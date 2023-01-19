@@ -1,8 +1,5 @@
 import React from 'react';
 
-import './Style/Form.css';
-
-
 const Candidate = () => {
   return (
     <div className='candidate-page'>
@@ -12,8 +9,8 @@ const Candidate = () => {
         <main className='candidate-main'></main>
         <footer className='candidate-footer'></footer>
       </div>
-     <footer className='name-footer'>
-</footer>
+      <footer className='name-footer'>
+      </footer>
     </div>
   )
 }
