@@ -1,5 +1,6 @@
 import React from 'react'
 import './Style/Candidate.css'
+import text from "../assets/images/Wiseskulls_Text.png"
 
 
 const Candidate = () => {
@@ -12,6 +13,7 @@ const Candidate = () => {
         <footer className='candidate-footer'></footer>
       </div>
      <footer className='name-footer'>
+      <img src={text} alt="Wiseskulls"/>
 </footer>
     </div>
   )
