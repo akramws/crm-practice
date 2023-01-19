@@ -19,12 +19,9 @@ export default function Index() {
         <Route path="/user-management" element={<UserManagement />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/form" element={<Candidate />} />
-        <Route path="/candidate-listing" element={<App />} />
         <Route path="/form" element={<Candidateform />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/form" element={<App />} />
-        <Route path="/candidate-listing" element={<Candidate/>} />
       </Routes>
     </BrowserRouter>
   );
