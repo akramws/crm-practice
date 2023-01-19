@@ -1,8 +1,19 @@
 import React from 'react'
-
+import './Style/HeaderStyle.css'
 const Header = () => {
   return (
-    <div>Header hover</div>
+    <>
+     <header className='main-header'>
+         <div>
+          </div>
+          <div>
+            </div>  
+      </header>
+
+
+
+
+    </>
   )
 }
 
