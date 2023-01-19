@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './Style/Component/Form.css';
+import './Style/Form.css';
 
 
 const Candidate = () => {
