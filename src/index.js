@@ -5,7 +5,10 @@ export default function Index() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/login" element={<App />} />
+        <Route path="/form" element={<App />} />
+        <Route path="/candidate-listing" element={<App />} />
+        <Route path="/user-management" element={<App />} />
       </Routes>
     </BrowserRouter>
   );
