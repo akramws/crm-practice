@@ -4,9 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Header from "./Component/Header";
 import Candidate from "./Component/Candidate";
-import Usermanagement from "./Component/Usermanagement";
+import UserManagement from "./Component/UserManagement";
 import Dashboard from "./Component/Dashboard";
 import Candidateform from "./Component/Candidateform";
+import LoginPage from "./Component/LoginPage";
 export default function Index() {
   return (
     <BrowserRouter>
@@ -15,7 +16,7 @@ export default function Index() {
         <Route path="/login" element={<App />} />
         <Route path="/form" element={<App />} />
         <Route path="/candidate-listing" element={<Candidate/>} />
-        <Route path="/user-management" element={<Usermanagement />} />
+        <Route path="/user-management" element={<UserManagement />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/form" element={<Candidate />} />
@@ -24,7 +25,6 @@ export default function Index() {
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/form" element={<App />} />
         <Route path="/candidate-listing" element={<Candidate/>} />
-        <Route path="/user-management" element={<App />} />
       </Routes>
     </BrowserRouter>
   );
