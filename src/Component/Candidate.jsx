@@ -11,7 +11,7 @@ import Header from "./Header";
 import { useNavigate } from "react-router";
 
 const Candidate = () => {
-  
+
     const navigate = useNavigate(); 
    
 
@@ -270,6 +270,9 @@ const Candidate = () => {
       <footer className="name-footer">
         <img src={text} alt="Wiseskulls" />
       </footer>
+      <div className="left-side-wiseskulls-logo">
+      <img src={text} alt="" />
+    </div>
     </div>
     </>
   );

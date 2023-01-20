@@ -284,3 +284,21 @@ body {
   color: #000000;
   margin-left: 50px;
 }
+
+.candidate-page .left-side-wiseskulls-logo{
+  position: fixed;
+    top: 39%;
+    display: flex;
+    width: 30px;
+    height: 200px;
+    border-radius: 0 50px 50px 0;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    justify-content: start;
+    align-items: center;
+}
+.candidate-page .left-side-wiseskulls-logo img{
+  width: 200%;
+  height: 180px;
+  margin-left: 5px;
+  transform: matrix(0, 1, -1, 0, 0, 0);
+}
