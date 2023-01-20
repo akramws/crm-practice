@@ -1,0 +1,16 @@
+.left-side-wiseskulls-logo {
+    position: fixed;
+    top: 39%;
+    display: flex;
+    width: 30px;
+    height: 200px;
+    border-radius: 0 50px 50px 0;
+    background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0%
+      0% no-repeat padding-box;
+    justify-content: start;
+    align-items: center;
+  }
+  .left-side-wiseskulls-logo img {
+    width: 50%;
+    margin-left: 5px;
+  }
