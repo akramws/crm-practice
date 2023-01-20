@@ -18,7 +18,7 @@ const UserManagement = () => {
                     <div className='userManagementHead'>
                         <div>
                             <FiSearch className='userManagmentsearch' />
-                            <input type="text" placeholder='Search Candidate' />
+                            <input className='userManagmentinpbut' type="text" placeholder='Search Candidate' />
                             <button className='searchAnyBut'>Search Any <AiOutlineDown className='userManagementdown' style={{ fontSize: '13px' }} /></button>
                         </div>
                         <div className='userManagmentText'>
@@ -55,8 +55,8 @@ const UserManagement = () => {
                             <tr>
                                 <td className='userAllCheckbox1'><input type="checkbox" /></td>
                                 <td>610211</td>
-                                <td>Ranjit Sing Tanwar</td>
-                                <td>Ranjit@wiseskulls.com</td>
+                                <td>Rohit Sindhi</td>
+                                <td>Rohit@wiseskulls.com</td>
                                 <td>+91 9658714121</td>
                                 <td>Team Lead</td>
                                 <td>
