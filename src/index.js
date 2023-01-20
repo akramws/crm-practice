@@ -5,9 +5,11 @@ import LoginPage from "./Component/LoginPage";
 
 import Candidate from "./Component/Candidate";
 import Dashboard from "./Component/Dashboard";
+import Header from "./Component/Header";
 export default function Index() {
   return (
     <BrowserRouter>
+        <Header/>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
