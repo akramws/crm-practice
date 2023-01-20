@@ -7,9 +7,12 @@ import { TbDownload } from "react-icons/tb";
 import { FaFilter } from "react-icons/fa";
 import { GrFormNext } from "react-icons/gr";
 import { RxDoubleArrowRight } from "react-icons/rx";
+import Header from "./Header";
 
 const Candidate = () => {
   return (
+    <>
+    {/* <Header/> */}
     <div className="candidate-page">
       <div className="candidate-container">
         <nav className="candidate-navbar">
@@ -263,6 +266,7 @@ const Candidate = () => {
         <img src={text} alt="Wiseskulls" />
       </footer>
     </div>
+    </>
   );
 };
 
