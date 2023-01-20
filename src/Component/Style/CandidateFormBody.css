@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish";
+}
+
+.form-input-fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.form-input-fields .form-inputs1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+
+.form-input-fields .form-inputs2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inp-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.inp-area .noted {
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    flex-basis: 30%;
+    position: relative;
+    right: 49px;
+    width: 320px;
+    height: 33px;
+    border: none;
+}
+
+.inp-area .noted:focus {
+    outline: none;
+}
+
+.textarea {
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    flex-basis: 70%;
+    position: relative;
+    top: 5px;
+    right: 44px;
+    width: 746px;
+    height: 78px;
+    border: none;
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+
+.inp-area .textare {
+    position: relative;
+    top: 12px;
+
+}
+
+
+.form-input-fields .form-inputs2 .Candidate-Name1 input {
+    position: relative;
+    right: 2px;
+    width: 233px;
+    height: 33px;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    border: none;
+}
+
+.form-input-fields .form-inputs2 button {
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    border: none;
+    color: white;
+    position: relative;
+    top: 0px;
+    left: 5px;
+    width: 80px;
+    height: 33px;
+}
+
+.form-input-fields .form-inputs3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.form-input-fields .Candidate-Name label {
+    text-align: left;
+    font: normal normal medium 15px/19px Mulish;
+    letter-spacing: 0px;
+    color: #043C79;
+    opacity: 1;
+    font-weight: bold;
+
+}
+
+.form-input-fields .experience {
+    text-align: left;
+    font: normal normal medium 15px/19px Mulish;
+    letter-spacing: 0px;
+    color: #043C79;
+    opacity: 1;
+
+
+}
+
+.inp-area .label1 {
+    text-align: left;
+    font: normal normal medium 15px/19px Mulish;
+    letter-spacing: 0px;
+    color: #043C79;
+    opacity: 1;
+    position: relative;
+    right: 40px;
+    font-weight: bold;
+}
+
+.inp-area .textarea-label {
+    text-align: left;
+    font: normal normal medium 15px/19px Mulish;
+    letter-spacing: 0px;
+    color: #043C79;
+    opacity: 1;
+    position: relative;
+    right: 40px;
+    font-weight: bold;
+}
+
+
+
+
+.form-input-fields input {
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    border: none;
+    position: relative;
+    width: 320px;
+    height: 33px;
+    padding-left: 15px;
+}
+
+.form-input-fields .big-input {
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    border: none;
+    position: relative;
+    width: 320px;
+    height: 142px;
+    resize: none;
+}
+
+.form-input-fields .big-input:focus {
+    outline: none;
+}
+
+
+.form-input-fields input:focus {
+    outline: none;
+}
+
+.foot-input {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 4rem;
+    right: 11px;
+    padding: 15px;
+}
+
+.foot-input .dash-div {
+    border-style: dashed;
+    color: #0E4D92;
+    flex-basis: 56.5%;
+    width: 1px;
+    border-radius: 3px;
+    position: relative;
+    right: 2px;
+    top: 14px;
+    height: 134px;
+
+}
+
+.foot-input .selecter-but {
+    position: relative;
+    left: 28px;
+    flex-basis: 42.5%;
+    width: 273px;
+    height: 33px;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    border: none;
+    padding-right: 55%;
+    color: white;
+
+}
+
+.foot-input .selecter-but:focus {
+    outline: none;
+}
+
+.foot-input .arrow-icon {
+    position: relative;
+    top: 0px;
+    left: 20px;
+    width: 59px;
+    height: 33px;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    border: none;
+    color: white;
+}
+
+.foot-input .dash-para-div .dash-para {
+    position: relative;
+    top: 15px;
+    left: 55px;
+    width: 1001px;
+    height: 25px;
+    text-align: left;
+    font: italic normal bold 20px/25px Mulish;
+    letter-spacing: 0px;
+    color: #FF0000;
+    opacity: 1;
+}
+
+.foot-input .dash-checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    left: 45px;
+    height: 50px;
+    text-align: left;
+    font: normal normal 600 20px/25px Mulish;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    gap: 30px;
+
+}
+
+.foot-input .dash-checkbox input[type=checkbox] {
+    position: relative;
+    top: -5px;
+    left: 5px;
+    width: 33px;
+    height: 30px;
+    accent-color: #26AD5F;
+}
+
+.foot-input .selecter-label {
+    position: relative;
+    top: 15px;
+    left: 29px;
+    width: 14px;
+    height: 19px;
+    font: normal normal bold 15px/19px Mulish;
+    letter-spacing: 0px;
+    color: #043C79;
+    opacity: 1;
+}
+
+.qsn-icon {
+    position: relative;
+    top: 2px;
+    width: 19px;
+    height: 19px;
+    opacity: 1;
+}
+
+.sub-but {
+    position: relative;
+    top: 180px;
+    left: 1128px;
+    width: 137px;
+    height: 58px;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+    color: white;
+    font: normal normal 300 20px/25px Mulish;
+    border: none;
+}
