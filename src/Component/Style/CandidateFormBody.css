@@ -18,6 +18,7 @@
     align-items: center;
     flex-direction: row;
     gap: 100px;
+    margin-top: 250px;
 }
 
 .form-input-fields .form-inputs1 {

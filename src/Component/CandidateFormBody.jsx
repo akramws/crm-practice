@@ -27,7 +27,6 @@ const CandidateFormBody = () => {
     return (
         <>
             <Modal
-                title="Basic Modal"
                 open={open}
                 onOk={handleOk}
                 onCancel={handleCancel}
@@ -303,6 +302,5 @@ const CandidateFormBody = () => {
         </>
     )
 }
-
 
 export default CandidateFormBody
