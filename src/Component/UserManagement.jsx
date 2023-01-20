@@ -53,7 +53,7 @@ const UserManagement = () => {
                         </thead>
                         <tbody className='userTbody'>
                             <tr>
-                                <td className='userAllCheckbox1'><input type="checkbox" /></td>
+                                <td className='userAllCheckbox1'><input className='userInputcheckbox' type="checkbox" /></td>
                                 <td>610211</td>
                                 <td>Rohit Sindhi</td>
                                 <td>Rohit@wiseskulls.com</td>
