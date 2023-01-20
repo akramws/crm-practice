@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish";
+}
+
+.left-side-wiseskulls-logo{
+  position: fixed;
+    top: 39%;
+    display: flex;
+    width: 30px;
+    height: 200px;
+    border-radius: 0 50px 50px 0;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    justify-content: start;
+    align-items: center;
+}
+.left-side-wiseskulls-logo img{
+  width: 50%;
+  margin-left: 5px;
+}
+
+.crm-dashboard {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crm-dashboard .crm-main-dashboard {
+  width: 90%;
+  height: 90%;
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.crm-dashboard .crm-main-dashboard .crm-dashboard-header {
+  display: flex;
+  height: 54px;
+  justify-content: center;
+  align-items: center;
+  background: #e3f0ff 0% 0% no-repeat padding-box;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.crm-dashboard
+  .crm-main-dashboard
+  .crm-dashboard-header
+  .crm-dashboard-header-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 453px;
+  height: 54px;
+  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 0px 0px 65px 65px;
+}
+
+.crm-dashboard
+  .crm-main-dashboard
+  .crm-dashboard-header
+  .crm-dashboard-header-detail
+  p {
+  text-align: center;
+  font-weight: 600;
+  font: normal normal 20px/25px "Mulish";
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+
+.crm-dashboard .crm-main-dashboard .crm-dashboard-body-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 0px 0px 10px 10px;
+  gap: 10px;
+}
+
+.crm-dashboard
+  .crm-main-dashboard
+  .crm-dashboard-body-content
+  .crm-body-content-leftside-div {
+  flex-basis: 69%;
+  height: 98%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.crm-dashboard
+  .crm-main-dashboard
+  .crm-dashboard-body-content
+  .crm-body-content-leftside-div
+  .crm-body-content-leftside-div-first-child {
+  width: 43%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  /* background: #f9f9f9 0% 0% no-repeat padding-box; */
+  border-radius: 10px;
+}
+
+.leftside-div-first-child-upper-div {
+  width: 100%;
+  height: 50%;
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  /* box-shadow: 0px 3px 6px #00000029; */
+}
+
+.show-button {
+  display: flex;
+  font-size: 12px;
+  color: #0e4d92;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 0;
+  font-family: "Mulish";
+  font-weight: 700;
+}
+
+.show-button p {
+  font: normal normal bold 15px/19px Mulish;
+}
+.show-button button {
+  background: #1b90ff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  border: none;
+  padding: 2px 5px;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.leftside-div-first-child-lower-div {
+  width: 100%;
+  height: 50%;
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  /* box-shadow: 0px 3px 6px #00000029; */
+}
+
+.left-lowerside-requirements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  color: #0e4d92;
+}
+
+.leftside-div-first-child-lower-div .left-lowerside-requirements h1 {
+  font-size: 89px;
+  font-weight: 800;
+}
+
+.leftside-div-first-child-lower-div .left-lowerside-requirements p {
+  font-size: 20px;
+  font: normal normal bold 20px/25px Mulish;
+}
+
+.top-5-recruiters-in-the-list-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 94.5%;
+  color: #0e4d92;
+}
+
+.top-5-recruiters-in-the-list-div .total-submissions-div {
+  text-align: center;
+}
+
+.top-5-recruiters-in-the-list-div .total-submissions-div h1 {
+  font-size: 89px;
+  font-weight: 800;
+}
+
+.top-5-recruiters-in-the-list-div .total-submissions-div p {
+  font: normal normal bold 20px/25px Mulish;
+}
+
+.top-5-recruiters-in-the-list-div button {
+  width: 100%;
+  height: 34px;
+  background: #1b90ff 0% 0% no-repeat padding-box;
+  font: normal normal bold 15px/19px Mulish;
+  color: #ffffff;
+  border: none;
+}
+
+.result-of-5-recruiters {
+  display: flex;
+  justify-content: inherit;
+  align-items: start;
+  width: 100%;
+}
+
+.result-of-5-recruiters ul {
+  list-style: none;
+}
+
+.result-of-5-recruiters li {
+  font: normal normal bold 15px/19px Mulish;
+  margin-top: 12px;
+}
+
+button:focus-visible {
+  outline: none;
+}
+button:focus-within {
+  outline: none;
+}
+
+.crm-dashboard
+  .crm-main-dashboard
+  .crm-dashboard-body-content
+  .crm-body-content-leftside-div
+  .crm-body-content-leftside-div-secound-child {
+  width: 43%;
+  height: 90%;
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  /* box-shadow: 0px 3px 6px #00000029; */
+}
+
+.crm-dashboard
+  .crm-main-dashboard
+  .crm-dashboard-body-content
+  .crm-body-content-rightside-div {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  flex-basis: 29%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.crm-body-content-rightside-div p {
+  font: normal normal bold 15px/19px Mulish;  
+  color: #0e4d92;
+}
+
+.crm-body-content-rightside-div .rightside-div-first-child-upper {
+  width: 90%;
+  height: 35%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.crm-body-content-rightside-div .rightside-div-secound-child-lower {
+  width: 90%;
+  height: 55%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.rightside-div-secound-child-lower .manage-teams-list-div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 84%;
+  margin-top: 30px;
+}
+
+.rightside-div-secound-child-lower .manage-teams-list-div div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 31.16%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0e4d92;
+}
+
+
+.rightside-div-secound-child-lower img {
+  width: 54px;
+  height: 54px;
+  border-radius: 93%;
+}
