@@ -51,6 +51,9 @@
 .userManagementHead input:focus-within{
     outline: none;
 }
+.userManagmentinpbut{
+    cursor: pointer;
+}
 .searchAnyBut{
     font-weight: 600;
     width: 130px;
@@ -60,6 +63,7 @@
     border: none;
     background: #F8FBFF 0% 0% no-repeat padding-box;
     color: #043C79;
+    cursor: pointer;
 }
 .userManagmentsearch{
     color: #043C79;
@@ -152,8 +156,7 @@
 }
 .userTable{
     width: 100%;
-    border-collapse: collapse;
-    
+    border-collapse: collapse; 
 }
 .userThead{
     width: 100%;
@@ -181,6 +184,7 @@
     accent-color: green;
 }
 .userTbody td{
+    font: normal normal 600 14px/14px "Mulish";
     text-align: start;
     align-items: center;
     color: #0E4D92;
@@ -278,6 +282,7 @@
     border-right: none;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    font: normal normal 600 14px/14px "Mulish";
 }
 .userResultbut1{
     border-top-right-radius: 3px;
