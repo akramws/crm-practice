@@ -1,5 +1,5 @@
 import React from 'react';
-import './Style/UserManagement.css';
+import './Style/Usermanagement.css';
 import { FiSearch } from 'react-icons/fi'
 import { AiOutlineDown } from 'react-icons/ai'
 import { BiReset } from 'react-icons/bi'
