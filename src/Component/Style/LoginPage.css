@@ -13,5 +13,116 @@
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../bg12.png);
-  }
+    background-image: url(../../assets/images/bg12.png);
+}
+
+.login-form {
+    top: 130px;
+    left: 285px;
+    height: 505px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid lightgray; */
+    border-radius: 20px;
+}
+
+.logo-input {
+    height: 100%;
+    width: 40%;
+    background-color: #115DAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    flex-direction: column;  
+}
+
+.login-form .logo-input img {
+    height: 60%;
+    width: 60%;
+}
+
+.login-form .logo-input p{
+    margin-top: 8px;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.input-details {
+    height: 100%;
+    width: 60%;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.input-details .sign-enter {
+    height: 450px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.input-details .sign-enter .email-enter h3 {
+    color: #0D4583;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Mulish';
+}
+
+.input-details .sign-enter .email-enter input {
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;   
+    /* background: #00000029 0% 0% no-repeat padding-box; */
+    box-shadow: 0px 0px 0px #00000029;
+    border: none;
+    padding-left: 18px;
+}
+
+.input-details .sign-enter .email-enter input:focus-visible{
+    outline: none;
+}
+
+.input-details .sign-enter .email-enter input:focus {
+    box-shadow: #64BDFF 0px 0px 0px 2px, #64BDFF 0px 4px 6px -1px, #64BDFF 0px 1px 0px inset;
+}
+
+.input-details .sign-enter .email-enter input::placeholder {
+    color: #A2A2A2;
+}
+
+.input-details .sign-enter .remember-me {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    gap: 10px;     
+}
+
+.input-details .sign-enter .remember-me span {
+    width: 13px;
+    height: 18px;
+    accent-color: #4CD964;
+}
+
+.input-details .sign-enter .remember-me p {
+    font-family: 'Mulish';
+    letter-spacing: 0px;
+    color: #505050;
+    opacity: 1;
+}
+
+.signto-press button {
+    height: 35px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    background-color: #34BE61;
+}
