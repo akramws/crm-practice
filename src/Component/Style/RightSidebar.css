@@ -1,21 +1,4 @@
-/* .right-sidebar {
-    position: fixed;
-    top: 39%;
-    right: 0;
-    display: flex;
-    width: 30px;
-    height: 200px;
-    border-radius: 50px 0 0 50px;
-    background: #535353 0% 0% no-repeat padding-box;
-    justify-content: end;
-    align-items: center;
-  }
-  .right-sidebar img{
-    color: white;
-    transform: rotate(90deg);
-    font-size: 4px;
-    font-family: sans-serif;
-  } */
+
 
   .right-sidebar {
     position: fixed;
