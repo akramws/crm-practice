@@ -10,21 +10,21 @@ import { Select, Tag } from 'antd';
 
 
 const CandidateForm = () => {
-const [change, setChange] = useState("block");
+  const [change, setChange] = useState("block");
 
   const onSearch = (value = "") => {
     console.log('search:', value);
   };
 
-const show=(e)=>{
-  console.log(e);
-if(e === true){
-  setChange("block");
-} else {
-  setChange("none");
+  const show = (e) => {
+    console.log(e);
+    if (e === true) {
+      setChange("block");
+    } else {
+      setChange("none");
 
-}
-}
+    }
+  }
   return (
     <div>
       <div className='main-form-div'>
@@ -35,7 +35,7 @@ if(e === true){
             CANDIDATE'S DETAIL LIST
           </div>
           <div className='logout-div'>
-            
+
             <button className='logout-header-form-btn'>Log Out</button><br /><br />
             <p className='Dashboard-Go-to-Candidate-Listing-p'><span><BiLeftArrowAlt className='leftarro-icon' />
               <lable className='underline-words' href='Dashboard'>Dashboard</lable></span>
@@ -45,7 +45,7 @@ if(e === true){
         </div>
 
       </div>
-      <div className='content-questions-line-div'style={{display:change}}>
+      <div className='content-questions-line-div' style={{ display: change }}>
         Click on the fields to get the questions to be asked to the Candidate.
       </div>
       <div className='footer-form-div'>
