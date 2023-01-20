@@ -55,9 +55,9 @@ const Header = () => {
           
           <div className='text-liner'>
           <span><IoIosArrowRoundBack className='icon-Logo' /></span>
-          <Link  className="Link" to="dashboard">Dashboard</Link>
+          <Link  className="Link" to="/dashboard">Dashboard</Link>
             <div className='box-border'></div>
-            <Link  className="Link" to="candidate-listing">Go to Candidate Listing</Link>
+            <Link  className="Link" to="/candidate-listing">Go to Candidate Listing</Link>
             <span><IoIosArrowRoundForward className='icon-Logo' /></span>
           </div>
           </div>
