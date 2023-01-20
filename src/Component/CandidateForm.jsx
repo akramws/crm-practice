@@ -1,5 +1,5 @@
 import { Switch } from 'antd';
-import React from 'react';
+import React, { useState } from 'react';
 import './Style/Form.css';
 import { BiLeftArrowAlt } from "react-icons/bi";
 import { BiRightArrowAlt } from "react-icons/bi";
@@ -10,16 +10,27 @@ import { Select, Tag } from 'antd';
 
 
 const CandidateForm = () => {
+const [change, setChange] = useState("block");
+
   const onSearch = (value = "") => {
     console.log('search:', value);
   };
 
+const show=(e)=>{
+  console.log(e);
+if(e === true){
+  setChange("block");
+} else {
+  setChange("none");
+
+}
+}
   return (
     <div>
       <div className='main-form-div'>
         <div className='headerdiv'>
           <div>
-            <Switch checkedChildren="On" unCheckedChildren="Off" defaultChecked color={"green"} className='on-off-btn'></Switch><br /><p className='scripton'>Script On</p></div>
+            <Switch checkedChildren="On" unCheckedChildren="Off" defaultChecked color={"green"} className='on-off-btn' onClick={show} ></Switch><br /><p className='scripton'><span id='script-blue'>Script </span><span id='on-green'>On</span> </p></div>
           <div className='candidatesdetailslist-box'>
             CANDIDATE'S DETAIL LIST
           </div>
@@ -34,7 +45,7 @@ const CandidateForm = () => {
         </div>
 
       </div>
-      <div className='content-questions-line-div'>
+      <div className='content-questions-line-div'style={{display:change}}>
         Click on the fields to get the questions to be asked to the Candidate.
       </div>
       <div className='footer-form-div'>
@@ -52,16 +63,16 @@ const CandidateForm = () => {
             }
             options={[
               {
-                value: 'jack',
-                label: 'Jack',
+                value: 'Faizan',
+                label: 'Faizan',
               },
               {
-                value: 'lucy',
-                label: 'Lucy',
+                value: 'Sohel',
+                label: 'Sohel',
               },
               {
-                value: 'tom',
-                label: 'Tom',
+                value: 'Rohit',
+                label: 'Rohit',
               },
             ]}
           /></div>
