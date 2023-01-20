@@ -1,10 +1,11 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
 
 import App from "./App";
 import Header from "./Component/Header";
 import Candidate from "./Component/Candidate";
-import Usermanagement from "./Component/Usermanagement";
+import Usermanagement from "./Component/UserManagement";
 import Dashboard from "./Component/Dashboard";
 import Candidateform from "./Component/Candidateform";
 import LoginPage from "./Component/LoginPage";

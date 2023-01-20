@@ -9,31 +9,25 @@ body {
 
 .candidate-page {
   width: 100vw;
-  height: 100vh;
-  /* overflow: hidden; */
-}
-
-.header {
-  width: 100vw;
-  height: 15vh;
-  background-color: blue;
+  height: 83vh;
+ position: relative;
 }
 .candidate-page .name-footer {
   bottom: 0;
   width: 100vw;
-  height: 8vh;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  height: 3vh;
+  background: #ffffff 0% 0% no-repeat padding-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .candidate-page .name-footer img {
-   height: 30px;
+  filter: drop-shadow(0 0 0.5rem #0e4d92);
+  height: 30px;
 }
 .candidate-page .candidate-container {
   width: 90vw;
-  height: 74vh;
+  height: 78vh;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
@@ -53,13 +47,13 @@ body {
 .search-input {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .candidate-page .candidate-navbar .search-navbar .search-input input {
   outline: none;
   border: none;
   width: 270px;
   height: 35px;
-  position: relative;
   background: #f8fbff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 3px #00000029;
   border-top-left-radius: 20px;
@@ -79,8 +73,8 @@ body {
   color: #0e4d92;
   position: absolute;
   z-index: 999;
-  top: 150px;
-  left: 122px;
+  top: 7px;
+  left: 9px;
 }
 .search-input span .search-btn:focus-within {
   border: none;
@@ -100,6 +94,11 @@ body {
   display: flex;
   align-items: center;
   padding-left: 15px;
+  border-left: 1px solid #043c79;
+}
+
+.logotext-div {
+  height:10vh;
 }
 
 .candidate-page .candidate-logo {
@@ -116,7 +115,7 @@ body {
 }
 
 .candidate-page .nav-btn {
-  gap: 10px;
+display: flex;
 }
 .candidate-page .nav-btn .btn-reset {
   width: 73px;
@@ -130,6 +129,9 @@ body {
   color: #ffffff;
   text-shadow: 0px 2px 2px #00000029;
   font: normal normal medium 16px/15px Mulish;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .candidate-page .nav-btn .btn-export {
   width: 73px;
@@ -143,88 +145,131 @@ body {
   color: #ffffff;
   text-shadow: 0px 2px 2px #00000029;
   font: normal normal medium 18px/15px Mulish;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .candidate-page .nav-btn .btn-usermanage {
-width: 140px;
-height: 32px;
-background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
-box-shadow: 0px 1px 1px #00000029;
-border-radius: 3px;
-border: none;
-margin-right: 10px;
-color: #ffffff;
-text-shadow: 0px 2px 2px #00000029;
-font: normal normal medium 20px/22px Mulish;
+  width: 140px;
+  height: 32px;
+  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: 0px 1px 1px #00000029;
+  border-radius: 3px;
+  border: none;
+  margin-right: 10px;
+  color: #ffffff;
+  text-shadow: 0px 2px 2px #00000029;
+  font: normal normal medium 20px/22px Mulish;
 }
 
-.candidate-page .candidate-main  {
-    width: 100%;
-    height:59vh;
-
+.candidate-page .candidate-main {
+  width: 100%;
+  height: 63vh;
 }
 
 .candidate-page .candidate-footer {
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #E3F0FF 0% 0% no-repeat padding-box;
-    border-radius: 0px 0px 10px 10px;
-
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e3f0ff 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 10px 10px;
 }
 .footer-pageresult {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.candidate-main table thead {
+.candidate-footer .footer-pageresult .per-page {
+  font: normal normal bold 12px/15px Mulish;
+  letter-spacing: 0px;
+  color: #0e4d92;
+  margin-right: 5px;
+}
 
-    background: #F2F2F2 0% 0% no-repeat padding-box;
-    color: #0E4D92;
-    font: normal normal bold 14px/16px Mulish;
+.candidate-footer .footer-pageresult input {
+  width: 55px;
+  height: 31px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.5px solid #0e4d92;
+  text-align: center;
+  font: normal normal bold 16px/15px Mulish;
+  color: #0e4d92;
+  padding-left: 8px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.candidate-footer .footer-pageresult input::placeholder {
+  color: #0e4d92;
+
+}
+.candidate-footer .footer-pageresult button {
+  width: 35px;
+  height: 31px;
+  border: 0.5px solid #0e4d92;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-left: none;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+.candidate-footer .pagination-div {
+  padding-right:25px;
+}
+.candidate-footer .pagination-div button {
+  width: 30px;
+  height: 31px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  border: none;
+  font: normal normal medium 12px/15px Mulish;
+}
+.candidate-footer .pagination-div .active {
+  background: #0e4d92 0% 0% no-repeat padding-box;
+  color: #ffffff;
+}
+
+
+
+.candidate-main table thead {
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+  color: #0e4d92;
+  font: normal normal bold 15px/16px Mulish;
 }
 .candidate-main {
-
-    overflow-x: scroll;
-
+  overflow-x: scroll;
 }
 .candidate-main table {
-    max-width: fit-content ;
-    border-collapse: collapse;
-    text-align: start;
+  border-collapse: collapse;
+  text-align: start;
+  white-space: nowrap;
 }
-.candidate-main table thead tr,.candidate-main table tbody tr {
-    width: 100%;
-    height: 10px;
-   border-bottom: 1px solid #CFCFCF;
-   text-align: start;
-
+.candidate-main table thead tr,
+.candidate-main table tbody tr {
+  height: 41.79px;
+  border-bottom: 1px solid #cfcfcf;
+  text-align: start;
+  vertical-align: middle;
 }
 .candidate-main table thead tr th {
-    width: fit-content;
-    padding: 2px 10px;
-    text-align: start;
-    word-break: keep-all;
-
-
-
+  width: 150px;
+  padding: 5px 10px;
+  text-align: start;
 }
 
-.candidate-main table tbody tr  td {
-    width: fit-content;
-    font: normal normal 600 14px/14px Mulish;
-    letter-spacing: 0px;
-    color: #0E4D92;
-    padding: 5px 10px;
-    text-align: start;
-
+.candidate-main table tbody tr td {
+  width: 150px;
+  font: normal normal 600 14px/14px Mulish; 
+  letter-spacing: 0px;
+  color: #0e4d92;
+  padding: 5px 10px;
+  text-align: start;
 }
 .candidate-page .candidate-footer .entries {
-    text-align: center;
-    font: normal normal bold 12px/15px Mulish;
-    letter-spacing: 0px;
-    color: #000000;
-    margin-left: 50px;
+  text-align: center;
+  font: normal normal bold 12px/15px Mulish;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-left: 50px;
 }
