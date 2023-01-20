@@ -1,0 +1,21 @@
+
+
+  .right-sidebar {
+    position: fixed;
+    top: 39%;
+    right: 0;
+    display: flex;
+    width: 30px;
+    height: 200px;
+    border-radius: 50px 0 0 50px;
+    background: transparent linear-gradient(180deg, #535353 0%, #535353 100%) 0%
+      0% no-repeat padding-box;
+    justify-content: start;
+    z-index: 1;
+  }
+  .right-sidebar img {
+    width: 150px;
+    height: 160px;
+    margin-left: 5px;
+    margin-bottom: 20px;    
+  }

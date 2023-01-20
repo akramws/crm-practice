@@ -9,6 +9,7 @@ import { GrFormNext } from "react-icons/gr";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import Header from "./Header";
 import { useNavigate } from "react-router";
+import Sidebar from "./Sidebar";
 
 const Candidate = () => {
 
@@ -54,44 +55,44 @@ const Candidate = () => {
             <thead>
               <tr>
                 <th>
-                  ID <FaFilter />
+                  ID <FaFilter style={{ fontSize: "11px" }} />
                 </th>
                 <th>
-                  Job Title <FaFilter />
+                  Job Title <FaFilter style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
-                  Candidate's Name <FaFilter />
+                  Candidate's Name <FaFilter style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
-                  User <FaFilter />
+                  User <FaFilter style={{ fontSize: "11px" }} />
                 </th>
                 <th>
-                  Contacts <FaFilter />
+                  Contacts <FaFilter style={{ fontSize: "11px" }} />
                 </th>
                 <th>
-                  Profile Source <FaFilter />
+                  Profile Source <FaFilter  style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
-                  Available In Job Market <FaFilter />
+                  Available In Job Market <FaFilter style={{ fontSize: "11px" }} />
                 </th>
                 <th>
-                  Current Location <FaFilter />
+                  Current Location <FaFilter style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
                   Visa Type
-                  <FaFilter />
+                  <FaFilter style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
                   Job Location
-                  <FaFilter />
+                  <FaFilter  style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
                   Sales Person
-                  <FaFilter />
+                  <FaFilter style={{ fontSize: "11px" }} />
                 </th>
                 <th>
                   Hiring Manager
-                  <FaFilter />
+                  <FaFilter style={{ fontSize: "11px" }} />
                 </th>
               </tr>
             </thead>
@@ -271,10 +272,7 @@ const Candidate = () => {
         <div>
         <img src={text} alt="Wiseskulls" /></div>
       </footer>
-      <div className="text-logo">
-        <div className="text-div">
-      <img src={text} alt="" /></div>
-    </div>
+    <Sidebar/>
     </div>
     </>
   );
