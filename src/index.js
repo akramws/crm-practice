@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
 
 import App from "./App";
 import Header from "./Component/Header";
@@ -14,8 +15,6 @@ export default function Index() {
         <Route path="/form" element={<CandidateForm />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/form" element={<App />} />
-        <Route path="/candidate-listing" element={<Candidate/>} />
-        <Route path="/user-management" element={<App />} />
       </Routes>
     </BrowserRouter>
   );
