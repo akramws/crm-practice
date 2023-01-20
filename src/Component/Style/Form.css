@@ -71,7 +71,7 @@
     border: none;
     border-radius: 4px;
     position: relative;
-    top: 1rem;
+    top: .4rem;
 }
 .ant-switch-checked{
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box !important;
@@ -94,6 +94,7 @@
 }
 .underline-words{
     color: #0E4D92;
+    text-decoration: underline;
 }
 #go-to{
     border-left:2px solid black ;

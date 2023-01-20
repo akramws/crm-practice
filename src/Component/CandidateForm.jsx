@@ -24,9 +24,11 @@ const CandidateForm = () => {
             CANDIDATE'S DETAIL LIST
           </div>
           <div className='logout-div'>
+            
             <button className='logout-header-form-btn'>Log Out</button><br /><br />
-            <p className='Dashboard-Go-to-Candidate-Listing-p'><span><BiLeftArrowAlt className='leftarro-icon' /><a className='underline-words' href='Dashboard'>Dashboard</a></span>
-              <span><a id='go-to' className='underline-words' href='Dashboard'>Go to Candidate Listing</a><BiRightArrowAlt className='leftarro-icon' /></span></p>
+            <p className='Dashboard-Go-to-Candidate-Listing-p'><span><BiLeftArrowAlt className='leftarro-icon' />
+              <lable className='underline-words' href='Dashboard'>Dashboard</lable></span>
+              <span><lable id='go-to' className='underline-words' href='Dashboard'>Go to Candidate Listing</lable><BiRightArrowAlt className='leftarro-icon' /></span></p>
 
           </div>
         </div>
@@ -44,7 +46,7 @@ const CandidateForm = () => {
             optionFilterProp="children"
 
             onSearch={onSearch}
-            style={{ width: '160%'  }}
+            style={{ width: '160%' }}
             filterOption={(input, option) =>
               (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
             }
@@ -65,7 +67,7 @@ const CandidateForm = () => {
           /></div>
         <div className='text-italic-pop'>
 
-          <Tooltip  color={"#26AD5F 0% 0% no-repeat padding-box"} className='toooltips-box' placement="left" title="  Must have Skills"  >
+          <Tooltip color={"#26AD5F 0% 0% no-repeat padding-box"} className='toooltips-box' placement="left" title="  Must have Skills"  >
             <div className='dase-dase-box'></div></Tooltip>
         </div>
 
