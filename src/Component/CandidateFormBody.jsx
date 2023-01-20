@@ -304,4 +304,5 @@ const CandidateFormBody = () => {
     )
 }
 
+
 export default CandidateFormBody

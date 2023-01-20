@@ -4,13 +4,16 @@
     font-family: "Mulish";
     
 }
-/* body {
-    position: sticky;
+/* .detail-form {
+    position: relative;
 } */
 .all-body-parent-div{
     position:fixed;
-    z-index: 9999;
+    z-index: 1;
     top: 0;
+background-color: #FFFFFF;
+
+  
 }
 
 
@@ -24,7 +27,7 @@ font: normal normal bold 15px/30px "Mulish";
 }
 
 .main-form-div{
-    width: 100%;
+    width: 100vw;
    
     margin-top: 5px;
     padding-left: 5px;
@@ -141,7 +144,7 @@ font: normal normal bold 15px/30px "Mulish";
 
 .content-questions-line-div{
     
-    width: 1430px;
+    width: 1440px;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -183,7 +186,7 @@ font: normal normal bold 15px/30px "Mulish";
  }
 
 .footer-form-div{
-    width: 1380px;
+    width: 1440px;
     height: 100px;
     display: flex;
     justify-content: space-between;
