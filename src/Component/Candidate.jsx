@@ -12,7 +12,7 @@ import Header from "./Header";
 const Candidate = () => {
   return (
     <>
-    {/* <Header/> */}
+    <Header/>
     <div className="candidate-page">
       <div className="candidate-container">
         <nav className="candidate-navbar">
