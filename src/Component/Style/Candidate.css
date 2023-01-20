@@ -284,3 +284,25 @@ body {
   color: #000000;
   margin-left: 50px;
 }
+
+.candidate-page .text-logo,.candidate-page .text-logo .text-div
+{
+    position: fixed;
+    top: 43%;
+    width: 30px;
+    height: 200px;
+    border-radius: 0 50px 50px 0;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+   
+}
+/* .candidate-page .text-logo .text-div {
+  position: relative;
+} */
+.candidate-page .text-logo .text-div img{
+  position: fixed;
+  top: 55%;
+  left: -62px;
+   width: 141px;
+  height: 18px;
+  transform: matrix(0, 1, -1, 0, 0, 0);
+}
