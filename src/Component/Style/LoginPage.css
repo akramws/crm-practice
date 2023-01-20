@@ -22,7 +22,7 @@
     width: 800px;
     display: flex;
     align-items: center;
-    /* border: 1px solid lightgray; */
+    border: 1px solid lightgray;
     border-radius: 20px;
     opacity: 1;
 }
@@ -114,6 +114,7 @@
     width: 13px;
     height: 18px;
     accent-color: #4CD964;
+    cursor: pointer;
 }
 
 .input-details .sign-enter .remember-me span input:focus-visible {
