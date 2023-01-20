@@ -24,7 +24,7 @@ const LoginPage = () => {
                         <div className='signto-press' >
                             <button>Sign In</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

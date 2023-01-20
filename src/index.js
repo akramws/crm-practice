@@ -12,17 +12,22 @@ import LoginPage from "./Component/LoginPage";
 export default function Index() {
   return (
     <BrowserRouter>
-    <Header/>
       <Routes>
         {/* <Route path="/login" element={<App />} /> */}
         <Route path="/form" element={<App />} />
-        <Route path="/candidate-listing" element={<Candidate/>} />
-        <Route path="/user-management" element={<UserManagement />} />
+        <Route path="/candidate-listing" element={<Candidate />} />
+        <Route path="/user-management" element={<>
+          <Header />
+          <UserManagement />
+        </>} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<>
+          <Header />
+          <Dashboard />
+        </>
+        } />
         <Route path="/form" element={<Candidateform />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        <Route path="/form" element={<App />} />
       </Routes>
     </BrowserRouter>
   );
