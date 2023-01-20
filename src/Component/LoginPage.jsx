@@ -1,8 +1,11 @@
 import React from 'react'
 import './Style/LoginPage.css'
 import MaskGroup from '../assets/images/MaskGroup.png'
+import { useNavigate } from 'react-router'
 
 const LoginPage = () => {
+
+    const navigation = useNavigate();
     return (
         <div className='back-img'>
             <div className='login-form'>
@@ -22,7 +25,7 @@ const LoginPage = () => {
                             <p>Remember Me</p>
                         </div>
                         <div className='signto-press' >
-                            <button>Sign In</button>
+                            <button onClick={() => { navigation("/dashboard") }} >  Sign In</button>
                         </div>
                     </div>
                 </div>

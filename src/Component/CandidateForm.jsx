@@ -7,10 +7,12 @@ import { BsQuestionCircleFill } from "react-icons/bs";
 
 import { Tooltip } from 'antd';
 import { Select, Tag } from 'antd';
+import { useNavigate } from 'react-router';
 
 
 const CandidateForm = () => {
 const [change, setChange] = useState("block");
+const navigation =useNavigate();
 
   const onSearch = (value = "") => {
     console.log('search:', value);
@@ -24,9 +26,12 @@ if(e === true){
   setChange("none");
 
 }
+
 }
   return (
-    <div>
+    
+    <div all-body-parent-div>
+    <div >
       <div className='main-form-div'>
         <div className='headerdiv'>
           <div>
@@ -36,10 +41,10 @@ if(e === true){
           </div>
           <div className='logout-div'>
             
-            <button className='logout-header-form-btn'>Log Out</button><br /><br />
+            <button className='logout-header-form-btn' onClick={()=>{navigation("/login")}}>Log Out</button><br /><br />
             <p className='Dashboard-Go-to-Candidate-Listing-p'><span><BiLeftArrowAlt className='leftarro-icon' />
-              <lable className='underline-words' href='Dashboard'>Dashboard</lable></span>
-              <span><lable id='go-to' className='underline-words' href='Dashboard'>Go to Candidate Listing</lable><BiRightArrowAlt className='leftarro-icon' /></span></p>
+              <button className='underline-words' onClick={()=>{navigation("/dashboard")}}>Dashboard</button></span>
+             <div className='slashe-div'></div> <span><button id='go-to' className='underline-words' onClick={()=>{navigation("/candidate-listing")}}>Go to Candidate Listing</button><BiRightArrowAlt className='leftarro-icon' /></span></p>
 
           </div>
         </div>
@@ -87,6 +92,7 @@ if(e === true){
       </div>
 
 
+    </div>
     </div>
   )
 }

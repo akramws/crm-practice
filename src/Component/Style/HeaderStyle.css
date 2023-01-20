@@ -36,6 +36,8 @@
   top: 1rem;
   margin-right: 20px;
   text-shadow: 0px 4px 3px #00000029;
+  cursor: pointer;
+
 }
 
 .main-header .secund-part .fist-btn {
@@ -66,7 +68,7 @@
   color: white;
   margin-right: 19px;
   font: normal normal medium 15px/19px 'Mulish';
-letter-spacing: 0px;
+  letter-spacing: 0px;
 }
 
 .main-header .text-liner span {

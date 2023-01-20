@@ -9,6 +9,7 @@ import { GrFormNext } from "react-icons/gr";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import Header from "./Header";
 import { useNavigate } from "react-router";
+import Sidebar from "./Sidebar";
 
 const Candidate = () => {
 
@@ -271,10 +272,7 @@ const Candidate = () => {
         <div>
         <img src={text} alt="Wiseskulls" /></div>
       </footer>
-      <div className="text-logo">
-        <div className="text-div">
-      <img src={text} alt="" /></div>
-    </div>
+    <Sidebar/>
     </div>
     </>
   );
