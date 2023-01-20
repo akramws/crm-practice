@@ -4,6 +4,19 @@
     font-family: "Mulish";
     
 }
+/* .detail-form {
+    position: relative;
+} */
+.all-body-parent-div{
+    width: 100vw;
+    position:fixed;
+    z-index: 1;
+    top: 0;
+background-color: #FFFFFF;
+
+  
+}
+
 
 #on-green{
 color: #4CD964;
@@ -15,7 +28,7 @@ font: normal normal bold 15px/30px "Mulish";
 }
 
 .main-form-div{
-    width: 100%;
+    width: 100vw;
    
     margin-top: 5px;
     padding-left: 5px;
@@ -82,6 +95,7 @@ font: normal normal bold 15px/30px "Mulish";
     border-radius: 4px;
     position: relative;
     top: .4rem;
+    cursor: pointer;
 }
 .ant-switch-checked{
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box !important;
@@ -101,19 +115,37 @@ font: normal normal bold 15px/30px "Mulish";
 .leftarro-icon{
     position: relative;
     top: .3rem;
+    cursor: pointer;
     
 }
 .underline-words{
     color: #0E4D92;
+    border: none;
     text-decoration: underline;
+    background-color:white ;
+    font: normal normal bold 14px/25px "Mulish";
+    cursor: pointer;
+
 }
-#go-to{
-    border-left:2px solid black ;
-    padding-left: 10px;
+/* #go-to{
+    
+    
+   
+  
+} */
+.slashe-div{
+    left: 1120px;
+  width: 0px;
+  height: 16px;
+  border: 1px solid black;
+  opacity: 1;
+  
+  margin-top: 5px;
 }
+
 .content-questions-line-div{
     
-    width: 1430px;
+    width: 1440px;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -145,6 +177,7 @@ font: normal normal bold 15px/30px "Mulish";
    position: relative;
    margin-right: 190px;
    margin-top: 8px;
+   cursor: pointer;
    
 }
 .toooltips-box{
@@ -154,7 +187,7 @@ font: normal normal bold 15px/30px "Mulish";
  }
 
 .footer-form-div{
-    width: 1380px;
+    width: 1440px;
     height: 100px;
     display: flex;
     justify-content: space-between;
