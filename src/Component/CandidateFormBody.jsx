@@ -236,7 +236,7 @@ const CandidateFormBody = () => {
                 </div>
 
                 <div className='textare'><br />
-                    <label htmlFor="textarea" className='textarea-label' >Note</label><br /><br />
+                    <label htmlFor="textarea" className='textarea-label' >Notes</label><br /><br />
                     <textarea name="" id="textarea" className='textarea'></textarea>
                 </div>
 
