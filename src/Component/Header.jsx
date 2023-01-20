@@ -4,6 +4,7 @@ import WiseSkull from "../assets/images/Wiseskulls_Text.png"
 import WiseSkull2 from "../assets/images/wise.png"
 import { IoIosArrowRoundForward,IoIosArrowRoundBack} from "react-icons/io"
 import { Button, Modal } from 'antd';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -54,9 +55,9 @@ const Header = () => {
           
           <div className='text-liner'>
           <span><IoIosArrowRoundBack className='icon-Logo' /></span>
-            <span>Dashboard</span>
+          <Link  className="Link" to="/dashboard">Dashboard</Link>
             <div className='box-border'></div>
-            <span>Go to Candidate Listing</span>
+            <Link  className="Link" to="/candidate-listing">Go to Candidate Listing</Link>
             <span><IoIosArrowRoundForward className='icon-Logo' /></span>
           </div>
           </div>
