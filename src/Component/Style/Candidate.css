@@ -9,20 +9,13 @@ body {
 
 .candidate-page {
   width: 100vw;
-  height: 100vh;
+  height: 83vh;
  position: relative;
-}
-
-
-.header {
-  width: 100vw;
-  height: 15vh;
-  background-color: blue;
 }
 .candidate-page .name-footer {
   bottom: 0;
   width: 100vw;
-  height: 4vh;
+  height: 3vh;
   background: #ffffff 0% 0% no-repeat padding-box;
   display: flex;
   justify-content: center;
@@ -102,6 +95,10 @@ body {
   align-items: center;
   padding-left: 15px;
   border-left: 1px solid #043c79;
+}
+
+.logotext-div {
+  height:10vh;
 }
 
 .candidate-page .candidate-logo {
@@ -238,7 +235,7 @@ display: flex;
 .candidate-main table thead {
   background: #f2f2f2 0% 0% no-repeat padding-box;
   color: #0e4d92;
-  font: normal normal bold 14px/16px Mulish;
+  font: normal normal bold 15px/16px Mulish;
 }
 .candidate-main {
   overflow-x: scroll;
