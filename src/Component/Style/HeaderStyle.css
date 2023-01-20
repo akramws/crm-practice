@@ -1,12 +1,14 @@
-.main-header{
-    width: 100%;
-    height: 115px;
-    background: transparent linear-gradient(266deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.main-header {
+  width: 100%;
+  height: 115px;
+  background: transparent linear-gradient(266deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.main-header .logo-right{
+
+.main-header .logo-right {
   justify-content: center;
   display: flex;
   align-items: center;
@@ -14,12 +16,12 @@
   gap: 20px;
 }
 
-.main-header .logo-right .logo-img{
+.main-header .logo-right .logo-img {
   height: 115px;
   margin-bottom: 10px;
 }
 
-.main-header .secund-part{  
+.main-header .secund-part {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -27,34 +29,34 @@
 
 }
 
-.main-header .secund-part button{
+.main-header .secund-part button {
   border: none;
-  border-radius:5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
   position: relative;
   top: 1rem;
   margin-right: 20px;
   text-shadow: 0px 4px 3px #00000029;
 }
 
-.main-header .secund-part .fist-btn{
-height: 43px;
-width: 100px;
-background-color: white;
-color: #0E4D92;
-justify-content: center;
-font-size: 15px;
+.main-header .secund-part .fist-btn {
+  height: 43px;
+  width: 100px;
+  background-color: white;
+  color: #0E4D92;
+  justify-content: center;
+  font-size: 15px;
 
 }
 
-.main-header .secund-part .second-btn{
+.main-header .secund-part .second-btn {
   height: 43px;
   width: 152px;
-  background: transparent linear-gradient(180deg,#09e08a 0%,#00944F);
+  background: transparent linear-gradient(180deg, #09e08a 0%, #00944F);
   color: #FFFFFF;
-font-size: 15px;
+  font-size: 15px;
 }
 
-.secund-part .text-liner{
+.secund-part .text-liner {
   display: flex;
   align-items: center;
   text-decoration: underline;
@@ -62,22 +64,76 @@ font-size: 15px;
   margin-right: 19px;
 }
 
-.main-header  .text-liner span{
+.main-header .text-liner span {
   color: white;
   margin-top: 25px;
 }
 
-.main-header .secund-part .text-liner .icon-Logo{
-   font-size: 30px;
-   margin-top: 7px;  
+.main-header .secund-part .text-liner .icon-Logo {
+  font-size: 30px;
+  margin-top: 7px;
 }
 
-.main-header .secund-part .text-liner .box-border{
-left: 1120px;
-width: 0px;
-height: 16px;
-border: 1px solid #cec6c6;
-opacity: 1;
-margin: 20px;
-margin-bottom: -5px;
+.main-header .secund-part .text-liner .box-border {
+  left: 1120px;
+  width: 0px;
+  height: 16px;
+  border: 1px solid #cec6c6;
+  opacity: 1;
+  margin: 20px;
+  margin-bottom: -5px;
+}
+
+/* For Model */
+
+
+.ant-modal-content button.ant-modal-close {
+  display: none;
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.pop-up{
+  width: 400px;
+  height: 150px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 50px;
+}
+
+.ant-modal-content{
+width: 450px;
+margin-top: 210px;
+}
+
+.pop-up .popup-btn{
+    height: 40px;
+    gap: 20px;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+.pop-up .popup-btn :first-child{
+      width: 100px;
+      background: transparent linear-gradient(180deg, #BFBFBF 0%, #535353 100%) 0% 0% no-repeat padding-box;
+      border-radius: 3px;
+      opacity: 1;
+      border: none;
+      color: #FFFFFF;
+      cursor: pointer;
+}
+
+.pop-up .popup-btn :last-child{
+  width: 100px;
+  background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+
 }
