@@ -25,7 +25,7 @@ const LoginPage = () => {
                             <p>Remember Me</p>
                         </div>
                         <div className='signto-press' >
-                            <button onClick={()=>{navigation("/dashboard")}} >  Sign In</button>
+                            <button onClick={() => { navigation("/dashboard") }} >  Sign In</button>
                         </div>
                     </div>
                 </div>
