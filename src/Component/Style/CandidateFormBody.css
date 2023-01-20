@@ -208,11 +208,11 @@
 }
 
 .foot-input .dash-div {
-    border-style: dashed;
-    color: #0E4D92;
+    border: 2px dashed #0E4D92;
+    border-radius: 3px;
+    opacity: 1;
     flex-basis: 56.5%;
     width: 1px;
-    border-radius: 3px;
     position: relative;
     right: 2px;
     top: 14px;
@@ -323,4 +323,5 @@
     color: white;
     font: normal normal 300 20px/25px Mulish;
     border: none;
+    cursor: pointer;
 }

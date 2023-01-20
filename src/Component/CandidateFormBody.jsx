@@ -173,7 +173,7 @@ const CandidateFormBody = () => {
                     <div className='Candidate-Name'><br /><br />
 
                         <label htmlFor="">Current Location (City)</label><br /><br />
-                        <input type="text"  />
+                        <input type="text"  placeholder='eg. California City'/>
 
                     </div>
                     <div className='Candidate-Name'><br /><br />
@@ -215,7 +215,7 @@ const CandidateFormBody = () => {
                     <div className='Candidate-Name'><br /><br />
 
                         <label htmlFor="">Interview Availability</label><br /><br />
-                        <input type="text"  />
+                        <input type="text"  placeholder='Type date and time here'/>
 
                     </div>
                     <div className='Candidate-Name'><br /><br />
