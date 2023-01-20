@@ -8,6 +8,10 @@
     font-family: "Mulish";
 }
 
+.form-body {
+    margin-top: 300px;
+}
+
 .form-input-fields {
     display: flex;
     justify-content: center;

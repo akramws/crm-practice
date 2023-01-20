@@ -6,7 +6,7 @@ import { FaRegQuestionCircle, FaAsterisk } from 'react-icons/fa';
 
 const CandidateFormBody = () => {
     return (
-        <div>
+        <div className='form-body'>
             <div className='form-input-fields'>
                 <div className='form-inputs1'>
                     <div className='Candidate-Name'><br />
@@ -265,5 +265,6 @@ const CandidateFormBody = () => {
         </div>
     )
 }
+
 
 export default CandidateFormBody
