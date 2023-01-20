@@ -268,10 +268,12 @@ const Candidate = () => {
         </footer>
       </div>
       <footer className="name-footer">
-        <img src={text} alt="Wiseskulls" />
+        <div>
+        <img src={text} alt="Wiseskulls" /></div>
       </footer>
-      <div className="left-side-wiseskulls-logo">
-      <img src={text} alt="" />
+      <div className="text-logo">
+        <div className="text-div">
+      <img src={text} alt="" /></div>
     </div>
     </div>
     </>
