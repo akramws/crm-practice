@@ -8,8 +8,13 @@ import { FaFilter } from "react-icons/fa";
 import { GrFormNext } from "react-icons/gr";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import Header from "./Header";
+import { useNavigate } from "react-router";
 
 const Candidate = () => {
+
+    const navigate = useNavigate(); 
+   
+
   return (
     <>
     <Header/>
@@ -41,7 +46,7 @@ const Candidate = () => {
               <TbDownload style={{ fontSize: "16px" }} />
               Export
             </button>
-            <button className="btn-usermanage">User ManageMent</button>
+            <button className="btn-usermanage" onClick={()=>navigate("/user-management")}>User ManageMent</button>
           </div>
         </nav>
         <main className="candidate-main">
@@ -263,8 +268,13 @@ const Candidate = () => {
         </footer>
       </div>
       <footer className="name-footer">
-        <img src={text} alt="Wiseskulls" />
+        <div>
+        <img src={text} alt="Wiseskulls" /></div>
       </footer>
+      <div className="text-logo">
+        <div className="text-div">
+      <img src={text} alt="" /></div>
+    </div>
     </div>
     </>
   );

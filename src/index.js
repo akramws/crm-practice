@@ -6,8 +6,8 @@ import Header from "./Component/Header";
 import Candidate from "./Component/Candidate";
 import UserManagement from "./Component/UserManagement";
 import Dashboard from "./Component/Dashboard";
-import CandidateForm from "./Component/CandidateForm";
 import LoginPage from "./Component/LoginPage";
+import DetailForm from "./Component/DetailForm";
 export default function Index() {
   return (
     <BrowserRouter>
@@ -24,7 +24,7 @@ export default function Index() {
           <Dashboard />
         </>
         } />
-        <Route path="/form" element={<CandidateForm />} />
+        <Route path="/form" element={<DetailForm />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
     </BrowserRouter>

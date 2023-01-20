@@ -1,13 +1,10 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 import "./Style/Dashboard.css";
-import vertImg from "../assets/images/vert.png"
 
 const Dashboard = () => {
   return (
     <>
-    <div className="left-side-wiseskulls-logo">
-      <img src={vertImg} alt="" />
-    </div>
     <div className="crm-dashboard">
       <div className="crm-main-dashboard">
         <div className="crm-dashboard-header">
@@ -144,6 +141,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    <Sidebar/>
     </>
   );
 };

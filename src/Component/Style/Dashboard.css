@@ -5,21 +5,7 @@
   font-family: "Mulish";
 }
 
-.left-side-wiseskulls-logo{
-  position: fixed;
-    top: 39%;
-    display: flex;
-    width: 30px;
-    height: 200px;
-    border-radius: 0 50px 50px 0;
-    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
-    justify-content: start;
-    align-items: center;
-}
-.left-side-wiseskulls-logo img{
-  width: 50%;
-  margin-left: 5px;
-}
+
 
 .crm-dashboard {
   width: 100%;
@@ -257,7 +243,7 @@ button:focus-within {
 }
 
 .crm-body-content-rightside-div p {
-  font: normal normal bold 15px/19px Mulish;  
+  font: normal normal bold 15px/19px Mulish;
   color: #0e4d92;
 }
 
@@ -293,7 +279,6 @@ button:focus-within {
   font-weight: 600;
   color: #0e4d92;
 }
-
 
 .rightside-div-secound-child-lower img {
   width: 54px;
