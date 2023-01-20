@@ -51,6 +51,9 @@
 .userManagementHead input:focus-within{
     outline: none;
 }
+.userManagmentinpbut{
+    cursor: pointer;
+}
 .searchAnyBut{
     font-weight: 600;
     width: 130px;
@@ -60,6 +63,7 @@
     border: none;
     background: #F8FBFF 0% 0% no-repeat padding-box;
     color: #043C79;
+    cursor: pointer;
 }
 .userManagmentsearch{
     color: #043C79;
@@ -152,7 +156,7 @@
 }
 .userTable{
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; 
 }
 .userThead{
     width: 100%;
@@ -176,8 +180,13 @@
 .userTable .userThead th input[type='checkbox']{
     accent-color: green;
 }
+.userTbody td input[type='checkbox']{
+    accent-color: green;
+}
 .userTbody td{
+    font: normal normal 600 14px/14px "Mulish";
     text-align: start;
+    align-items: center;
     color: #0E4D92;
     height: 50px;
     border-bottom: 1px solid #CFCFCF;
@@ -185,6 +194,7 @@
 .userTbody{
     height: 80px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
+    font-size: 14px;
 }
 .userTable tr{
     border-bottom: 1px solid #CFCFCF;
@@ -221,14 +231,14 @@
     color: #6A6A6A;
     opacity: 1;
     margin-left: 10px;
-    margin-top: 3px;
+    height: 20px;
 }
 .footerRighticon{
     background-color: #ABABAB;
     color: #6A6A6A;
     opacity: 1;
     margin-right: 10px;
-    margin-top: 3px;
+    height: 20px;
 }
 .userFootersecounddiv{
     display: flex;
@@ -272,6 +282,7 @@
     border-right: none;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    font: normal normal 600 14px/14px "Mulish";
 }
 .userResultbut1{
     border-top-right-radius: 3px;
