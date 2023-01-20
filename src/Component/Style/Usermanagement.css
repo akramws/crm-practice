@@ -187,17 +187,13 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 .userTable tr{
-    border: 1px solid #CFCFCF;
+    border-bottom: 1px solid #CFCFCF;
 }
 .ant-switch-checked{
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box!important;
  }
- .switch1{
+.switch1{
     width: 75px;
- }
- 
-.usertheadtr{
-    border: none;
 }
 .userDelete{
     color: red;
