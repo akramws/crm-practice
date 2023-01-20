@@ -8,7 +8,7 @@
 .userHeader{
     width: 100%;
     height: 90px;
-    border: 1px solid black;
+    border: 1px solid 
 }
 .usermanagementmain{
     width: 90%;
@@ -32,24 +32,29 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
 .userManagementHead input{
-    width: 200px;
-    height: 25px;
+    width: 230px;
+    height: 30px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border: none;
-    padding-left: 30px;
+    padding-left: 40px;
     background: #F8FBFF 0% 0% no-repeat padding-box;
     color: black;
     border-right: 1px solid #043C79;
     
 }
+.userManagementHead input::placeholder{
+    color: #D5E9FF;
+}
 .userManagementHead input:focus-within{
     outline: none;
 }
 .searchAnyBut{
-    width: 120px;
-    height: 25px;
+    font-weight: 600;
+    width: 130px;
+    height: 30px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border: none;
@@ -182,17 +187,13 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 .userTable tr{
-    border: 1px solid #CFCFCF;
+    border-bottom: 1px solid #CFCFCF;
 }
 .ant-switch-checked{
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box!important;
  }
- .switch1{
+.switch1{
     width: 75px;
- }
- 
-.usertheadtr{
-    border: none;
 }
 .userDelete{
     color: red;

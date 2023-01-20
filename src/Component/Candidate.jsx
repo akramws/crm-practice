@@ -7,9 +7,12 @@ import { TbDownload } from "react-icons/tb";
 import { FaFilter } from "react-icons/fa";
 import { GrFormNext } from "react-icons/gr";
 import { RxDoubleArrowRight } from "react-icons/rx";
+import Header from "./Header";
 
 const Candidate = () => {
   return (
+    <>
+    <Header/>
     <div className="candidate-page">
       <div className="candidate-container">
         <nav className="candidate-navbar">
@@ -103,18 +106,60 @@ const Candidate = () => {
                 <td>Parth</td>
               </tr>
               <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
+                <td>187830</td>
+                <td>Android Developer</td>
+                <td>Path Patel</td>
                 <td>Amaan</td>
-                <td>9101267898</td>
+                <td>9664853392</td>
+                <td>Monster</td>
+                <td>Yes</td>
+                <td>Seattle</td>
+                <td>Green Card</td>
+                <td>Missouri</td>
+                <td>Jaimin</td>
+                <td>Milli</td>
+              </tr>
+              <tr>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
                 <td>Linkedin</td>
                 <td>Yes</td>
-                <td>New York</td>
+                <td>New Jersey</td>
                 <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
+              </tr>
+              <tr>
+                <td>187830</td>
+                <td>Android Developer</td>
+                <td>Path Patel</td>
+                <td>Amaan</td>
+                <td>9664853392</td>
+                <td>Monster</td>
+                <td>Yes</td>
+                <td>Seattle</td>
+                <td>Green Card</td>
+                <td>Missouri</td>
+                <td>Jaimin</td>
+                <td>Milli</td>
+              </tr>
+              <tr>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
+                <td>Linkedin</td>
+                <td>Yes</td>
+                <td>New Jersey</td>
+                <td>H1 N1</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
               </tr>
               <tr>
                 <td>125869</td>
@@ -131,18 +176,32 @@ const Candidate = () => {
                 <td>Parth</td>
               </tr>
               <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
                 <td>Linkedin</td>
                 <td>Yes</td>
-                <td>New York</td>
+                <td>New Jersey</td>
                 <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
+              </tr>
+              <tr>
+                <td>187830</td>
+                <td>Android Developer</td>
+                <td>Path Patel</td>
+                <td>Amaan</td>
+                <td>9664853392</td>
+                <td>Monster</td>
+                <td>Yes</td>
+                <td>Seattle</td>
+                <td>Green Card</td>
+                <td>Missouri</td>
+                <td>Jaimin</td>
+                <td>Milli</td>
               </tr>
               <tr>
                 <td>125869</td>
@@ -159,74 +218,18 @@ const Candidate = () => {
                 <td>Parth</td>
               </tr>
               <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
                 <td>Linkedin</td>
                 <td>Yes</td>
-                <td>New York</td>
+                <td>New Jersey</td>
                 <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
               </tr>
             </tbody>
           </table>
@@ -263,6 +266,7 @@ const Candidate = () => {
         <img src={text} alt="Wiseskulls" />
       </footer>
     </div>
+    </>
   );
 };
 
