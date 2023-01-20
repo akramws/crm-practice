@@ -114,7 +114,7 @@
     width: 13px;
     height: 18px;
     accent-color: #4CD964;
-    
+    cursor: pointer;
 }
 
 .input-details .sign-enter .remember-me span input:focus-visible {
