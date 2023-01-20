@@ -6,7 +6,7 @@
 
 .back-img {
     width: 100%;
-    height: 82vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +114,7 @@
     width: 13px;
     height: 18px;
     accent-color: #4CD964;
+    
 }
 
 .input-details .sign-enter .remember-me span input:focus-visible {
