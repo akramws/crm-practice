@@ -4,14 +4,13 @@ import text from "../assets/images/Wiseskulls_Text.png";
 import { BiSearch } from "react-icons/bi";
 import { BiChevronDown, BiReset } from "react-icons/bi";
 import { TbDownload } from "react-icons/tb";
-import { RiFilter2Fill } from "react-icons/ri";
+import { FaFilter } from "react-icons/fa";
 import { GrFormNext } from "react-icons/gr";
 import { RxDoubleArrowRight } from "react-icons/rx";
 
 const Candidate = () => {
   return (
     <div className="candidate-page">
-      <div className="header"></div>
       <div className="candidate-container">
         <nav className="candidate-navbar">
           <div className="search-navbar">
@@ -28,7 +27,8 @@ const Candidate = () => {
               </span>
             </div>
           </div>
-          <div className="candidate-logo">Candidates' Listing</div>
+          <div className="logotext-div">
+          <div className="candidate-logo">Candidates' Listing</div></div>
           <div className="nav-btn">
             <button className="btn-reset">
               <BiReset style={{ fontSize: "16px" }} />
@@ -46,44 +46,44 @@ const Candidate = () => {
             <thead>
               <tr>
                 <th>
-                  ID <RiFilter2Fill />
+                  ID <FaFilter />
                 </th>
                 <th>
-                  Job Title <RiFilter2Fill />
+                  Job Title <FaFilter />
                 </th>
                 <th>
-                  Candidate's Name <RiFilter2Fill />
+                  Candidate's Name <FaFilter />
                 </th>
                 <th>
-                  User <RiFilter2Fill />
+                  User <FaFilter />
                 </th>
                 <th>
-                  Contacts <RiFilter2Fill />
+                  Contacts <FaFilter />
                 </th>
                 <th>
-                  Profile Source <RiFilter2Fill />
+                  Profile Source <FaFilter />
                 </th>
                 <th>
-                  Available In Job Market <RiFilter2Fill />
+                  Available In Job Market <FaFilter />
                 </th>
                 <th>
-                  Current Location <RiFilter2Fill />
+                  Current Location <FaFilter />
                 </th>
                 <th>
                   Visa Type
-                  <RiFilter2Fill />
+                  <FaFilter />
                 </th>
                 <th>
                   Job Location
-                  <RiFilter2Fill />
+                  <FaFilter />
                 </th>
                 <th>
                   Sales Person
-                  <RiFilter2Fill />
+                  <FaFilter />
                 </th>
                 <th>
                   Hiring Manager
-                  <RiFilter2Fill />
+                  <FaFilter />
                 </th>
               </tr>
             </thead>
@@ -103,18 +103,60 @@ const Candidate = () => {
                 <td>Parth</td>
               </tr>
               <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
+                <td>187830</td>
+                <td>Android Developer</td>
+                <td>Path Patel</td>
                 <td>Amaan</td>
-                <td>9101267898</td>
+                <td>9664853392</td>
+                <td>Monster</td>
+                <td>Yes</td>
+                <td>Seattle</td>
+                <td>Green Card</td>
+                <td>Missouri</td>
+                <td>Jaimin</td>
+                <td>Milli</td>
+              </tr>
+              <tr>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
                 <td>Linkedin</td>
                 <td>Yes</td>
-                <td>New York</td>
+                <td>New Jersey</td>
                 <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
+              </tr>
+              <tr>
+                <td>187830</td>
+                <td>Android Developer</td>
+                <td>Path Patel</td>
+                <td>Amaan</td>
+                <td>9664853392</td>
+                <td>Monster</td>
+                <td>Yes</td>
+                <td>Seattle</td>
+                <td>Green Card</td>
+                <td>Missouri</td>
+                <td>Jaimin</td>
+                <td>Milli</td>
+              </tr>
+              <tr>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
+                <td>Linkedin</td>
+                <td>Yes</td>
+                <td>New Jersey</td>
+                <td>H1 N1</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
               </tr>
               <tr>
                 <td>125869</td>
@@ -131,18 +173,32 @@ const Candidate = () => {
                 <td>Parth</td>
               </tr>
               <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
                 <td>Linkedin</td>
                 <td>Yes</td>
-                <td>New York</td>
+                <td>New Jersey</td>
                 <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
+              </tr>
+              <tr>
+                <td>187830</td>
+                <td>Android Developer</td>
+                <td>Path Patel</td>
+                <td>Amaan</td>
+                <td>9664853392</td>
+                <td>Monster</td>
+                <td>Yes</td>
+                <td>Seattle</td>
+                <td>Green Card</td>
+                <td>Missouri</td>
+                <td>Jaimin</td>
+                <td>Milli</td>
               </tr>
               <tr>
                 <td>125869</td>
@@ -159,74 +215,18 @@ const Candidate = () => {
                 <td>Parth</td>
               </tr>
               <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
+                <td>100869</td>
+                <td>IOS Developer</td>
+                <td>Vikas Kapoor</td>
+                <td>Shoeb</td>
+                <td>8101267898</td>
                 <td>Linkedin</td>
                 <td>Yes</td>
-                <td>New York</td>
+                <td>New Jersey</td>
                 <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
-              </tr>
-              <tr>
-                <td>125869</td>
-                <td>Java Developer</td>
-                <td>Vinay Sharma</td>
-                <td>Amaan</td>
-                <td>9101267898</td>
-                <td>Linkedin</td>
-                <td>Yes</td>
-                <td>New York</td>
-                <td>H1 N1</td>
-                <td>New york city</td>
-                <td>DigVijay</td>
-                <td>Parth</td>
+                <td>New Orleans</td>
+                <td>Mili</td>
+                <td>Anjali</td>
               </tr>
             </tbody>
           </table>
