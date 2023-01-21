@@ -214,6 +214,7 @@
 }
 .userDelete{
     color: red;
+    cursor: pointer;
 }
 .usertheadtr{
     height: 50px;
