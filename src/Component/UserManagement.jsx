@@ -15,9 +15,7 @@ const UserManagement = () => {
 
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
-
-
-
+    
 
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
@@ -30,8 +28,12 @@ const UserManagement = () => {
     }
 
 
+
+
+
     return (
         <>
+
             <Modal
                 title="Modal 1000px width"
                 centered
@@ -39,8 +41,7 @@ const UserManagement = () => {
                 onOk={() => setOpen(false)}
                 onCancel={() => setOpen(false)}
                 width={1000}
-                className='ModanExport'
-            >
+                className='ModanExport' >
                 <div className='ExportPop'>
                     <div className='UserManagmentHead'>
                         <header>
@@ -51,10 +52,10 @@ const UserManagement = () => {
                     <div className='userExportSecound'>
                         <h2>Export As</h2>
                         <span className='userExportSecoundSpan1'>
-                        <input name='Export' type="radio" /><label htmlFor="">Excel</label>
+                            <input name='Export' type="radio" /><label htmlFor="">Excel</label>
                         </span>
                         <span className='userExportSecoundSpan2'>
-                        <input name='Export' type="radio" /><label htmlFor="">Csv</label>
+                            <input name='Export' type="radio" /><label htmlFor="">Csv</label>
                         </span>
                     </div>
                     <div className='ExportThree'>
@@ -268,13 +269,17 @@ const UserManagement = () => {
                         </div>
                     </div>
 
-                        <div className='ExportFooter'>
-                            <button className='ExportFooterBut1'>Export</button>
-                            <button className='ExportFooterBut2'>Cancel</button>
-                        </div>
+                    <div className='ExportFooter'>
+                        <button className='ExportFooterBut1'>Export</button>
+                        <button className='ExportFooterBut2'>Cancel</button>
+                    </div>
 
                 </div>
             </Modal>
+
+
+
+
 
             <div className='usermanagementmaindiv'>
 
@@ -314,7 +319,10 @@ const UserManagement = () => {
                                     <th>Status <FaFilter style={{ fontSize: '13px' }} /></th>
                                     <th>Actions</th>
                                     <th></th>
-                                    <th className='userDelete1' style={{ opacity: deletebut }}><span><MdDelete className='userDelete' style={{ fontSize: '15px' }} /></span> <span className='userDelete' style={{ fontSize: '15px' }}>Delete</span></th>
+                                        <th className='userDelete1' style={{ opacity: deletebut }}>
+                                            <span><MdDelete className='userDelete' style={{ fontSize: '18px' }} /></span>
+                                            <span className='userDelete' style={{ fontSize: '15px' }}>Delete</span>
+                                        </th>
                                 </tr>
                             </thead>
                             <tbody className='userTbody'>
