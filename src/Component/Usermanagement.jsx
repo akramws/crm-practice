@@ -42,7 +42,7 @@ const UserManagement = () => {
             <Modal open={open1}>
                 <div className="pop-up">
                     <h1>Confirm to Delete ?</h1>
-                    <div className='popup-click'>
+                    <div className='popup-btn'>
                         <button onClick={()=> setOpen1(false)}>Cancel</button>
                         <button onClick={()=> setOpen1(false)}>Delete</button>
                     </div>
