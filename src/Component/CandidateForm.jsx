@@ -14,7 +14,7 @@ import { Modal } from 'antd';
 
 const CandidateForm = () => {
   const [isInstructionShow, setIsInstructionShow] = useState(true);
-  const [open, setOpen] = useState(false);
+  const [on, setOn] = useState(false);
 
   const Navigate = useNavigate();
 
@@ -23,14 +23,14 @@ const CandidateForm = () => {
   return (
     <>
       <Modal
-        open={open}
-        onOk={() => setOpen(false)}
-        onCancel={() => setOpen(false)}
+        open={on}
+        onOk={() => setOn(false)}
+        onCancel={() => setOn(false)}
       >
         <div className='pop-up'>
           <h1>Confirm  Log Out?</h1>
           <div className='popup-btn'>
-            <button onClick={() => setOpen(false)}>Cancel</button>
+            <button onClick={() => setOn(false)}>Cancel</button>
             <button onClick={() => { Navigate("/login") }} >Log Out</button>
           </div>
         </div>
@@ -46,7 +46,7 @@ const CandidateForm = () => {
               </div>
               <div className='logout-div'>
 
-                <button className='logout-header-form-btn' onClick={() => setOpen(true)}>Log Out</button><br /><br />
+                <button className='logout-header-form-btn' onClick={() => setOn(true)}>Log Out</button><br /><br />
                 <p className='Dashboard-Go-to-Candidate-Listing-p'><span><BiLeftArrowAlt className='leftarro-icon' />
                   <button className='underline-words' onClick={() => { Navigate("/dashboard") }}>Dashboard</button></span>
                   <div className='slashe-div'></div> <span><button id='go-to' className='underline-words' onClick={() => { Navigate("/candidate-listing") }}>Go to Candidate Listing</button><BiRightArrowAlt className='leftarro-icon' /></span></p>
@@ -63,7 +63,8 @@ const CandidateForm = () => {
           }
           <div className='footer-form-div'>
             <div className='Select-JPC-Job-Title-div'>
-              <label className='Select-JPC'>Select JPC/Job Title<BsQuestionCircleFill className='question-lable-icon' /></label><br />
+              <label className='Select-JPC'>Select JPC/Job Title<Tooltip  color={"#1B90FF"} style={{ width: "800px" }} className='toooltips-box' placement="top" title="Choose a requirement from the dopdown"  >
+              <BsQuestionCircleFill className='question-lable-icon' /></Tooltip></label><br />
               <Select
                 className='select-option-form'
                 defaultValue="Rohit"
@@ -85,6 +86,35 @@ const CandidateForm = () => {
                     value: 'Rohit',
                     label: 'Rohit',
                   },
+                  {
+                    value: 'Naushad',
+                    label: 'Naushad',
+                  },
+                  {
+                    value: 'Neha',
+                    label: 'Neha',
+                  },
+                  {
+                    value: 'Vikas',
+                    label: 'Vikas',
+                  },
+                  {
+                    value: 'Sharif',
+                    label: 'Sharif',
+                  },
+                  {
+                    value: 'Akram',
+                    label: 'Akram',
+                  },
+                  {
+                    value: 'Mehmud',
+                    label: 'Mehmud',
+                  },
+                  {
+                    value: 'Raju',
+                    label: 'Raju',
+                  },
+
                 ]}
               /></div>
             <div className='text-italic-pop'>

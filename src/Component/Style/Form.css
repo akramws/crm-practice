@@ -204,37 +204,8 @@
 
 }
 
-@keyframes myfirst {
-    0% {
-        background: red;
-        left: 0px;
-        top: 0px;
-    }
 
-    25% {
-        background: yellow;
-        left: 200px;
-        top: 0px;
-    }
 
-    50% {
-        background: blue;
-        left: 200px;
-        top: 200px;
-    }
-
-    75% {
-        background: green;
-        left: 0px;
-        top: 200px;
-    }
-
-    100% {
-        background: red;
-        left: 0px;
-        top: 0px;
-    }
-}
 
 .footer-form-div {
     width: 1440px;
@@ -273,4 +244,5 @@
 
 .ant-tooltip-content .ant-tooltip-inner {
     font-style: italic !important;
+    
 }
