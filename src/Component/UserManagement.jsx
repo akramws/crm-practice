@@ -20,8 +20,13 @@ const UserManagement = () => {
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
+    const showModal1 = () => {
+        setOpen1(true);
+    };
+    // tEST
     const [openUser, setOpenUser] = useState(false);
 
+ 
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
             setDeleteBut("1");
@@ -37,9 +42,9 @@ const UserManagement = () => {
             <Modal open={open1}>
                 <div className="pop-up">
                     <h1>Confirm to Delete ?</h1>
-                    <div className="popup-click">
-                        <button onClick={() => setOpen1(false)}>Cancel</button>
-                        <button onClick={() => setOpen1(false)}>Delete</button>
+                    <div className='popup-click'>
+                        <button onClick={()=> setOpen1(false)}>Cancel</button>
+                        <button onClick={()=> setOpen1(false)}>Delete</button>
                     </div>
                 </div>
             </Modal>
@@ -406,10 +411,9 @@ const UserManagement = () => {
                                         </th>
                                         <th>Actions</th>
                                         <th></th>
-                                        <th className="userDelete1" style={{ opacity: deletebut }}>
+                                        <th  className="userDelete1 userDelete" onClick={showModal1} style={{ opacity: deletebut }}>
                                             <span>
                                                 <MdDelete
-                                                    //   onClick={showModal1}
                                                     className="userDelete"
                                                     style={{ fontSize: "18px" }}
                                                 />
