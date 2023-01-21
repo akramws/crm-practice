@@ -11,8 +11,7 @@ import Header from "./Header";
 import { useNavigate } from "react-router";
 import Sidebar from "./Sidebar";
 import { Modal } from "antd";
-import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Space, Typography } from "antd";
+import { Select } from 'antd';
 
 const Candidate = () => {
   const navigate = useNavigate();
@@ -24,21 +23,13 @@ const Candidate = () => {
     setOpen(false);
   };
 
-  const items = [
-    {
-      key: "1",
-      label: "1",
-    },
-    {
-      key: "2",
-      label: "2",
-    },
-    {
-      key: "3",
-      label: "3",
-    },
-  ];
-
+  const onChange = (value: string) => {
+    console.log(`selected ${value}`);
+  };
+  
+  const onSearch = (value: string) => {
+    console.log('search:', value);
+  };
   return (
     <>
       <Modal
@@ -494,20 +485,31 @@ const Candidate = () => {
             <div className="entries">Showing 1 to 10 of 5545 entries</div>
             <div className="footer-pageresult">
               <div className="per-page">Result per page</div>
-              <Dropdown
-                menu={{
-                  items,
-                  selectable: true,
-                  defaultSelectedKeys: ["2"],
-                }}
-              >
-                <Typography.Link>
-                  <Space>
-                    {items[1].key}
-                    <DownOutlined />
-                  </Space>
-                </Typography.Link>
-              </Dropdown>
+              <Select
+              className="select"
+                showSearch
+                placeholder="Page"
+                optionFilterProp="children"
+                onChange={onChange}
+                onSearch={onSearch}
+                filterOption={(input, option) =>
+                  (option?.label ?? "")
+                }
+                options={[
+                  {
+                    value: "1",
+                    label: "1-10",
+                  },
+                  {
+                    value: "11",
+                    label: "11-20",
+                  },
+                  {
+                    value: "21",
+                    label: "21-30",
+                  },
+                ]}
+              />
             </div>
             <div className="pagination-div">
               <button className="active">1</button>
