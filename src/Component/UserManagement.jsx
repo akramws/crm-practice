@@ -16,9 +16,6 @@ const UserManagement = () => {
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
 
-
-
-
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
             setDeleteBut("1")
@@ -45,7 +42,7 @@ const UserManagement = () => {
                     <div className='UserManagmentHead'>
                         <header>
                             <p>Export</p>
-                            <button>X</button>
+                            <button onClick={() => setOpen(false)}>X</button>
                         </header>
                     </div>
                     <div className='userExportSecound'>
@@ -270,7 +267,7 @@ const UserManagement = () => {
 
                         <div className='ExportFooter'>
                             <button className='ExportFooterBut1'>Export</button>
-                            <button className='ExportFooterBut2'>Cancel</button>
+                            <button className='ExportFooterBut2' onClick={() => setOpen(false)} >Cancel</button>
                         </div>
 
                 </div>
