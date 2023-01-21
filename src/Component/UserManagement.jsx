@@ -23,11 +23,11 @@ const UserManagement = () => {
 
     const handleOk = (e) => {
         console.log(e);
-        setOpen(false);
+        setOpen1(false);
     };
     const handleCancel = (e) => {
         console.log(e);
-        setOpen(false);
+        setOpen1(false);
     };
 
     const checkBoxFun = (e) => {
@@ -51,7 +51,8 @@ const UserManagement = () => {
             <Modal
                 open={open1}
                 onOk={handleOk}
-                onCancel={handleCancel}>
+                onCancel={handleCancel}
+                >
 
                 <div className='pop-up'>
                     <h1>Confirm  Log Out?</h1>
@@ -301,10 +302,8 @@ const UserManagement = () => {
 
                     <div className='ExportFooter'>
                         <button className='ExportFooterBut1'>Export</button>
-                        <button className='ExportFooterBut2'>Cancel</button>
                         <button className='ExportFooterBut2' onClick={() => setOpen(false)} >Cancel</button>
                     </div>
-
                 </div>
             </Modal>
 
@@ -350,8 +349,8 @@ const UserManagement = () => {
                                     <th>Status <FaFilter style={{ fontSize: '13px' }} /></th>
                                     <th>Actions</th>
                                     <th></th>
-                                    <th className='userDelete1' style={{ opacity: deletebut }}>
-                                        <span><MdDelete onClick={showModal1} className='userDelete' style={{ fontSize: '18px' }} /></span>
+                                    <th className='userDelete1 userDelete' onClick={showModal1} style={{ opacity: deletebut }}>
+                                        <span><MdDelete className='userDelete' style={{ fontSize: '18px' }} /></span>
                                         <span className='userDelete' style={{ fontSize: '15px' }}>Delete</span>
                                     </th>
                                 </tr>
