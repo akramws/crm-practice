@@ -9,6 +9,7 @@
       0% no-repeat padding-box;
     justify-content: start;
     align-items: center;
+    z-index: 1;
   }
   .left-side-wiseskulls-logo img {
     width: 50%;
