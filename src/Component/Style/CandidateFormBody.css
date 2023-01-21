@@ -336,3 +336,47 @@
     border: none;
     cursor: pointer;
 }
+
+/*Popup css*/
+
+
+.skill-head {
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 65px 65px;
+    opacity: 1;
+    height: 50px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 30%;
+    top: 0px;
+    color: white;
+    text-align: center;
+    font: normal normal bold 15px/25px Mulish;
+    letter-spacing: 0px;
+}
+
+.header-back {
+    width: 100%;
+    background: #E3F0FF 0% 0% no-repeat padding-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 1;
+    position: relative;
+    top: -20px;
+    
+}
+
+.popup-modal .ant-modal-content {
+    width: 150%;
+    height: 250px;
+    margin-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+    right: 25%;
+}
