@@ -21,7 +21,7 @@ const UserManagement = () => {
     const [open, setOpen] = useState(false);
     const [open1, setOpenUserPopUp1] = useState(false);
     const showModal1 = () => {
-        setOpenUserPopUp(true);
+        setOpenUserPopUp1(true);
     };
     const [openUser, setOpenUser] = useState(false);
 
@@ -42,8 +42,8 @@ const UserManagement = () => {
                 <div className="pop-up">
                     <h1>Confirm to Delete ?</h1>
                     <div className='popup-click'>
-                        <button onClick={()=> setOpenUserPopUp(false)}>Cancel</button>
-                        <button onClick={()=> setOpenUserPopUp(false)}>Delete</button>
+                        <button onClick={()=> setOpenUserPopUp1(false)}>Cancel</button>
+                        <button onClick={()=> setOpenUserPopUp1(false)}>Delete</button>
                     </div>
                 </div>
             </Modal>
