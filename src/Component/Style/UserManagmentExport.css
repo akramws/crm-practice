@@ -53,17 +53,21 @@
 .userExportSecound{
     display: flex;
     justify-content: start;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     border-bottom: 2px solid #F2F2F2;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 20px;
 }
+.userExportSecound input[type='radio']{
+    width: 35px;
+    height: 17px;
+    accent-color: black;
+}
 .userExportSecound span{
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 .userExportSecound span label{
     font-size: 15px;
@@ -87,10 +91,15 @@
     font-weight: bolder;
     color: #0E4D92;
 }
+.ExportThree input[type='checkbox']{
+    width: 50px;
+    height: 20px;
+    accent-color: green;
+}
 .ExportAllCheckbox{
     display: flex;
     justify-content: center;
-    gap: 157.5px;
+    gap: 130px;
     margin-top: 15px;
 }
 .ExportAllCheckbox div{
@@ -98,11 +107,16 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 8px;
 }
 .ExportAllCheckbox div label {
     color: #0E4D92;
     font: normal normal 600 14px/22px "Mulish";
+}
+.ExportAllCheckbox div input[type='checkbox']{
+    width: 30px;
+    height: 18px;
+    accent-color: green;
 }
 .ExportFooter{
     margin-top: 43px;

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Style/HeaderStyle.css'
 import WiseSkull from "../assets/images/Wiseskulls_Text.png"
 import WiseSkull2 from "../assets/images/wise.png"
-import { IoIosArrowRoundForward,IoIosArrowRoundBack} from "react-icons/io"
+import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io"
 import { Button, Modal } from 'antd';
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 
@@ -22,26 +22,26 @@ const Header = () => {
     setOpen(false);
   };
 
-  
+
   return (
     <>
-        
+
       <Modal
         open={open}
         onOk={handleOk}
         onCancel={handleCancel}>
-          
+
         <div className='pop-up'>
           <h1>Confirm  Log Out?</h1>
           <div className='popup-btn'>
             <button onClick={handleCancel}>Cancel</button>
-            <button onClick={()=>{Navigate("/login")}} >Log Out</button>
+            <button onClick={() => { Navigate("/login") }} >Log Out</button>
           </div>
         </div>
       </Modal>
 
 
-    
+
       <header className='main-header'>
         <div className='logo-right'>
           <img className='logo-img' src={WiseSkull2} alt="" />
@@ -49,19 +49,19 @@ const Header = () => {
         </div>
         <div className='secund-part'>
           <div>
-          <button className='second-btn' >Add Requirement</button>
-          <button className='fist-btn'   onClick={showModal}  >Log Out</button>
+            <button className='second-btn' >Add Requirement</button>
+            <button className='fist-btn' onClick={showModal}  >Log Out</button>
 
           </div>
-          
+
           <div className='text-liner'>
-          <span><IoIosArrowRoundBack className='icon-Logo' /></span>
-          <Link  className="Link" to="/dashboard">Dashboard</Link>
+            <span><IoIosArrowRoundBack className='icon-Logo' /></span>
+            <Link className="Link" to="/dashboard">Dashboard</Link>
             <div className='box-border'></div>
-            <Link  className="Link" to="/candidate-listing">Go to Candidate Listing</Link>
+            <Link className="Link" to="/candidate-listing">Go to Candidate Listing</Link>
             <span><IoIosArrowRoundForward className='icon-Logo' /></span>
           </div>
-          </div>
+        </div>
       </header>
     </>
   )
