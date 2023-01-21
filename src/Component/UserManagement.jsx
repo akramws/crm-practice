@@ -19,7 +19,7 @@ import AddUser from "./AddUser";
 const UserManagement = () => {
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
-    const [open1, setOpenUserPopUp] = useState(false);
+    const [open1, setOpenUserPopUp1] = useState(false);
     const showModal1 = () => {
         setOpenUserPopUp(true);
     };
