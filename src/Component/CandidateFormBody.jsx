@@ -1,36 +1,41 @@
 import React from 'react'
 import './Style/CandidateFormBody.css'
-import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowDown} from 'react-icons/io';
+import { IoClose } from 'react-icons/io5';
 import { FaAsterisk } from 'react-icons/fa';
 import { BsQuestionCircleFill } from 'react-icons/bs';
 import Sidebar from './Sidebar';
 import RightSidebar from './RightSidebar';
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
+import { Tooltip } from 'antd';
 import { useState } from 'react';
 
 
 const CandidateFormBody = () => {
 
-    const [open, setOpen] = useState(false);
-    const showModal = () => {
-        setOpen(true);
+    const [perskill, setSkill] = useState(false);
+
+    const skillModal = () => {
+        setSkill(true);
     };
-    const handleOk = (e) => {
+
+    const handleOpen = (e) => {
         console.log(e);
-        setOpen(false);
+        setSkill(false);
     };
-    const handleCancel = (e) => {
+
+    const handleClose = (e) => {
         console.log(e);
-        setOpen(false);
+        setSkill(false);
     };
 
     return (
         <div>
             <Modal
                 className='popup-modal'
-                open={open}
-                onOk={handleOk}
-                onCancel={handleCancel}
+                open={perskill}
+                onOk={handleOpen}
+                onCancel={handleClose}
                 okButtonProps={{
                     disabled: true,
                 }}
@@ -38,10 +43,49 @@ const CandidateFormBody = () => {
                     disabled: true,
                 }}
             >
-                <div >
+                <div>
                     <div className='header-back'>
-                    <header className='skill-head'>Skill Based Experience</header>
+                        <header className='skill-head'>Skill Based Experience</header>
+                        <button onClick={handleClose}><IoClose/></button>
                     </div>
+
+                    <div className='main-popup-inputs'>
+                        <div className='group-popup-inputs1'>
+                            <div>
+                                <div>
+                                    <label htmlFor="popup-id1">Java</label><br />
+                                    <input id='popup-id1' className='popup-inputs' type="text" />
+                                </div><br />
+                                <div>
+                                    <label htmlFor="popup-id1">Javascript</label><br />
+                                    <input className='popup-inputs' type="text" />
+                                </div><br />
+                                <div>
+                                    <label htmlFor="popup-id1">Python</label><br />
+                                    <input className='popup-inputs' type="text" />
+                                </div><br />
+                            </div><br />
+                        </div>
+
+                        <div className='group-popup-inputs2'>
+                            <div>
+                                <div>
+                                    <label htmlFor="popup-id1">React</label><br />
+                                    <input className='popup-inputs' type="text" />
+                                </div><br />
+                                <div>
+                                    <label htmlFor="popup-id1">Unity</label><br />
+                                    <input className='popup-inputs' type="text" />
+                                </div><br />
+                                <div>
+                                    <label htmlFor="popup-id1">Node JS</label><br />
+                                    <input className='popup-inputs' type="text" />
+                                </div><br />
+                            </div><br />
+                        </div>
+
+                    </div>
+
                 </div>
             </Modal>
             <div>
@@ -50,7 +94,7 @@ const CandidateFormBody = () => {
                         <div className='Candidate-Name'><br />
 
                             <label htmlFor="">Candidate Name</label><br /><br />
-                            <input type="text" placeholder='Type Name here...' />
+                            <input type="text" className='name-input' placeholder='Type Name here...' />
 
                         </div>
                         <div className='Candidate-Name'><br /><br />
@@ -68,7 +112,7 @@ const CandidateFormBody = () => {
                         <div className='Candidate-Name'><br /><br />
 
                             <label htmlFor="">Current Location (State)</label><br /><br />
-                            <input type="text" placeholder='eg. California' />
+                            <input type="text" className='name-input' placeholder='eg. California' />
 
                         </div>
                         <div className='Candidate-Name'><br /><br />
@@ -124,14 +168,14 @@ const CandidateFormBody = () => {
                         <div className='Candidate-Name'><br /><br />
 
                             <label htmlFor="">Profile Source</label><br /><br />
-                            <input type="text" placeholder='eg. Monster' />
+                            <input type="text" className='name-input' placeholder='eg. Monster' />
 
                         </div>
                         <div className='Candidate-Name1'><br /><br />
 
                             <label htmlFor="" className='experience'>Number of Years of Experience</label><br /><br />
                             <input type="text" />
-                            <button className='skill-but' onClick={showModal}>Per Skill</button>
+                            <button className='skill-but' onClick={skillModal}>Per Skill</button>
                         </div>
 
                         <div className='Candidate-Name'><br /><br />
@@ -211,7 +255,7 @@ const CandidateFormBody = () => {
                         <div className='Candidate-Name'><br /><br />
 
                             <label htmlFor="">Current Location (City)</label><br /><br />
-                            <input type="text" placeholder='eg. California City' />
+                            <input type="text" className='name-input' placeholder='eg. California City' />
 
                         </div>
                         <div className='Candidate-Name'><br /><br />
@@ -253,7 +297,7 @@ const CandidateFormBody = () => {
                         <div className='Candidate-Name'><br /><br />
 
                             <label htmlFor="">Interview Availability</label><br /><br />
-                            <input type="text" placeholder='Type date and time here' />
+                            <input type="text" className='name-input' placeholder='Type date and time here' />
 
                         </div>
                         <div className='Candidate-Name'><br /><br />
@@ -282,7 +326,8 @@ const CandidateFormBody = () => {
 
                 <div className='foot-input'>
                     <div>
-                        <label htmlFor="" className='selecter-label'>ADDITIONAL NOTIFICATIONS <BsQuestionCircleFill className='qsn-icon' /></label><br /><br />
+                        <label htmlFor="" className='selecter-label'>ADDITIONAL NOTIFICATIONS <Tooltip  color={"#1B90FF 0% 0% no-repeat padding-box"} placement="top" title="Notify them via email before submission"><BsQuestionCircleFill className='qsn-icon' />
+                        </Tooltip></label><br /><br />
                         <button className='selecter-but'>Select</button>
                         <button className='arrow-icon'><IoIosArrowDown /></button>
                     </div>
