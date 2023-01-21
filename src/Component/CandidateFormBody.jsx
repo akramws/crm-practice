@@ -57,12 +57,12 @@ const CandidateFormBody = () => {
                                     <input id='popup-id1' className='popup-inputs' type="text" />
                                 </div><br />
                                 <div>
-                                    <label htmlFor="popup-id1">Javascript</label><br />
-                                    <input className='popup-inputs' type="text" />
+                                    <label htmlFor="popup-id2">Javascript</label><br />
+                                    <input id='popup-id2' className='popup-inputs' type="text" />
                                 </div><br />
                                 <div>
-                                    <label htmlFor="popup-id1">Python</label><br />
-                                    <input className='popup-inputs' type="text" />
+                                    <label htmlFor="popup-id3">Python</label><br />
+                                    <input id='popup-id3' className='popup-inputs' type="text" />
                                 </div><br />
                             </div><br />
                         </div>
@@ -70,16 +70,16 @@ const CandidateFormBody = () => {
                         <div className='group-popup-inputs2'>
                             <div>
                                 <div>
-                                    <label htmlFor="popup-id1">React</label><br />
-                                    <input className='popup-inputs' type="text" />
+                                    <label htmlFor="popup-id4">React</label><br />
+                                    <input id='popup-id4' className='popup-inputs' type="text" />
                                 </div><br />
                                 <div>
-                                    <label htmlFor="popup-id1">Unity</label><br />
-                                    <input className='popup-inputs' type="text" />
+                                    <label htmlFor="popup-id5">Unity</label><br />
+                                    <input id='popup-id5' className='popup-inputs' type="text" />
                                 </div><br />
                                 <div>
-                                    <label htmlFor="popup-id1">Node JS</label><br />
-                                    <input className='popup-inputs' type="text" />
+                                    <label htmlFor="popup-id6">Node JS</label><br />
+                                    <input id='popup-id6' className='popup-inputs' type="text" />
                                 </div><br />
                             </div><br />
                         </div>

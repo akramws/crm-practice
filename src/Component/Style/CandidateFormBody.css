@@ -322,6 +322,7 @@
     height: 19px;
     opacity: 1;
     color: #1B90FF;
+    cursor: pointer;
 }
 
 .sub-but {
