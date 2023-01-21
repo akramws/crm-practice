@@ -167,6 +167,10 @@
 .userAllCheckbox1{
     padding-left: 7px;
 }
+.userAllCheckbox1 input[type='checkbox']{
+    width: 35px;
+    height: 17px;
+}
 .userIddiv{
     display: flex;
     justify-content: center;
