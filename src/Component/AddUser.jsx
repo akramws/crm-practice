@@ -10,16 +10,23 @@ const AddUser = () => {
         </div>
         <div className="add-user-form-header">
           <form action="" className="add-user-form-body">
-            <label htmlFor="uName">User Name</label><br />
-            <input type="text" id="uName" /><br />
+            <label htmlFor="uName">User Name</label>
+            <br />
+            <input type="text" id="uName" />
+            <br />
 
-            <label htmlFor="pNumber">Phone Number</label><br />
-            <input type="text" id="pNumber" /><br />
+            <label htmlFor="pNumber">Phone Number</label>
+            <br />
+            <input type="text" id="pNumber" />
+            <br />
 
-            <label htmlFor="email">Email ID</label><br />
-            <input type="email" id="email" /><br />
+            <label htmlFor="email">Email ID</label>
+            <br />
+            <input type="email" id="email" />
+            <br />
 
-            <label htmlFor="role">Role</label><br />
+            <label htmlFor="role">Role</label>
+            <br />
             <select id="role">
               <option selected hidden>
                 Select
@@ -27,15 +34,22 @@ const AddUser = () => {
               <option>Team Lead</option>
               <option>Admin</option>
               <option>Team Member</option>
-            </select><br />
+            </select>
+            <br />
 
-            <label htmlFor="password">Password</label><br />
-            <input type="password" id="password" /><br />
+            <label htmlFor="password">Password</label>
+            <br />
+            <input type="password" id="password" />
+            <br />
 
-            <label htmlFor="confirmPassword">Confirm Password</label><br />
-            <input type="password" id="confirmPassword" /><br />
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <br />
+            <input type="password" id="confirmPassword" />
+            <br />
 
-            <button>Submit</button>
+            <button>
+              <p>Submit</p>
+            </button>
           </form>
         </div>
       </div>

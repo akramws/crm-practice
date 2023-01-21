@@ -34,13 +34,103 @@ const Candidate = () => {
         className="candidate-export"
       >
         <div className="export-div">  
+        <div className="export-button-div">
           <div className="export-text"><p>Export</p></div>
+          <div className="cross-button"><button className="x-btn" onClick={hideModal}>x</button></div></div>
           <div className="export-type">
-            <span>Export</span>
+            <span>Export As</span>
             <input type="radio" id="excel"/>
             <label htmlFor="excel">Excel</label>
             <input type="radio" id="csv"/>
             <label htmlFor="csv">CSV</label>
+          </div>
+          <div className="checkbox-div">
+            <div className="select-label">
+            <label ><input type="checkbox" ></input>Select All</label></div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+            <div className="all-checkbox">
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            <label><input type="checkbox" ></input>Username</label>
+            </div>
+          </div>
+          <div className="exportbtn">
+            <button className="export-button" onClick={hideModal}>Export</button>
+            <button className="cancel-button" onClick={hideModal}>Cancel</button>
+
           </div>
 
         </div>
