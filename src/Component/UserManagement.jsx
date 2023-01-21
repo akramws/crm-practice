@@ -7,6 +7,7 @@ import { BiReset } from 'react-icons/bi'
 import { TfiExport } from 'react-icons/tfi'
 import { FaFilter } from 'react-icons/fa'
 import { MdDelete } from 'react-icons/md';
+import { Select, Tag } from 'antd';
 import { Modal, Switch } from 'antd';
 import { BsFillPersonCheckFill } from 'react-icons/bs'
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineRight } from 'react-icons/ai'
@@ -48,10 +49,10 @@ const UserManagement = () => {
                     <div className='userExportSecound'>
                         <h2>Export As</h2>
                         <span className='userExportSecoundSpan1'>
-                        <input name='Export' type="radio" /><label htmlFor="">Excel</label>
+                            <input name='Export' type="radio" /><label htmlFor="">Excel</label>
                         </span>
                         <span className='userExportSecoundSpan2'>
-                        <input name='Export' type="radio" /><label htmlFor="">Csv</label>
+                            <input name='Export' type="radio" /><label htmlFor="">Csv</label>
                         </span>
                     </div>
                     <div className='ExportThree'>
@@ -265,10 +266,10 @@ const UserManagement = () => {
                         </div>
                     </div>
 
-                        <div className='ExportFooter'>
-                            <button className='ExportFooterBut1'>Export</button>
-                            <button className='ExportFooterBut2' onClick={() => setOpen(false)} >Cancel</button>
-                        </div>
+                    <div className='ExportFooter'>
+                        <button className='ExportFooterBut1'>Export</button>
+                        <button className='ExportFooterBut2' onClick={() => setOpen(false)} >Cancel</button>
+                    </div>
 
                 </div>
             </Modal>
@@ -452,7 +453,32 @@ const UserManagement = () => {
                                 </div>
                                 <div className='usertextdiv'>
                                     <div className='userResultdiv'>
-                                        <span>Result per page <button className='userResultbut'>10</button><button className='userResultbut1'><AiOutlineDown /></button> </span>
+                                        <span>Result per page</span>
+                                        <span>
+                                            <Select
+                                                className='select-option-form'
+                                                optionFilterProp="children"
+                                                style={{ width: '150%' }}
+                                                defaultValue="10"
+                                                filterOption={(input, option) =>
+                                                    (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                                                }
+                                                options={[
+                                                    {
+                                                        value: '50',
+                                                        label: '50',
+                                                    },
+                                                    {
+                                                        value: '100',
+                                                        label: '100',
+                                                    },
+                                                    {
+                                                        value: '10',
+                                                        label: '10',
+                                                    },
+                                                ]}
+                                            />
+                                            </span>
                                     </div>
                                     <div className='userFooterbutton'>
                                         <button id='userFooterbutton1'>1</button>
