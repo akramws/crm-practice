@@ -298,3 +298,38 @@ body {
   margin-left: 50px;
 }
 
+.candidate-export .ant-modal-content{
+  margin: -40px -280px;
+  width: 78vw;
+  height: 100vh;
+  padding: 0;
+}
+
+.export-div {
+  display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 0!important;
+flex-direction: column;
+
+
+}
+.candidate-export .export-text {
+width: 245px;
+height: 53px;
+background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+border-radius: 0px 0px 65px 65px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #ffffff;
+font: normal normal bold 22px/25px Mulish;
+
+
+}
+
+.export-div .export-type {
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: start;}
