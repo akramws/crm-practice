@@ -7,6 +7,7 @@ import { BiReset } from 'react-icons/bi'
 import { TfiExport } from 'react-icons/tfi'
 import { FaFilter } from 'react-icons/fa'
 import { MdDelete } from 'react-icons/md';
+import { Select, Tag } from 'antd';
 import { Modal, Switch } from 'antd';
 import { BsFillPersonCheckFill } from 'react-icons/bs'
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineRight } from 'react-icons/ai'
@@ -15,7 +16,19 @@ const UserManagement = () => {
 
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
-    
+    const [open1, setOpen1] = useState(false);
+    const showModal1 = () => {
+        setOpen1(true);
+    };
+
+    const handleOk = (e) => {
+        console.log(e);
+        setOpen(false);
+    };
+    const handleCancel = (e) => {
+        console.log(e);
+        setOpen(false);
+    };
 
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
@@ -31,8 +44,25 @@ const UserManagement = () => {
 
 
 
+
     return (
         <>
+
+            <Modal
+                open={open1}
+                onOk={handleOk}
+                onCancel={handleCancel}>
+
+                <div className='pop-up'>
+                    <h1>Confirm  Log Out?</h1>
+                    <div className='popup-btn'>
+                        <button onClick={()=> setOpen1(false)}>Cancel</button>
+                        <button onClick={()=> setOpen1(false)}>Delete</button>
+                    </div>
+                </div>
+
+            </Modal>
+
 
             <Modal
                 title="Modal 1000px width"
@@ -46,7 +76,7 @@ const UserManagement = () => {
                     <div className='UserManagmentHead'>
                         <header>
                             <p>Export</p>
-                            <button>X</button>
+                            <button onClick={() => setOpen(false)}>X</button>
                         </header>
                     </div>
                     <div className='userExportSecound'>
@@ -272,6 +302,7 @@ const UserManagement = () => {
                     <div className='ExportFooter'>
                         <button className='ExportFooterBut1'>Export</button>
                         <button className='ExportFooterBut2'>Cancel</button>
+                        <button className='ExportFooterBut2' onClick={() => setOpen(false)} >Cancel</button>
                     </div>
 
                 </div>
@@ -319,10 +350,10 @@ const UserManagement = () => {
                                     <th>Status <FaFilter style={{ fontSize: '13px' }} /></th>
                                     <th>Actions</th>
                                     <th></th>
-                                        <th className='userDelete1' style={{ opacity: deletebut }}>
-                                            <span><MdDelete className='userDelete' style={{ fontSize: '18px' }} /></span>
-                                            <span className='userDelete' style={{ fontSize: '15px' }}>Delete</span>
-                                        </th>
+                                    <th className='userDelete1' style={{ opacity: deletebut }}>
+                                        <span><MdDelete onClick={showModal1} className='userDelete' style={{ fontSize: '18px' }} /></span>
+                                        <span className='userDelete' style={{ fontSize: '15px' }}>Delete</span>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody className='userTbody'>
@@ -463,7 +494,32 @@ const UserManagement = () => {
                                 </div>
                                 <div className='usertextdiv'>
                                     <div className='userResultdiv'>
-                                        <span>Result per page <button className='userResultbut'>10</button><button className='userResultbut1'><AiOutlineDown /></button> </span>
+                                        <span>Result per page</span>
+                                        <span>
+                                            <Select
+                                                className='select-option-form'
+                                                optionFilterProp="children"
+                                                style={{ width: '150%' }}
+                                                defaultValue="10"
+                                                filterOption={(input, option) =>
+                                                    (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                                                }
+                                                options={[
+                                                    {
+                                                        value: '50',
+                                                        label: '50',
+                                                    },
+                                                    {
+                                                        value: '100',
+                                                        label: '100',
+                                                    },
+                                                    {
+                                                        value: '10',
+                                                        label: '10',
+                                                    },
+                                                ]}
+                                            />
+                                        </span>
                                     </div>
                                     <div className='userFooterbutton'>
                                         <button id='userFooterbutton1'>1</button>
