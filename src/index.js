@@ -9,6 +9,7 @@ import Dashboard from "./Component/Dashboard";
 import LoginPage from "./Component/LoginPage";
 import DetailForm from "./Component/DetailForm";
 import AddUser from "./Component/AddUser";
+import Sidebar from "./Component/Sidebar";
 export default function Index() {
   return (
     <BrowserRouter>
