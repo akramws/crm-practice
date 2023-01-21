@@ -4,12 +4,14 @@ import './App.css';
 
 import Header from "./Component/Header";
 import Candidate from "./Component/Candidate";
-import UserManagement from "./Component/UserManagement";
+import UserManagement from "./Component/Usermanagement";
 import Dashboard from "./Component/Dashboard";
 import LoginPage from "./Component/LoginPage";
 import DetailForm from "./Component/DetailForm";
 import AddUser from "./Component/AddUser";
 import Sidebar from "./Component/Sidebar";
+import RightSideBox from "./Component/RightSideBox";
+import ManageTeam from "./Component/ManageTeam";
 export default function Index() {
   return (
     <BrowserRouter>
@@ -20,7 +22,7 @@ export default function Index() {
         <Route path="/user-management" element={<>
           <Header />
           <UserManagement />
-          <Sidebar/>
+          <Sidebar />
         </>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<>
@@ -29,6 +31,8 @@ export default function Index() {
         </>
         } />
         <Route path="/form" element={<DetailForm />} />
+        <Route path="/right-side-box" element={<RightSideBox />} />
+        <Route path="/ManageTeam" element={<ManageTeam />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
     </BrowserRouter>

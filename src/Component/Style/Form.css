@@ -101,6 +101,7 @@
 
 .ant-switch-checked {
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box !important;
+    
 }
 
 .or {
@@ -198,37 +199,8 @@
 
 }
 
-@keyframes myfirst {
-    0% {
-        background: red;
-        left: 0px;
-        top: 0px;
-    }
 
-    25% {
-        background: yellow;
-        left: 200px;
-        top: 0px;
-    }
 
-    50% {
-        background: blue;
-        left: 200px;
-        top: 200px;
-    }
-
-    75% {
-        background: green;
-        left: 0px;
-        top: 200px;
-    }
-
-    100% {
-        background: red;
-        left: 0px;
-        top: 0px;
-    }
-}
 
 .footer-form-div {
     width: 1440px;
@@ -265,6 +237,11 @@
     color: #043C79;
 }
 
-.ant-tooltip-content .ant-tooltip-inner {
+.ant-tooltip-content  .ant-tooltip-inner{
     font-style: italic !important;
+    
+    
+}
+#tooltips-1-quetion-div{
+    width: 300px;
 }
