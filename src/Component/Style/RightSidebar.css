@@ -11,6 +11,7 @@
     background: transparent linear-gradient(180deg, #535353 0%, #535353 100%) 0%
       0% no-repeat padding-box;
     justify-content: start;
+    z-index: 1;
   }
   .right-sidebar img {
     width: 150px;

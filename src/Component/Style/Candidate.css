@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
   height: 83vh;
   position: relative;
 }
+
 .candidate-page .name-footer {
   bottom: 0;
   width: 100vw;
@@ -21,10 +23,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .candidate-page .name-footer img {
   filter: drop-shadow(0 0 0.5rem #0e4d92);
   height: 30px;
 }
+
 .candidate-page .candidate-container {
   width: 90vw;
   height: 78vh;
@@ -33,6 +37,7 @@ body {
   border-radius: 10px;
   margin: 10px 30px 10px 60px;
 }
+
 .candidate-page .candidate-container .candidate-navbar {
   width: 90vw;
   height: 10vh;
@@ -49,6 +54,7 @@ body {
   align-items: center;
   position: relative;
 }
+
 .candidate-page .candidate-navbar .search-navbar .search-input input {
   outline: none;
   border: none;
@@ -62,25 +68,19 @@ body {
   font: normal normal normal 14px/15px Mulish;
   border-right: 1px solid #043c79;
 
-
 }
-.candidate-page
-  .candidate-navbar
-  .search-navbar
-  .search-input
-  input::placeholder {
+
+.candidate-page .candidate-navbar .search-navbar .search-input input::placeholder {
   font: normal normal normal 14px/15px Mulish;
   letter-spacing: 0px;
   color: #d5e9ff;
 }
-.candidate-page
-  .candidate-navbar
-  .search-navbar
-  .search-input
-  input:focus-within {
+
+.candidate-page .candidate-navbar .search-navbar .search-input input:focus-within {
   border: none;
   outline: none;
 }
+
 .search-input .search-icon {
   color: #0e4d92;
   position: absolute;
@@ -88,10 +88,12 @@ body {
   top: 7px;
   left: 9px;
 }
+
 .search-input span .search-btn:focus-within {
   border: none;
   outline: none;
 }
+
 .search-input span .search-btn {
   border: none;
   height: 35px;
@@ -115,8 +117,7 @@ body {
 .candidate-page .candidate-logo {
   width: 310px;
   height: 48px;
-  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0%
-    0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0% 0% no-repeat padding-box;
   border-radius: 0px 0px 65px 65px;
   font: normal normal bold 20px/25px Mulish;
   letter-spacing: 0px;
@@ -128,11 +129,11 @@ body {
 .candidate-page .nav-btn {
   display: flex;
 }
+
 .candidate-page .nav-btn .btn-reset {
   width: 73px;
   height: 32px;
-  background: transparent linear-gradient(180deg, #cecece 0%, #8a8888 100%) 0%
-    0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #cecece 0%, #8a8888 100%) 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 1px #00000029;
   border-radius: 3px;
   border: none;
@@ -145,11 +146,11 @@ body {
   align-items: center;
   gap: 2px;
 }
+
 .candidate-page .nav-btn .btn-export {
   width: 73px;
   height: 32px;
-  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0%
-    0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 1px #00000029;
   border-radius: 3px;
   border: none;
@@ -163,11 +164,11 @@ body {
   gap: 2px;
 
 }
+
 .candidate-page .nav-btn .btn-usermanage {
   width: 140px;
   height: 32px;
-  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0%
-    0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 1px #00000029;
   border-radius: 3px;
   border: none;
@@ -191,11 +192,13 @@ body {
   background: #e3f0ff 0% 0% no-repeat padding-box;
   border-radius: 0px 0px 10px 10px;
 }
+
 .footer-pageresult {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .candidate-footer .footer-pageresult .per-page {
   font: normal normal bold 12px/15px Mulish;
   letter-spacing: 0px;
@@ -215,9 +218,11 @@ body {
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
+
 .candidate-footer .footer-pageresult input::placeholder {
   color: #0e4d92;
 }
+
 .candidate-footer .footer-pageresult button {
   width: 35px;
   height: 31px;
@@ -227,9 +232,11 @@ body {
   border-left: none;
   background: #ffffff 0% 0% no-repeat padding-box;
 }
+
 .candidate-footer .pagination-div {
   padding-right: 25px;
 }
+
 .candidate-footer .pagination-div button {
   width: 30px;
   height: 31px;
@@ -238,6 +245,7 @@ body {
   border: none;
   font: normal normal medium 12px/15px Mulish;
 }
+
 .candidate-footer .pagination-div .active {
   background: #0e4d92 0% 0% no-repeat padding-box;
   color: #ffffff;
@@ -248,14 +256,17 @@ body {
   color: #0e4d92;
   font: normal normal bold 15px/16px Mulish;
 }
+
 .candidate-main {
   overflow-x: scroll;
 }
+
 .candidate-main table {
   border-collapse: collapse;
   text-align: start;
   white-space: nowrap;
 }
+
 .candidate-main table thead tr,
 .candidate-main table tbody tr {
   height: 41.79px;
@@ -263,6 +274,7 @@ body {
   text-align: start;
   vertical-align: middle;
 }
+
 .candidate-main table thead tr th {
   width: 150px;
   padding: 5px 10px;
@@ -277,6 +289,7 @@ body {
   padding: 5px 10px;
   text-align: start;
 }
+
 .candidate-page .candidate-footer .entries {
   text-align: center;
   font: normal normal bold 12px/15px Mulish;
