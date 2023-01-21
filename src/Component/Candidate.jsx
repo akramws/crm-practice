@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Style/Candidate.css";
 import text from "../assets/images/Wiseskulls_Text.png";
 import { BiSearch } from "react-icons/bi";
@@ -10,14 +10,42 @@ import { RxDoubleArrowRight } from "react-icons/rx";
 import Header from "./Header";
 import { useNavigate } from "react-router";
 import Sidebar from "./Sidebar";
+import { Modal} from 'antd';
+
 
 const Candidate = () => {
 
     const navigate = useNavigate(); 
+    const [open, setOpen] = useState(false);
+    const showModal = () => {
+      setOpen(true);
+    };
+    const hideModal = () => {
+      setOpen(false);
+    };
    
 
   return (
     <>
+    <Modal
+        open={open}
+        onOk={hideModal}
+        onCancel={hideModal}
+        className="candidate-export"
+      >
+        <div className="export-div">  
+          <div className="export-text"><p>Export</p></div>
+          <div className="export-type">
+            <span>Export</span>
+            <input type="radio" id="excel"/>
+            <label htmlFor="excel">Excel</label>
+            <input type="radio" id="csv"/>
+            <label htmlFor="csv">CSV</label>
+          </div>
+
+        </div>
+       
+      </Modal>
     <Header/>
     <div className="candidate-page">
       <div className="candidate-container">
@@ -43,7 +71,7 @@ const Candidate = () => {
               <BiReset style={{ fontSize: "16px" }} />
               Reset
             </button>
-            <button className="btn-export">
+            <button className="btn-export" onClick={showModal}>
               <TbDownload style={{ fontSize: "16px" }} />
               Export
             </button>
@@ -79,20 +107,16 @@ const Candidate = () => {
                   Current Location <FaFilter style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
-                  Visa Type
-                  <FaFilter style={{ fontSize: "11px" }}/>
+                  Visa Type <FaFilter style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
-                  Job Location
-                  <FaFilter  style={{ fontSize: "11px" }}/>
+                  Job Location <FaFilter  style={{ fontSize: "11px" }}/>
                 </th>
                 <th>
-                  Sales Person
-                  <FaFilter style={{ fontSize: "11px" }} />
+                  Sales Person <FaFilter style={{ fontSize: "11px" }} />
                 </th>
                 <th>
-                  Hiring Manager
-                  <FaFilter style={{ fontSize: "11px" }} />
+                  Hiring Manager <FaFilter style={{ fontSize: "11px" }} />
                 </th>
               </tr>
             </thead>
