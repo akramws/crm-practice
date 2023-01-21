@@ -8,13 +8,14 @@ import UserManagement from "./Component/UserManagement";
 import Dashboard from "./Component/Dashboard";
 import LoginPage from "./Component/LoginPage";
 import DetailForm from "./Component/DetailForm";
-import Sidebar from "./Component/Sidebar";
+import AddUser from "./Component/AddUser";
 export default function Index() {
   return (
     <BrowserRouter>
       <Routes>
         {/* <Route path="/login" element={<App />} /> */}
         <Route path="/candidate-listing" element={<Candidate />} />
+        <Route path="/add-user" element={<AddUser />} />
         <Route path="/user-management" element={<>
           <Header />
           <UserManagement />

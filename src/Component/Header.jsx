@@ -4,9 +4,10 @@ import WiseSkull from "../assets/images/Wiseskulls_Text.png"
 import WiseSkull2 from "../assets/images/wise.png"
 import { IoIosArrowRoundForward,IoIosArrowRoundBack} from "react-icons/io"
 import { Button, Modal } from 'antd';
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 const Header = () => {
+  const Navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
   const showModal = () => {
@@ -34,7 +35,7 @@ const Header = () => {
           <h1>Confirm  Log Out?</h1>
           <div className='popup-btn'>
             <button onClick={handleCancel}>Cancel</button>
-            <button onClick={handleOk} >Log Out</button>
+            <button onClick={()=>{Navigate("/login")}} >Log Out</button>
           </div>
         </div>
       </Modal>
