@@ -10,7 +10,7 @@ import { RxDoubleArrowRight } from "react-icons/rx";
 import Header from "./Header";
 import { useNavigate } from "react-router";
 import Sidebar from "./Sidebar";
-import { Modal} from 'antd';
+import { Modal,Space} from 'antd';
 
 
 const Candidate = () => {

@@ -329,7 +329,28 @@ font: normal normal bold 22px/25px Mulish;
 }
 
 .export-div .export-type {
+ width: 100%;
 display: flex;
 align-items: center;
 flex-direction: row;
-justify-content: start;}
+justify-content: start;
+border-bottom: 1px solid black ;
+letter-spacing: 0px;
+color: #000000;
+gap: 10px;
+padding: 10px 0 10px 30px;
+
+}
+
+.export-div .export-type span {
+  font: normal normal bold 20px/30px Mulish;
+}
+
+.export-div .export-type label {
+  font: normal normal medium 15px/19px Mulish;
+}
+
+.export-div .export-type input[type ="radio"] {
+  width: 30px;
+height: 16px;
+}
