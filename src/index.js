@@ -4,7 +4,7 @@ import './App.css';
 
 import Header from "./Component/Header";
 import Candidate from "./Component/Candidate";
-import UserManagement from "./Component/UserManagement";
+import UserManagement from "./Component/Usermanagement";
 import Dashboard from "./Component/Dashboard";
 import LoginPage from "./Component/LoginPage";
 import DetailForm from "./Component/DetailForm";
