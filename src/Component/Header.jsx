@@ -28,8 +28,8 @@ const Header = () => {
       <Modal
         open={open}
         onOk={handleOk}
-        onCancel={handleCancel}
-      >
+        onCancel={handleCancel}>
+          
         <div className='pop-up'>
           <h1>Confirm  Log Out?</h1>
           <div className='popup-btn'>

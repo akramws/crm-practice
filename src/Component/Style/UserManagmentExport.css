@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish";
+}
+.UserManagment-export{
+    width: 70vw;
+    height: 70vh;
+    border: 1px solid black;
+    background-color: azure;
+    display: flex;
+}
+.ModanExport .ant-modal-content{
+    opacity: 1;
+    width: 100%;
+    height: 95vh;
+    padding: 0;
+}
+.ModanExport{
+    margin-top: -150px;
+    padding: 0;
+}
+.ant-modal-title{
+    display: none;
+}
+.UserManagmentHead header{
+    display: flex;
+    justify-content: space-between;
+}
+.UserManagmentHead header p {
+    margin-left: 400px;
+    width: 200px;
+    height: 45px;
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    padding-top: 12px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    border: none;
+}
+.UserManagmentHead header button{
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    margin-right: 15px;
+    color: #0E4D92;
+}
+.userExportSecound{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 2px solid #F2F2F2;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+}
+.userExportSecound span{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.userExportSecound span label{
+    font-size: 15px;
+    font-weight: bold;
+}
+.userExportSecoundSpan1{
+    margin-left: 30px;
+}
+.userExportSecoundSpan2{
+    margin-left: 20px;
+}
+.ExportThree{
+    margin-top: 25px;
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.ExportThree label{
+    font-size: 17px;
+    font-weight: bolder;
+    color: #0E4D92;
+}
+.ExportAllCheckbox{
+    display: flex;
+    justify-content: center;
+    gap: 157.5px;
+    margin-top: 15px;
+}
+.ExportAllCheckbox div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.ExportAllCheckbox div label {
+    color: #0E4D92;
+    font: normal normal 600 14px/22px "Mulish";
+}
+.ExportFooter{
+    margin-top: 43px;
+    width: 69.5vw;
+    height: 9vh;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.ExportFooter button{
+    width: 130px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.ExportFooterBut1{
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    opacity: 1;
+    border: none;
+    border-radius: 5px;
+}
+.ExportFooterBut2{
+    background: transparent linear-gradient(180deg, #CECECE 0%, #8A8888 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    opacity: 1;
+    border: none;
+    border-radius: 5px;
+    margin-right: 30px;
+}
