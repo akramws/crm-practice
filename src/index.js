@@ -9,6 +9,7 @@ import Dashboard from "./Component/Dashboard";
 import LoginPage from "./Component/LoginPage";
 import DetailForm from "./Component/DetailForm";
 import AddUser from "./Component/AddUser";
+import Sidebar from "./Component/Sidebar";
 export default function Index() {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ export default function Index() {
         <Route path="/user-management" element={<>
           <Header />
           <UserManagement />
+          <Sidebar/>
         </>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<>

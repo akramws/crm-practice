@@ -113,7 +113,7 @@ const CandidateForm = () => {
               /></div>
             <div className='text-italic-pop'>
 
-              <Tooltip color={"#26AD5F 0% 0% no-repeat padding-box"} className='toooltips-box' placement="left" title="  Must have Skills"  >
+              <Tooltip  color={"#26AD5F 0% 0% no-repeat padding-box"} className='toooltips-box' placement="left" title="  Must have Skills"  >
                 <div className='dase-dase-box'></div></Tooltip>
             </div>
 
