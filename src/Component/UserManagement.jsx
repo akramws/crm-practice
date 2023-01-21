@@ -54,8 +54,8 @@ const UserManagement = () => {
                 onCancel={handleCancel}>
 
                 <div className='pop-up'>
-                    <h1>Confirm  Log Out?</h1>
-                    <div className='popup-btn'>
+                    <h1>Confirm to Delete ?</h1>
+                    <div className='popup-click'>
                         <button onClick={()=> setOpen1(false)}>Cancel</button>
                         <button onClick={()=> setOpen1(false)}>Delete</button>
                     </div>
@@ -308,12 +308,7 @@ const UserManagement = () => {
                 </div>
             </Modal>
 
-
-
-
-
             <div className='usermanagementmaindiv'>
-
 
                 <div className='usermanagementmain'>
                     <header>
