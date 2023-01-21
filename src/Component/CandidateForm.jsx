@@ -63,7 +63,7 @@ const CandidateForm = () => {
           }
           <div className='footer-form-div'>
             <div className='Select-JPC-Job-Title-div'>
-              <label className='Select-JPC'>Select JPC/Job Title<Tooltip  color={"#1B90FF"} style={{ width: "800px" }} className='toooltips-box' placement="top" title="Choose a requirement from the dopdown"  >
+              <label className='Select-JPC'>Select JPC/Job Title<Tooltip  color={"#1B90FF"} style={{ width: "800px" }} className='toooltips-box' id="tooltips-1-quetion-div" placement="top" title="Choose a requirement from the dopdown"  >
               <BsQuestionCircleFill className='question-lable-icon' /></Tooltip></label><br />
               <Select
                 className='select-option-form'
@@ -119,7 +119,7 @@ const CandidateForm = () => {
               /></div>
             <div className='text-italic-pop'>
 
-              <Tooltip color={"#26AD5F 0% 0% no-repeat padding-box"} className='toooltips-box' placement="left" title="Must have Skills"  >
+              <Tooltip color={"#26AD5F 0% 0% no-repeat padding-box"}  className='toooltips-box' placement="left" title="Must have Skills"  >
                 <div className='dase-dase-box'></div></Tooltip>
             </div>
 

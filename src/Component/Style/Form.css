@@ -101,6 +101,7 @@
 
 .ant-switch-checked {
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box !important;
+    
 }
 
 .or {
@@ -236,7 +237,11 @@
     color: #043C79;
 }
 
-.ant-tooltip-content .ant-tooltip-inner {
+.ant-tooltip-content  .ant-tooltip-inner{
     font-style: italic !important;
     
+    
+}
+#tooltips-1-quetion-div{
+    width: 300px;
 }
