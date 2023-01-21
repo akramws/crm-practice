@@ -25,8 +25,9 @@ const CandidateFormBody = () => {
     };
 
     return (
-        <>
+        <div>
             <Modal
+                className='popup-modal'
                 open={open}
                 onOk={handleOk}
                 onCancel={handleCancel}
@@ -37,8 +38,10 @@ const CandidateFormBody = () => {
                     disabled: true,
                 }}
             >
-                <div>
+                <div >
+                    <div className='header-back'>
                     <header className='skill-head'>Skill Based Experience</header>
+                    </div>
                 </div>
             </Modal>
             <div>
@@ -299,7 +302,7 @@ const CandidateFormBody = () => {
                 <Sidebar />
                 <RightSidebar />
             </div>
-        </>
+        </div>
     )
 }
 

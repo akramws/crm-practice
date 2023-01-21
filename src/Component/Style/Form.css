@@ -14,8 +14,10 @@
     top: 0;
 background-color: #FFFFFF;
 
+
   
 }
+
 
 
 #on-green{
@@ -96,7 +98,9 @@ font: normal normal bold 15px/30px "Mulish";
     position: relative;
     top: .4rem;
     cursor: pointer;
+    
 }
+
 .ant-switch-checked{
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box !important;
 }
@@ -183,8 +187,18 @@ font: normal normal bold 15px/30px "Mulish";
 .toooltips-box{
     border-radius: 8px;
     border-spacing: 12px;
+   
+    
+   
      
  }
+ @keyframes myfirst {
+    0%   {background: red; left: 0px; top: 0px;}
+    25%  {background: yellow; left: 200px; top: 0px;}
+    50%  {background: blue; left: 200px; top: 200px;}
+    75%  {background: green; left: 0px; top: 200px;}
+    100% {background: red; left: 0px; top: 0px;}
+  }
 
 .footer-form-div{
     width: 1440px;

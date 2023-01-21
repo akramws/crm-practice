@@ -114,8 +114,12 @@
     width: 13px;
     height: 18px;
     accent-color: #4CD964;
-    cursor: pointer;
+    
 }
+
+/* input[type=checkbox] {
+    accent-color: green;
+  } */
 
 .input-details .sign-enter .remember-me span input:focus-visible {
     outline: none;
