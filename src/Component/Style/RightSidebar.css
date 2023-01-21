@@ -18,3 +18,28 @@
     margin-left: 5px;
     margin-bottom: 20px;    
   }
+
+
+  .right-modal .ant-modal-content{
+    left: 507px;
+    margin-top: 64px;
+    height: 430px;
+    color: #000000;
+    overflow: auto;
+    cursor: pointer;
+    opacity: 0.6;
+
+  }
+
+  .right-modal .ant-modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+.paragrap-title p{
+  font: normal normal normal 13px/15px Arial;
+}
+
+.main-box-boarder{
+  box-shadow: 0px 3px 6px #00000029;
+ 
+}
