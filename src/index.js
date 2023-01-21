@@ -10,6 +10,7 @@ import LoginPage from "./Component/LoginPage";
 import DetailForm from "./Component/DetailForm";
 import AddUser from "./Component/AddUser";
 import Sidebar from "./Component/Sidebar";
+import RightSideBox from "./Component/RightSideBox";
 export default function Index() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ export default function Index() {
         </>
         } />
         <Route path="/form" element={<DetailForm />} />
+        <Route path="/right-side-box" element={<RightSideBox />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
     </BrowserRouter>
