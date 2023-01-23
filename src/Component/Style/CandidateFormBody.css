@@ -65,7 +65,6 @@
     box-shadow: 0px 1px 1px #00000029;
     border-radius: 3px;
     opacity: 1;
-    flex-basis: 70%;
     position: relative;
     top: 5px;
     right: 44px;
@@ -268,7 +267,7 @@
     position: relative;
     top: 15px;
     left: 55px;
-    width: 1001px;
+    width: 100%;
     height: 25px;
     text-align: left;
     font: italic normal bold 20px/25px Mulish;
@@ -444,4 +443,7 @@
     letter-spacing: 0px;
     color: #043C79;
     opacity: 1;
+}
+#qsn-icon-tool{
+    width: 275px;
 }
