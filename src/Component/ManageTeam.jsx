@@ -1,5 +1,6 @@
 import React from 'react';
 import './Style/ManageTeam.css';
+import './Style/ManageTeamRight.css';
 import { RxCross2 } from "react-icons/rx";
 import { Popover } from 'antd';
 import UnderbarPopup from './UnderbarPopup';
