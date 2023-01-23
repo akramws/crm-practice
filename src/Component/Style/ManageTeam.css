@@ -6,7 +6,17 @@
 }
 .manageteam-main-div{
     width: 100%;
+    height: 100%;
     margin-top: 30px;
+}
+.page-margin-div{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   margin-left: 60px;
+   box-shadow: 2px 2px 2px 2px gray;
 }
 .manageteam-head{
 width: 300px;
@@ -58,7 +68,7 @@ color: #FFFFFF;
 justify-content: center;
 align-items: center;
 position: relative;
-left: 30rem;
+left: 25rem;
 }
 .head-btn-X{
     width: 60px;
@@ -68,7 +78,7 @@ justify-content: center;
 font-size: 25px;
 align-items: center;
 position: relative;
-left: 30rem;
+left: 25rem;
 }
 .manage-contant-main-div{
     width: 100%;

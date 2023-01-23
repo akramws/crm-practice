@@ -45,8 +45,8 @@ console.log("location",location);
 
       <header className='main-header'>
         <div className='logo-right'>
-          <img className='logo-img' src={WiseSkull2} alt="" />
-          <img className='photo-img ' src={WiseSkull} alt="" />
+          <img className='logo-img' src={WiseSkull2} alt="" onClick={() => { Navigate("/dashboard") }} />
+          <img className='photo-img ' src={WiseSkull} alt=""  onClick={() => { Navigate("/dashboard") }}/>
         </div>
         <div className='secund-part'>
           <div>

@@ -34,9 +34,10 @@ const UserManagement = () => {
         const handleClick = (e) => {
             if (userReff.current && !userReff.current.contains(e.target)) {
      
-                if(e.target.className === "userAdd"){
+                if(e.target.className === "userAdd" || e.target.className === "allEditbtn" ){
                 }else{
                     setOpenUser(false)
+                    setEditUser(false)
                 }
             }
           };
@@ -56,6 +57,8 @@ const UserManagement = () => {
     };
 
     console.log("openUser >>", openUser);
+    console.log("setEditUser", editUser);
+
 
     return (
         <>
@@ -480,7 +483,7 @@ const UserManagement = () => {
                     </div>
                 </div>
             </div>
-            {editUser && <EditUser/>}
+            {editUser && <EditUser userReff={userReff}/> }
             {openUser && <AddUser userReff={userReff} />}
         </>
     );

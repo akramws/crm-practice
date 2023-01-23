@@ -9,13 +9,13 @@ const ManageTeam = () => {
   return (
     
     <div className='manageteam-main-div'>
-        <div>
+        <div className='page-margin-div'>
             <div className='manage-team-parant-div'> 
                 <div className='manageteam-head'>Manage Teams</div>
                 <div className='head-but-div'>
 
               <Popover placement='bottomRight' content={<UnderbarPopup/>} trigger='click'>  
-                <button className='head-btn'>Creat Team</button>
+                <button className='head-btn'>Create Team</button>
                 </Popover>
 
                 <span className='head-btn-X'><RxCross2/></span>
