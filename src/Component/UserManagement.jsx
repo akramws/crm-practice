@@ -15,8 +15,10 @@ import {
     AiOutlineRight,
 } from "react-icons/ai";
 import AddUser from "./AddUser";
+import EditUser from "./EditUser";
 
 const UserManagement = () => {
+    const [editUser, setEditUser] = useState(false)
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
@@ -442,7 +444,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
                                         <td>Change Password</td>
@@ -466,7 +468,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td  className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -491,7 +493,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -515,7 +517,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
                                         <td>Change Password</td>
@@ -539,7 +541,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -564,7 +566,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -588,7 +590,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
                                         <td>Change Password</td>
@@ -612,7 +614,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -637,7 +639,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -662,7 +664,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -736,6 +738,7 @@ const UserManagement = () => {
                 </div>
             </div>
             {openUser && <AddUser />}
+            {editUser && <EditUser/>}
         </>
     );
 };
