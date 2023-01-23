@@ -27,6 +27,10 @@ const Candidate = () => {
     console.log(`selected ${value}`);
   }
 
+
+const  searchEvent = (e)=>{
+   console.log(e.target.value);
+}
   return (
     <>
       <Modal
@@ -262,7 +266,7 @@ const Candidate = () => {
                 <span className="search-icon">
                   <BiSearch style={{ fontSize: "24px" }} />
                 </span>
-                <input type="text" placeholder="Search any.." />
+                <input type="text" placeholder="Search any.." onChange={searchEvent} />
                 <span>
                   <div className="search-options">
                     <Select
@@ -270,6 +274,7 @@ const Candidate = () => {
                       onChange={handleChange}
                       className="search-select"
                     >
+                      <Option value="Search Any">Search Any</Option>
                       <Option value="Job Title">Job Title</Option>
                       <Option value="User">User</Option>
                       <Option value="Contacts" >
