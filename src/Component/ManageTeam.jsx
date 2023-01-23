@@ -1,10 +1,8 @@
 import React from 'react';
 import './Style/ManageTeam.css';
-import './Style/ManageTeamRight.css';
 import { RxCross2 } from "react-icons/rx";
 import { Popover } from 'antd';
 import UnderbarPopup from './UnderbarPopup';
-import ManageTeamRight from './ManageTeamRight';
 
 const ManageTeam = () => {
   return (
@@ -23,7 +21,7 @@ const ManageTeam = () => {
                 </div>
             </div>
             <div className='manage-team-body-div'>
-            <ManageTeamRight/>
+           
             </div>
         </div>
     </div>
