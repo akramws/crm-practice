@@ -4,7 +4,7 @@ import WiseSkull from "../assets/images/Wiseskulls_Text.png"
 import WiseSkull2 from "../assets/images/wise.png"
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io"
 import { Button, Modal } from 'antd';
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const Navigate = useNavigate();
@@ -21,8 +21,9 @@ const Header = () => {
     console.log(e);
     setOpen(false);
   };
+  let location = useLocation();
 
-
+console.log("location",location);
   return (
     <>
 
@@ -44,10 +45,13 @@ const Header = () => {
         <div className='logo-right'>
           <img className='logo-img' src={WiseSkull2} alt="" />
           <img className='photo-img' src={WiseSkull} alt="" />
+          <img className='logo-img' src={WiseSkull2} alt="" onClick={() => { Navigate("/dashboard") }} />
+          <img className='photo-img ' src={WiseSkull} alt=""  onClick={() => { Navigate("/dashboard") }}/>
         </div>
         <div className='secund-part'>
           <div>
-            <button className='second-btn' >Add Requirement</button>
+
+            {location.pathname !== "/dashboard" && <button className='second-btn' >Add Requirement</button> }
             <button className='fist-btn' onClick={showModal}  >Log Out</button>
 
           </div>
@@ -56,7 +60,8 @@ const Header = () => {
             <span><IoIosArrowRoundBack className='icon-Logo' /></span>
             <Link className="Link" to="/dashboard">Dashboard</Link>
             <div className='box-border'></div>
-            <Link className="Link" to="/candidate-listing">Go to Candidate Listing</Link>
+            { location.pathname !=="/candidate-listing" ? <Link className="Link" to="/candidate-listing">Go to Candidate Listing</Link>
+            : <Link className="Link" to="/form">Go to Candidate Form</Link>}
             <span><IoIosArrowRoundForward className='icon-Logo' /></span>
           </div>
         </div>

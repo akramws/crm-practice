@@ -42,9 +42,8 @@ const UserManagement = () => {
 
     return (
         <>
-            <Modal open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
+            <Modal className="SearchbarPopupModel" open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
                 <SearchbarPopup/>
-                
             </Modal>
             
             <Modal open={open1}>
