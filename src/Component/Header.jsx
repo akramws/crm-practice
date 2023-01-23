@@ -57,8 +57,8 @@ console.log("location",location);
           </div>
 
           <div className='text-liner'>
-            <span><IoIosArrowRoundBack className='icon-Logo' /></span>
-            <Link className="Link" to="/dashboard">Dashboard</Link>
+           {location.pathname !== "/dashboard" && <span><IoIosArrowRoundBack className='icon-Logo' /></span>}
+           {location.pathname !== "/dashboard" &&   <Link className="Link" to="/dashboard">Dashboard</Link> }
             <div className='box-border'></div>
             { location.pathname !=="/candidate-listing" ? <Link className="Link" to="/candidate-listing">Go to Candidate Listing</Link>
             : <Link className="Link" to="/form">Go to Candidate Form</Link>}
