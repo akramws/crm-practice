@@ -32,7 +32,6 @@ const Candidate = () => {
 const  searchEvent = (e)=>{
    console.log(e.target.value);
 }
-const mainTh ="ID";
 
 
 // const mainTh = ["ID"," Job Title", "Candidate's Name ","User","Contacts","Profile Source","Available In Job Market"," Current Location"," Visa Type"]
@@ -316,8 +315,8 @@ const mainTh ="ID";
             <table>
               <thead>
                 <tr>
-                  <th value={mainTh}>
-                    ID<Popover placement="bottom" content={<Contentpop mainTh={mainTh}/>} trigger="click" onClick={(e)=>{console.log(e);}}>
+                  <th onClick={()=>{console.log(document.getElementsByTagName("th")[0].outerText);}}>
+                    ID<Popover placement="bottom" content={<Contentpop/>} trigger="click" >
                     <FaFilter style={{ fontSize: "11px" }}/></Popover>
                   </th>
                   <th>
