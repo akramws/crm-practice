@@ -9,7 +9,7 @@
     position: relative;
 } */
 .all-body-parent-div {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -26,7 +26,7 @@
 }
 
 .main-form-div {
-    width: 100vw;
+    width: 100%;
 
     margin-top: 5px;
     padding-left: 5px;
@@ -39,7 +39,7 @@
 }
 
 .headerdiv {
-    width: 1400px;
+    width: 100%;
     height: 90PX;
     display: flex;
     justify-content: space-between;
@@ -141,7 +141,7 @@
   
 } */
 .slashe-div {
-    left: 1120px;
+   
     width: 0px;
     height: 16px;
     border: 1px solid black;
@@ -152,7 +152,7 @@
 
 .content-questions-line-div {
 
-    width: 1440px;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -203,7 +203,7 @@
 
 
 .footer-form-div {
-    width: 1440px;
+    width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -228,6 +228,7 @@
 
 .detail-form .select-option-form {
     background: #F2F2F2 0% 0% no-repeat padding-box;
+    position:sticky;
 }
 
 .Select-JPC {
