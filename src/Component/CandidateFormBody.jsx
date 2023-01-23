@@ -326,7 +326,7 @@ const CandidateFormBody = () => {
 
                 <div className='foot-input'>
                     <div>
-                        <label htmlFor="" className='selecter-label'>ADDITIONAL NOTIFICATIONS <Tooltip  color={"#1B90FF 0% 0% no-repeat padding-box"} placement="top" title="Notify them via email before submission"><BsQuestionCircleFill className='qsn-icon' />
+                        <label htmlFor="" className='selecter-label'>ADDITIONAL NOTIFICATIONS <Tooltip id='qsn-icon-tool'  color={"#1B90FF 0% 0% no-repeat padding-box"} placement="top" title="Notify them via email before submission"><BsQuestionCircleFill className='qsn-icon' />
                         </Tooltip></label><br /><br />
                         <button className='selecter-but'>Select</button>
                         <button className='arrow-icon'><IoIosArrowDown /></button>
