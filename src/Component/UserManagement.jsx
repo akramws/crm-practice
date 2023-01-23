@@ -16,6 +16,7 @@ import {
 } from "react-icons/ai";
 import AddUser from "./AddUser";
 import Export from "./Export";
+import EditUser from "./EditUser";
 
 const UserManagement = () => {
     const [editUser, setEditUser] = useState(false)
