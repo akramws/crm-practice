@@ -15,7 +15,7 @@ const ManageTeamRight = () => {
                 <li className='li-team'>Team Zeta</li><br />
                 <li className='li-team'>Team Tera</li><br />
                 <li className='li-team'>Team</li><br />
-                <li className='li-team'>Team Superman</li><br />
+                <li className='li-team'>Team Superman</li>
             </div>
 
         </div>
