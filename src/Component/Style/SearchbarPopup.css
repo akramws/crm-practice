@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.SearchbarPopupModel.ant-modal-content .ant-modal-content {
+    margin-top: 0px;
+}
+
+.SearchbarPopupModel.ant-modal .ant-modal-content {
+    height: 50px;
+    width: 900px;
+    padding: 1px 0px;
+    margin-top: 18px;
+    margin-left: -150px;
+    border-radius: 60px;
+    border: 0;
+    
+}
+
+.popup-Searchbar input {
+    height: 39px;
+    width: 730px;
+    border: 0;
+    padding-left: 70px;
+    outline: none;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+}
+
+.popup-Searchbar .searchBar-btn {
+    font-size: 23px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 18px;
+}
+
+.popup-Searchbar input::placeholder {
+    font-size: 20px;
+}
+
+.popup-Searchbar .experience-btn {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 610px;
+    font-weight: 700;
+    font-family: "Mulish";
+    color: #CECECE;
+    opacity: 1;
+}
+
+.popup-Searchbar .last-Serchbtn {
+    font-size: 18px;
+    height: 38px;
+    width: 150px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-top: 5px;
+    outline: none;
+    border: 0;
+}
