@@ -16,6 +16,10 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     z-index: 1;
+    color:#000000;
+    font-weight: bold;
+    opacity: 1;
+
 }
 
 .main-box-boarder .paragrap-title::-webkit-scrollbar{
@@ -24,5 +28,6 @@
 }
 .main-box-boarder .paragrap-title p{
     padding: 20px;
+
     
 }
