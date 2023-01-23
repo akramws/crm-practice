@@ -16,8 +16,10 @@ import {
 } from "react-icons/ai";
 import AddUser from "./AddUser";
 import Export from "./Export";
+import EditUser from "./EditUser";
 
 const UserManagement = () => {
+    const [editUser, setEditUser] = useState(false)
     const userReff = useRef()
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
@@ -185,7 +187,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
                                         <td>Change Password</td>
@@ -209,7 +211,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td  className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -234,7 +236,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -258,7 +260,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
                                         <td>Change Password</td>
@@ -282,7 +284,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -307,7 +309,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -331,7 +333,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
                                         <td>Change Password</td>
@@ -355,7 +357,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -380,7 +382,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -405,7 +407,7 @@ const UserManagement = () => {
                                                 unCheckedChildren="Inactive"
                                             />
                                         </td>
-                                        <td>
+                                        <td className="allEditbtn" onClick={() => setEditUser(!editUser)}>
                                             {" "}
                                             <BsFillPersonCheckFill /> Edit
                                         </td>
@@ -478,6 +480,7 @@ const UserManagement = () => {
                     </div>
                 </div>
             </div>
+            {editUser && <EditUser/>}
             {openUser && <AddUser userReff={userReff} />}
         </>
     );
