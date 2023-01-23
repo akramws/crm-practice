@@ -15,6 +15,7 @@ import {
     AiOutlineRight,
 } from "react-icons/ai";
 import AddUser from "./AddUser";
+import SearchbarPopup from "./SearchbarPopup";
 
 const UserManagement = () => {
     const [deletebut, setDeleteBut] = useState("0");
@@ -37,8 +38,15 @@ const UserManagement = () => {
 
     console.log("openUser >>", openUser);
 
+    const [searchBarInput,setSearchBarInput] = useState(false)
+
     return (
         <>
+            <Modal open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
+                <SearchbarPopup/>
+                
+            </Modal>
+            
             <Modal open={open1}>
                 <div className="pop-up">
                     <h1>Confirm to Delete ?</h1>
@@ -354,6 +362,9 @@ const UserManagement = () => {
                                             style={{ fontSize: "13px" }}
                                         />
                                     </button>
+                                </div>
+                                <div className="advanceSearch" >
+                                        <p onClick={() => setSearchBarInput(true)} >Advanced Search</p>
                                 </div>
                                 <div className="userManagmentText">
                                     <p>User Management</p>
