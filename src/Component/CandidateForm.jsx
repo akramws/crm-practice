@@ -65,11 +65,11 @@ const CandidateForm = () => {
             <div className='Select-JPC-Job-Title-div'>
               <label className='Select-JPC'>Select JPC/Job Title<Tooltip  color={"#1B90FF"} style={{ width: "800px" }} className='toooltips-box' id="tooltips-1-quetion-div" placement="top" title="Choose a requirement from the dopdown"  >
               <BsQuestionCircleFill className='question-lable-icon' /></Tooltip></label><br />
-              <Select
+              <div className='select-in-form'><Select
                 className='select-option-form-inp01'
                 defaultValue="Rohit"
                 optionFilterProp="children"
-                style={{ width: '160%' }}
+                style={{ width: '250px' }}
                 filterOption={(input, option) =>
                   (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                 }
@@ -116,7 +116,7 @@ const CandidateForm = () => {
                   },
 
                 ]}
-              /></div>
+              /></div></div>
             <div className='text-italic-pop'>
 
               <Tooltip color={"#26AD5F 0% 0% no-repeat padding-box"}  className='toooltips-box' placement="left" title="Must have Skills"  >
