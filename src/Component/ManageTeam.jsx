@@ -9,7 +9,7 @@ const ManageTeam = () => {
   return (
     
     <div className='manageteam-main-div'>
-        <div>
+        <div className='page-margin-div'>
             <div className='manage-team-parant-div'> 
                 <div className='manageteam-head'>Manage Teams</div>
                 <div className='head-but-div'>
