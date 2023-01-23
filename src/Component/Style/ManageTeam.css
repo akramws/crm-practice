@@ -4,10 +4,8 @@
     font-family: "Mulish";
 
 }
-.manageteam-main-div{
-    width: 100%;
-    margin-top: 30px;
-}
+
+
 .manageteam-head{
 width: 300px;
 height: 50px;
@@ -58,7 +56,7 @@ color: #FFFFFF;
 justify-content: center;
 align-items: center;
 position: relative;
-left: 30rem;
+left: 25rem;
 }
 .head-btn-X{
     width: 60px;
@@ -68,7 +66,7 @@ justify-content: center;
 font-size: 25px;
 align-items: center;
 position: relative;
-left: 30rem;
+left: 25rem;
 }
 .manage-contant-main-div{
     width: 100%;
@@ -120,11 +118,12 @@ left: 30rem;
 }
 .team-hulk-inp{
     width: 300px;
-    height: 30px;
+    height: 100px;
     border-radius:10px ;
     padding-left: 10px;
     border: none;
     border-bottom: 1px solid gray;
+    outline: none;
 }
 .underbar-div3{
     margin-top: -40px;
