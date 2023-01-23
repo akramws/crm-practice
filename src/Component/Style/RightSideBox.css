@@ -1,10 +1,4 @@
-.main-box-boarder{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-}
+
 
 .main-box-boarder .paragrap-title{
     position: fixed;
@@ -30,4 +24,5 @@
 }
 .main-box-boarder .paragrap-title p{
     padding: 20px;
+    
 }
