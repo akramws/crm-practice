@@ -27,8 +27,7 @@ body {
 .candidate-page .name-footer div {
   height: 30px;
   font: normal normal bold 28px/15px Mulish;
-  color: #D5E9FF;
-
+  color: #d5e9ff;
 }
 
 .candidate-page .candidate-container {
@@ -60,7 +59,7 @@ body {
 .candidate-page .candidate-navbar .search-navbar .search-input input {
   outline: none;
   border: none;
-  width: 270px;
+  width: 220px;
   height: 35px;
   background: #f8fbff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 3px #00000029;
@@ -68,7 +67,6 @@ body {
   border-bottom-left-radius: 20px;
   padding-left: 40px;
   font: normal normal normal 14px/15px Mulish;
-  border-right: 1px solid #043c79;
 }
 
 .candidate-page
@@ -97,20 +95,37 @@ body {
   top: 7px;
   left: 9px;
 }
-
-.search-input span .search-btn {
-  border: none;
-  height: 35px;
-  width: 120px;
-  background: #f8fbff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 2px 3px #00000029;
+.search-input .search-options {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  font: normal normal 600 14px/15px Mulish;
+  /* padding: 0 5px 0 10px; */
+  height: 35px;
+  width: 170px;
+  background: #f8fbff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 3px #00000029;
+  border-left: 1px solid #043c79;
+}
+.search-input .search-options .ant-select-selector {
+  border-radius: none !important;
+  width: 170px;
+  height: 35px;
+  font: normal normal bold 15px/16px Mulish;
   color: #043c79;
   display: flex;
   align-items: center;
-   width: 120
+  border: none !important;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.search-input .search-options   .ant-select-selector .ant-select-selection-item {
+  font: normal normal bold 14px/16px Mulish;
+
+}
+
+.search-input .search-options .ant-select-arrow {
+  color: #043c79;
+  font-size: 16px;
+  padding: 0 10px 0 0;
 }
 
 .logotext-div {
@@ -289,7 +304,7 @@ body {
   align-items: center;
   width: 100%;
   gap: 34%;
-  padding-right:15px;
+  padding-right: 15px;
 }
 .export-div {
   display: flex;
@@ -313,12 +328,11 @@ body {
   position: relative;
 }
 
-
 .export-button-div .cross-button .x-btn {
-border: none;
-font: normal normal 500 34px/30px Mulish;
-color: #0E4D92;
-background-color: #FFFFFF;
+  border: none;
+  font: normal normal 500 34px/30px Mulish;
+  color: #0e4d92;
+  background-color: #ffffff;
 }
 
 .export-div .export-type {
@@ -358,7 +372,8 @@ background-color: #FFFFFF;
   padding: 10px 0 10px 30px;
 }
 
-.export-div .checkbox-div .select-label ,.export-div .checkbox-div .select-label label {
+.export-div .checkbox-div .select-label,
+.export-div .checkbox-div .select-label label {
   width: 100%;
   font: normal normal bold 20px/30px Mulish;
   letter-spacing: 0px;
@@ -367,17 +382,14 @@ background-color: #FFFFFF;
   align-items: center;
   gap: 10px;
   padding: 10px 0;
-
 }
 
-.export-div .checkbox-div  .select-label label input[type="checkbox"] {
+.export-div .checkbox-div .select-label label input[type="checkbox"] {
   width: 23px;
   height: 24px;
-  border: 1px solid #0E4D92;
+  border: 1px solid #0e4d92;
   accent-color: green;
-
 }
-
 
 .export-div .checkbox-div .all-checkbox {
   width: 100%;
@@ -386,7 +398,6 @@ background-color: #FFFFFF;
   display: flex;
   justify-content: flex-start;
   gap: 125px;
-
 }
 
 .export-div .checkbox-div .all-checkbox label {
@@ -399,13 +410,12 @@ background-color: #FFFFFF;
   gap: 20px;
   margin-top: 20px;
 }
-.export-div .checkbox-div .all-checkbox label  input[type="checkbox"] {
+.export-div .checkbox-div .all-checkbox label input[type="checkbox"] {
   width: 23px;
-height: 24px;
-border: 1px solid #0E4D92;
-border-radius: 3px;
-accent-color: green;
-
+  height: 24px;
+  border: 1px solid #0e4d92;
+  border-radius: 3px;
+  accent-color: green;
 }
 
 .export-div .exportbtn {
@@ -415,37 +425,37 @@ accent-color: green;
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
-  padding: 10px 40px 10px 0 ;
-  background: #F2F2F2 0% 0% no-repeat padding-box;
-border-radius: 0px 0px 10px 10px;
+  padding: 10px 40px 10px 0;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 10px 10px;
 }
 .export-div .exportbtn .export-button {
- border: none;
-width: 148px;
-height: 53px;
-background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
-box-shadow: 0px 1px 1px #00000029;
-border-radius: 3px;
-font: normal normal 500 21px/26px Mulish;
-letter-spacing: 0px;
-color: #FFFFFF;
-text-shadow: 0px 2px 2px #00000029;
+  border: none;
+  width: 148px;
+  height: 53px;
+  background: transparent linear-gradient(180deg, #1b90ff 0%, #0e4d92 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: 0px 1px 1px #00000029;
+  border-radius: 3px;
+  font: normal normal 500 21px/26px Mulish;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-shadow: 0px 2px 2px #00000029;
 }
 
 .export-div .exportbtn .cancel-button {
-border: none;
-width: 148px;
-height: 53px;
-background: transparent linear-gradient(180deg, #CECECE 0%, #8A8888 100%) 0% 0% no-repeat padding-box;
-box-shadow: 0px 1px 1px #00000029;
-border-radius: 3px;
-font: normal normal 500 21px/26px Mulish;
-letter-spacing: 0px;
-color: #FFFFFF;
-text-shadow: 0px 2px 2px #00000029;
-
+  border: none;
+  width: 148px;
+  height: 53px;
+  background: transparent linear-gradient(180deg, #cecece 0%, #8a8888 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: 0px 1px 1px #00000029;
+  border-radius: 3px;
+  font: normal normal 500 21px/26px Mulish;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-shadow: 0px 2px 2px #00000029;
 }
-
 
 .footer-pageresult .select {
   width: 105px;
@@ -455,34 +465,30 @@ text-shadow: 0px 2px 2px #00000029;
 .footer-pageresult .ant-select-selector {
   width: 105px;
   height: 31px;
-  border: 0.5px solid #0E4D92;
+  border: 0.5px solid #0e4d92;
   border-radius: 3px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-
-
+  background: #ffffff 0% 0% no-repeat padding-box;
 }
 
 .footer-pageresult .ant-select-selector .ant-select-selection-search {
   width: 30px;
-height: 31px;
-margin-top: 0!important;
+  height: 31px;
+  margin-top: 0 !important;
 }
 
 .footer-pageresult .ant-select-selector .ant-select-selection-item {
   width: 75px;
-height: 31px; 
-font: normal normal medium 12px/15px Mulish;
-color: #0E4D92;
+  height: 31px;
+  font: normal normal medium 12px/15px Mulish;
+  color: #0e4d92;
 }
 
 .footer-pageresult .ant-select-arrow {
   height: 22px;
 
-  border-left:0.5px solid #0E4D92;
-  color: #0E4D92;
+  border-left: 0.5px solid #0e4d92;
+  color: #0e4d92;
   height: 27px;
   margin-top: -13px;
-  padding-left: 17px;    
+  padding-left: 17px;
 }
-
-

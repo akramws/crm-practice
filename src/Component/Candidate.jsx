@@ -264,10 +264,11 @@ const Candidate = () => {
                 </span>
                 <input type="text" placeholder="Search any.." />
                 <span>
-                  <div className="search-btn">
+                  <div className="search-options">
                     <Select
                       defaultValue="Search Any"
                       onChange={handleChange}
+                      className="search-select"
                     >
                       <Option value="Job Title">Job Title</Option>
                       <Option value="User">User</Option>
