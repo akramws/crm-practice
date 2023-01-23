@@ -14,7 +14,7 @@ const ManageTeam = () => {
                 <div className='head-but-div'>
 
               <Popover placement='bottomRight' content={<UnderbarPopup/>} trigger='click'>  
-                <button className='head-btn'>Creat Team</button>
+                <button className='head-btn'>Create Team</button>
                 </Popover>
 
                 <span className='head-btn-X'><RxCross2/></span>
