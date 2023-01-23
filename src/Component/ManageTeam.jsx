@@ -21,6 +21,7 @@ const ManageTeam = () => {
                 </div>
             </div>
             <div className='manage-team-body-div'>
+           
             </div>
         </div>
     </div>
