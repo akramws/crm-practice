@@ -44,7 +44,7 @@ const UserManagement = () => {
           document.removeEventListener("click", handleClick);
         };
     }, [userReff])
-    
+
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
             setDeleteBut("1");
