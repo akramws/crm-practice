@@ -1,6 +1,7 @@
 import React from 'react';
 import './Style/ManageTeam.css';
 import { RxCross2 } from "react-icons/rx";
+import ManageTeamRight from './ManageTeamRight';
 
 const ManageTeam = () => {
   return (
@@ -14,23 +15,8 @@ const ManageTeam = () => {
                 <span className='head-btn-X'><RxCross2/></span>
                 </div>
             </div>
-        </div>
-        <div className='manage-contant-main-div'>
-            <div className='content-div1'>
-                <span>Team</span><br /><br />
-                <span className='team-alpha-underline'>Team Alpha</span>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </div>
-            <div className='content-div2'>
-            <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <div className='manage-team-body-div'>
+            <ManageTeamRight/>
             </div>
         </div>
     </div>
