@@ -35,8 +35,8 @@ export default function Index() {
         } />
         <Route path="/form" element={<DetailForm />} />
         <Route path="/right-side-box" element={<RightSideBox />} />
-        <Route path="/ManageTeam" element={<ManageTeam />} />
-        <Route path="/UnderbarPopup" element={<UnderbarPopup />} />
+        <Route path="/manage-team" element={<> <Header/> <ManageTeam/></>} />
+        <Route path="/underbar-popup" element={<UnderbarPopup />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
     </BrowserRouter>
