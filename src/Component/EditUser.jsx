@@ -1,15 +1,16 @@
-import React from "react";
-import "./Style/AddUser.css";
+import React from 'react'
+import './Style/EditUser.css'
 
-const AddUser = ({userReff}) => {
+const EditUser = () => {
   return (
-    <div className="add-user-section" ref={userReff}>
-      <div className="add-user-main-section">
-        <div className="add-user-header">
-          <p>Add User</p>
+    <>
+     <div className="edit-user-main">
+      <div className="edit-section">
+        <div className="edit-user-header">
+          <p>Edit User</p>
         </div>
-        <div className="add-user-form-header">
-          <form action="" className="add-user-form-body">
+        <div className="edit-form-header">
+          <form action="" className="editUser-form-body">
             <label htmlFor="uName">User Name</label>
             <br />
             <input type="text" id="uName" />
@@ -37,24 +38,17 @@ const AddUser = ({userReff}) => {
             </select>
             <br />
 
-            <label htmlFor="password">Password</label>
-            <br />
-            <input type="password" id="password" />
-            <br />
-
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <br />
-            <input type="password" id="confirmPassword" />
-            <br />
-
+           
             <button>
-              <p>Submit</p>
+              <p>Done</p>
             </button>
           </form>
         </div>
       </div>
     </div>
-  );
-};
+    
+    </>
+  )
+}
 
-export default AddUser;
+export default EditUser
