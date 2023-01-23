@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Style/Candidate.css";
-import text from "../assets/images/Wiseskulls_Text.png";
 import { BiSearch } from "react-icons/bi";
-import { BiChevronDown, BiReset } from "react-icons/bi";
+import {  BiReset } from "react-icons/bi";
 import { TbDownload } from "react-icons/tb";
 import { FaFilter } from "react-icons/fa";
 import { GrFormNext } from "react-icons/gr";
@@ -11,7 +10,7 @@ import Header from "./Header";
 import { useNavigate } from "react-router";
 import Sidebar from "./Sidebar";
 import { Modal } from "antd";
-import { Select } from 'antd';
+import { Select } from "antd";
 
 const Candidate = () => {
   const navigate = useNavigate();
@@ -23,13 +22,11 @@ const Candidate = () => {
     setOpen(false);
   };
 
-  const onChange = (value: string) => {
+  const { Option } = Select;
+  function handleChange(value) {
     console.log(`selected ${value}`);
-  };
-  
-  const onSearch = (value: string) => {
-    console.log('search:', value);
-  };
+  }
+
   return (
     <>
       <Modal
@@ -267,10 +264,19 @@ const Candidate = () => {
                 </span>
                 <input type="text" placeholder="Search any.." />
                 <span>
-                  <button className="search-btn">
-                    Search Any
-                    <BiChevronDown style={{ fontSize: "21px" }} />
-                  </button>
+                  <div className="search-btn">
+                    <Select
+                      defaultValue="Search Any"
+                      onChange={handleChange}
+                    >
+                      <Option value="Job Title">Job Title</Option>
+                      <Option value="User">User</Option>
+                      <Option value="Contacts" >
+                      Contacts
+                      </Option>
+                      <Option value="Current Location">Current Location</Option>
+                    </Select>
+                  </div>
                 </span>
               </div>
             </div>
@@ -485,31 +491,18 @@ const Candidate = () => {
             <div className="entries">Showing 1 to 10 of 5545 entries</div>
             <div className="footer-pageresult">
               <div className="per-page">Result per page</div>
-              <Select
-              className="select"
-                showSearch
-                placeholder="Page"
-                optionFilterProp="children"
-                onChange={onChange}
-                onSearch={onSearch}
-                filterOption={(input, option) =>
-                  (option?.label ?? "")
-                }
-                options={[
-                  {
-                    value: "1",
-                    label: "1-10",
-                  },
-                  {
-                    value: "11",
-                    label: "11-20",
-                  },
-                  {
-                    value: "21",
-                    label: "21-30",
-                  },
-                ]}
-              />
+              <div>
+                <Select
+                  defaultValue="1-10"
+                  style={{ width: 100 }}
+                  onChange={handleChange}
+                >
+                  <Option value="page 1">1-10</Option>
+                  <Option value="page 2">11-20</Option>
+                  <Option value="page 3">21-30</Option>
+                  <Option value="page 4">31-40</Option>
+                </Select>
+              </div>
             </div>
             <div className="pagination-div">
               <button className="active">1</button>
@@ -531,9 +524,7 @@ const Candidate = () => {
           </footer>
         </div>
         <footer className="name-footer">
-          <div>
-            <img src={text} alt="Wiseskulls" />
-          </div>
+          <div>Wiseskulls</div>
         </footer>
         <Sidebar />
       </div>
