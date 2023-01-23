@@ -1,10 +1,10 @@
 import React from 'react'
 import './Style/EditUser.css'
 
-const EditUser = () => {
+const EditUser = ({userReff}) => {
   return (
     <>
-     <div className="edit-user-main">
+     <div className="edit-user-main" ref={userReff}>
       <div className="edit-section">
         <div className="edit-user-header">
           <p>Edit User</p>
