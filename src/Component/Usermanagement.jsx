@@ -7,7 +7,7 @@ import { BiReset } from "react-icons/bi";
 import { TfiExport } from "react-icons/tfi";
 import { FaFilter } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { Modal, Switch, Select } from "antd";
+import { Modal, Switch, Select, Popover, Button } from "antd";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import {
     AiOutlineDoubleLeft,
@@ -31,22 +31,22 @@ const UserManagement = () => {
     useEffect(() => {
         const handleClick = (e) => {
             if (userReff.current && !userReff.current.contains(e.target)) {
-     
-                if(e.target.className === "userAdd"){
-                }else{
+
+                if (e.target.className === "userAdd") {
+                } else {
                     setOpenUser(false)
                 }
             }
-          };
+        };
         document.addEventListener("click", handleClick);
 
         return () => {
-          document.removeEventListener("click", handleClick);
+            document.removeEventListener("click", handleClick);
         };
     }, [userReff])
 
     const checkBoxFun = (e) => {
-        if (e.target.checked == true) {
+        if (e.target.checked === true) {
             setDeleteBut("1");
         } else {
             setDeleteBut("0");
@@ -134,6 +134,7 @@ const UserManagement = () => {
                                                 type="checkbox"
                                             />
                                         </th>
+                                      
                                         <th>
                                             ID <FaFilter style={{ fontSize: "13px" }} />
                                         </th>

@@ -1,0 +1,37 @@
+.AddReq-Pop-Main{
+    height: 500px;
+    width: 400px;
+}
+.AddReq-Pop-Secound{
+    background-color: lightgray;
+    margin-top: 20px;
+}
+.AddReq-Pop-Secound div .AddReq-but{
+    display: flex;
+    justify-content: end;
+    margin-right: 15px;
+    padding-top: 10px;
+    gap: 15px;
+}
+.AddReq-but .AddReq-but1{
+    width: 50px;
+    height: 22px;
+    background: transparent linear-gradient(180deg, #CECECE 0%, #8A8888 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+}
+.AddReq-but .AddReq-but2{
+    width: 25px;
+    background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+}
+.AddReq-but span{
+    display: flex;
+    gap: 5px;
+}
+.AddReq-but span p {
+    color: #26AD5F;
+}

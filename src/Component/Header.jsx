@@ -4,7 +4,9 @@ import WiseSkull from "../assets/images/Wiseskulls_Text.png"
 import WiseSkull2 from "../assets/images/wise.png"
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io"
 import { Button, Modal } from 'antd';
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Popover } from 'antd';
+import './Style/AddRequirementPop.css'
 
 const Header = () => {
   const Navigate = useNavigate();
@@ -22,6 +24,32 @@ const Header = () => {
     setOpen(false);
   };
 
+// Add Requirement Pop 
+const content = (
+    <div className='AddReq-Pop-Main'>
+        <div className='AddReq-Pop-Secound'>
+            <div>
+              <div className='AddReq-but'>
+                <button className='AddReq-but1'>Save</button>
+                <span><button className='AddReq-but2'>+</button><p>Add</p></span>
+              </div>
+
+                <div className='AddReq-Pop-Secound-Contant'>
+                  <div>
+                    <input type="text" /><br />
+                  </div>
+                  <div>
+                    <p>Uplode JD</p><br/>
+                    <p>Must Have Skills</p><br/><br/>
+                    <p>Busic of Java,redux,React,bla,bla,</p>
+                  </div>
+                </div>
+
+            </div>
+            <div></div>
+        </div>
+    </div>
+  );
 
   return (
     <>
@@ -48,8 +76,11 @@ const Header = () => {
           <img className='photo-img ' src={WiseSkull} alt="" />
         </div>
         <div className='secund-part'>
+
           <div>
-            <button className='second-btn' >Add Requirement</button>
+            <Popover placement="bottomRight" content={content} trigger="click">
+              <button className='second-btn' >Add Requirement</button>
+            </Popover>
             <button className='fist-btn' onClick={showModal}  >Log Out</button>
 
           </div>
