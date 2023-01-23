@@ -40,12 +40,10 @@ const Header = () => {
         </div>
       </Modal>
 
-
-
       <header className='main-header'>
         <div className='logo-right'>
           <img className='logo-img' src={WiseSkull2} alt="" />
-          <img className='photo-img ' src={WiseSkull} alt="" />
+          <img className='photo-img' src={WiseSkull} alt="" />
         </div>
         <div className='secund-part'>
           <div>
