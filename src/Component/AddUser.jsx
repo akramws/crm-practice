@@ -1,9 +1,9 @@
 import React from "react";
 import "./Style/AddUser.css";
 
-const AddUser = () => {
+const AddUser = ({userReff}) => {
   return (
-    <div className="add-user-section">
+    <div className="add-user-section" ref={userReff}>
       <div className="add-user-main-section">
         <div className="add-user-header">
           <p>Add User</p>
