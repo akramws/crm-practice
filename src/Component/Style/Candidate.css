@@ -98,7 +98,6 @@ body {
 .search-input .search-options {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  /* padding: 0 5px 0 10px; */
   height: 35px;
   width: 170px;
   background: #f8fbff 0% 0% no-repeat padding-box;
