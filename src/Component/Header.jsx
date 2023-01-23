@@ -6,12 +6,15 @@ import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io"
 import { Button, Modal } from 'antd';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Popover } from 'antd';
-import './Style/AddRequirementPop.css'
+import './Style/AddRequirementPop.css';
+import AddRequirementPop from './AddRequirementPop'
+
 
 const Header = () => {
   const Navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
+
   const showModal = () => {
     setOpen(true);
   };
@@ -23,33 +26,6 @@ const Header = () => {
     console.log(e);
     setOpen(false);
   };
-
-// Add Requirement Pop 
-const content = (
-    <div className='AddReq-Pop-Main'>
-        <div className='AddReq-Pop-Secound'>
-            <div>
-              <div className='AddReq-but'>
-                <button className='AddReq-but1'>Save</button>
-                <span><button className='AddReq-but2'>+</button><p>Add</p></span>
-              </div>
-
-                <div className='AddReq-Pop-Secound-Contant'>
-                  <div>
-                    <input type="text" /><br />
-                  </div>
-                  <div>
-                    <p>Uplode JD</p><br/>
-                    <p>Must Have Skills</p><br/><br/>
-                    <p>Busic of Java,redux,React,bla,bla,</p>
-                  </div>
-                </div>
-
-            </div>
-            <div></div>
-        </div>
-    </div>
-  );
 
   return (
     <>
@@ -68,17 +44,14 @@ const content = (
         </div>
       </Modal>
 
-
-
-      <header className='main-header'>
+      <header className='main-header' title='Header Created By Neha'>
         <div className='logo-right'>
           <img className='logo-img' src={WiseSkull2} alt="" />
           <img className='photo-img ' src={WiseSkull} alt="" />
         </div>
         <div className='secund-part'>
-
           <div>
-            <Popover placement="bottomRight" content={content} trigger="click">
+            <Popover placement="bottomRight" content={<AddRequirementPop/>} trigger="click">
               <button className='second-btn' >Add Requirement</button>
             </Popover>
             <button className='fist-btn' onClick={showModal}  >Log Out</button>

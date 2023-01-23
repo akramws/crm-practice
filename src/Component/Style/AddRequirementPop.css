@@ -2,10 +2,28 @@
     height: 500px;
     width: 400px;
 }
-.AddReq-Pop-Secound{
-    background-color: lightgray;
-    margin-top: 20px;
+.ant-popover-content .ant-popover-inner:has(.AddReq-Pop-Secound) {
+    background-color: initial;
+    backdrop-filter: blur(15px) !important;
 }
+.AddReq-Pop-Secound{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    margin-top: 20px;
+    border: 1px solid #E3F0FF;
+    height: 300px;
+    overflow: scroll;
+}
+
+.AddReq-Pop-Secound{
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.AddReq-Pop-Secound::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+
 .AddReq-Pop-Secound div .AddReq-but{
     display: flex;
     justify-content: end;
@@ -21,6 +39,17 @@
     border: none;
     border-radius: 3px;
 }
+.AddReq-but{
+    background: #E3F0FF 0% 0% no-repeat padding-box;
+    opacity: 0.90;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    width: 398px;
+    margin-top: -15px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
 .AddReq-but .AddReq-but2{
     width: 25px;
     background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box;
@@ -34,4 +63,80 @@
 }
 .AddReq-but span p {
     color: #26AD5F;
+}
+.AddReq-Pop-Secound-Contan{
+    margin: 15px;
+    padding: 20px;
+    padding-left: 30px;
+    background-color: #FFFFFF;
+    height: 200px;
+}
+.AddReq-Pop-Secound-Contan div input{
+    font-weight: bold;
+    width: 320px;
+    height: 30px;
+    padding-left: 15px;
+    box-shadow: 0px 1px 1px #00000029;
+    border: none;
+}
+.AddReq-Pop-Secound-Contan-input{
+    margin-top: 20px;
+}
+.AddReq-Pop-Secound-Contan-secound .AddReq-UplodeJd{
+    text-align: end;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.AddReq-Pop-Secound-Contan-secound{
+    box-shadow: 0px 1px 1px #00000029;
+}
+.AddReq-MustHave{
+    font-weight: bold;
+    padding-left: 15px;
+}
+.AddReq-Busic{
+    color: #0E4D92;
+    padding-left: 15px;
+}
+.AddReq-Pop-Three{
+    border: 1px solid #E3F0FF;
+    margin-top: 20px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 120px;
+    gap: 20px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.AddReq-Pop-Three button{
+    width: 27px;
+    height: 27px;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: transparent linear-gradient(180deg, #CECECE 0%, #8A8888 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+}
+
+.AddReq-Pop-Three .ant-select-selector{
+    box-shadow: 0px 1px 1px #00000029;
+    border: none !important;
+}
+.AddReq-Pop-Three span{
+    display: flex;
+    flex-direction: column;
+
+}
+.AddReq-Pop-Three span p {
+    font-size: 12px;
+    position: relative;
+    right: 0.5rem;
+}
+.AddReq-Pop-Three span button{
+    margin-top: 21px;
 }

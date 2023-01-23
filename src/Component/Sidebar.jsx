@@ -7,7 +7,7 @@ import "./Style/Sidebar.css";
 
 const Sidebar = () => {
   return (
-    <div className="left-side-wiseskulls-logo">
+    <div className="left-side-wiseskulls-logo" title='Confirm to Delete Created By Naushad'>
       <img src={vertImg} alt="" />
     </div>
   )
