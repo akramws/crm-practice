@@ -6,6 +6,7 @@
 }
 .manageteam-main-div{
     width: 100%;
+    margin-top: 30px;
 }
 .manageteam-head{
 width: 300px;
@@ -89,26 +90,75 @@ left: 30rem;
 }
 .team-alpha-underline{
     border-bottom:1px solid gray ;
+   
 }
 .underbar-div{
-    width: 40%;
-    height: auto;
-    border: 2px solid black;
-    padding-top: 10px;
-    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    
+   flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+   gap: 20px;
 }
 .underbar-popup-btn{
-    width: 100px;
-    height: 22px;
+    width: 80px;
+    height: 30px;
+    background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
     margin-top: 30px;
-    margin-left: 20%;
+    margin-left: 30%;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
 }
 .team-hulk-inp{
     width: 300px;
     height: 30px;
     border-radius:10px ;
     padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
 }
-/* .popup-lable-inp{
+.underbar-div3{
+    margin-top: -40px;
+}
+.popup-lable-inp{
+    font: normal normal bold 18px/30px "Mulish";
+    color: #043C79;
+}
+
+
+.underbar-div2 .select-option-form-underbar .ant-select-selector {
+    border: none!important;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    color: #FFFFFF;
+    font-size: 16px;
     
-} */
+   
+    
+}
+.underbar-div3 .select-option-form-underbar .ant-select-selector {
+     border: none!important;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 16px;
+    
+   
+}
+
+:where(.css-dev-only-do-not-override-1i9hnpv):where(.select-option-form-underbar).ant-select .ant-select-arrow {
+    color: white; 
+    
+    
+}
+
