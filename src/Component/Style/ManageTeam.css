@@ -90,3 +90,25 @@ left: 30rem;
 .team-alpha-underline{
     border-bottom:1px solid gray ;
 }
+.underbar-div{
+    width: 40%;
+    height: auto;
+    border: 2px solid black;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.underbar-popup-btn{
+    width: 100px;
+    height: 22px;
+    margin-top: 30px;
+    margin-left: 20%;
+}
+.team-hulk-inp{
+    width: 300px;
+    height: 30px;
+    border-radius:10px ;
+    padding-left: 10px;
+}
+.popup-lable-inp{
+    
+}
