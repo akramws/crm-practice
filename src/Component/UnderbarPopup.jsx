@@ -6,17 +6,18 @@ import './Style/ManageTeam.css';
 const UnderbarPopup = () => {
   return (
     <div className='underbar-div' title='Confirm to Delete Created By Rohit'>
-        <div>
-            <label>Team Name</label><br />
+        <div className='underbar-div1'>
+            <label className='popup-lable-inp'>Team Name</label><br /><br />
             <input className='team-hulk-inp' type="text" value={"Team Hulk"} />
         </div>
-        <div>
+        <div className='underbar-div2'>
             <label className='popup-lable-inp'  htmlFor="">Asighn Lead</label><br />
         <Select
-                className='select-option-form'
+                className='select-option-form-underbar'
                 defaultValue="Rohit"
                 optionFilterProp="children"
-                style={{ width: '300px' }}
+                style={{ width: '300px'}}
+             
                 filterOption={(input, option) =>
                   (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                 }
@@ -63,12 +64,14 @@ const UnderbarPopup = () => {
                   },
 
                 ]}
-              /> <br />
+              />  </div><br />
+              <div className='underbar-div3'>
               <label className='popup-lable-inp' htmlFor="">Add Team Members</label><br />
               <Select
-                className='select-option-form'
+                className='select-option-form-underbar'
                 defaultValue="Rohit"
                 optionFilterProp="children"
+                
                 style={{ width: '300px' }}
                 filterOption={(input, option) =>
                   (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
@@ -117,10 +120,11 @@ const UnderbarPopup = () => {
 
                 ]}
               />
-              <div>
-              <button className='underbar-popup-btn'>Creat</button>
               </div>
-        </div>
+              <div>
+              <button className='underbar-popup-btn'>Create</button>
+              </div>
+       
     </div>
   )
 }

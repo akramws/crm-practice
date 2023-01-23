@@ -66,7 +66,7 @@ const CandidateForm = () => {
               <label className='Select-JPC'>Select JPC/Job Title<Tooltip  color={"#1B90FF"} style={{ width: "800px" }} className='toooltips-box' id="tooltips-1-quetion-div" placement="top" title="Choose a requirement from the dopdown"  >
               <BsQuestionCircleFill className='question-lable-icon' /></Tooltip></label><br />
               <Select
-                className='select-option-form'
+                className='select-option-form-inp01'
                 defaultValue="Rohit"
                 optionFilterProp="children"
                 style={{ width: '160%' }}

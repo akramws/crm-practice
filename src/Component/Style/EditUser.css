@@ -1,0 +1,113 @@
+.edit-user-main {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+  }
+  
+  .edit-user-main .edit-section{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 29.3%;
+    height: 82%;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 0px 0px 10px;
+    opacity: 1;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    bottom: 0;
+    cursor: pointer;
+  }
+  
+  .edit-user-main .edit-section .edit-user-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 65px 65px;
+    opacity: 1;
+    width: 169px;
+    height: 34px;
+  }
+  
+  .edit-user-main .edit-section .edit-user-header p {
+    font: bold 15px/19px "Mulish";
+    letter-spacing: 0px;
+    color: #ffffff;
+    
+  }
+  
+  .edit-form-header {
+    display: flex;
+   align-items: flex-start;
+   margin-top: 25px;
+
+  }
+  
+  .editUser-form-body label {
+    font: normal normal medium 12px/15px "Mulish";
+    color: #043c79;
+  }
+  
+  .editUser-form-body input {
+    width: 291px;
+    height: 27px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    border: none;
+    margin: 10px 0 20px 0;
+    padding-left: 10px;
+    color: #043c79;
+    cursor: pointer;
+
+  }
+  
+  
+  .editUser-form-body input:focus-within{
+      outline: none;
+  }
+  
+  .editUser-form-body select {
+    width: 291px;
+    height: 28px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    border: none;
+    margin: 10px 0 20px 0;
+    padding-left: 10px;
+    color: #043c79;
+  }
+  
+  .editUser-form-body select:focus-within{
+      outline: none;
+  }
+  
+  .edit-form-header .editUser-form-body button {
+    position: relative;
+    width: 73px;
+    height: 29px;
+    background: transparent linear-gradient(180deg, #4CD964 0%, #26AD5F 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 3px;
+    opacity: 1;
+    left: 220px;
+    border: none;
+    top: 169px;
+    cursor: pointer;
+  }
+  
+  .edit-form-header .editUser-form-body button p {
+    font: normal normal medium 12px/15px "Mulish";
+    color: #ffffff;
+    text-shadow: 0px 2px 2px #00000029;
+   
+  }
+  

@@ -20,7 +20,7 @@
     border-radius: 10px;
 }
 .usermanagementmaindiv{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     margin-top: 25px;
@@ -68,6 +68,10 @@
     color: #043C79;
     cursor: pointer;
 }
+
+.allEditbtn{
+    cursor: pointer;
+}
 .userManagmentsearch{
     color: #043C79;
     position: relative;
@@ -79,6 +83,18 @@
     position: relative;
     top: 0.3rem;
 }
+
+.advanceSearch p {
+    height: 15px;
+    width: 108px;
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Mulish';
+    color: #000000;
+    opacity: 1;
+}
+
 .userManagmentText{
     width: 270px;
     height: 45px;

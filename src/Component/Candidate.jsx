@@ -10,7 +10,8 @@ import Header from "./Header";
 import { useNavigate } from "react-router";
 import Sidebar from "./Sidebar";
 import { Modal } from "antd";
-import { Select } from "antd";
+import { Select, Popover } from "antd";
+import Contentpop from "./Style/Contentpop";
 
 const Candidate = () => {
   const navigate = useNavigate();
@@ -27,6 +28,14 @@ const Candidate = () => {
     console.log(`selected ${value}`);
   }
 
+
+const  searchEvent = (e)=>{
+   console.log(e.target.value);
+}
+
+
+// const mainTh = ["ID"," Job Title", "Candidate's Name ","User","Contacts","Profile Source","Available In Job Market"," Current Location"," Visa Type"]
+// console.log();
   return (
     <>
       <Modal
@@ -262,13 +271,15 @@ const Candidate = () => {
                 <span className="search-icon">
                   <BiSearch style={{ fontSize: "24px" }} />
                 </span>
-                <input type="text" placeholder="Search any.." />
+                <input type="text" placeholder="Search any.." onChange={searchEvent} />
                 <span>
-                  <div className="search-btn">
+                  <div className="search-options">
                     <Select
                       defaultValue="Search Any"
                       onChange={handleChange}
+                      className="search-select"
                     >
+                      <Option value="Search Any">Search Any</Option>
                       <Option value="Job Title">Job Title</Option>
                       <Option value="User">User</Option>
                       <Option value="Contacts" >
@@ -304,8 +315,9 @@ const Candidate = () => {
             <table>
               <thead>
                 <tr>
-                  <th>
-                    ID <FaFilter style={{ fontSize: "11px" }} />
+                  <th onClick={()=>{console.log(document.getElementsByTagName("th")[0].outerText);}}>
+                    ID<Popover placement="bottom" content={<Contentpop/>} trigger="click" >
+                    <FaFilter style={{ fontSize: "11px" }}/></Popover>
                   </th>
                   <th>
                     Job Title <FaFilter style={{ fontSize: "11px" }} />
@@ -323,7 +335,7 @@ const Candidate = () => {
                     Profile Source <FaFilter style={{ fontSize: "11px" }} />
                   </th>
                   <th>
-                    Available In Job Market{" "}
+                    Available In Job Market
                     <FaFilter style={{ fontSize: "11px" }} />
                   </th>
                   <th>
