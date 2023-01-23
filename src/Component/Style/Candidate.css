@@ -24,9 +24,11 @@ body {
   align-items: center;
 }
 
-.candidate-page .name-footer img {
-  filter: drop-shadow(0 0 0.5rem #0e4d92);
+.candidate-page .name-footer div {
   height: 30px;
+  font: normal normal bold 28px/15px Mulish;
+  color: #D5E9FF;
+
 }
 
 .candidate-page .candidate-container {
@@ -96,25 +98,19 @@ body {
   left: 9px;
 }
 
-.search-input span .search-btn:focus-within {
-  border: none;
-  outline: none;
-}
-
 .search-input span .search-btn {
   border: none;
   height: 35px;
-  width: 130px;
+  width: 120px;
   background: #f8fbff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 3px #00000029;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font: normal normal 600 14px/15px Mulish;
-  letter-spacing: 0px;
   color: #043c79;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+   width: 120
 }
 
 .logotext-div {
@@ -213,7 +209,7 @@ body {
   font: normal normal bold 12px/15px Mulish;
   letter-spacing: 0px;
   color: #0e4d92;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 .candidate-footer .pagination-div {
