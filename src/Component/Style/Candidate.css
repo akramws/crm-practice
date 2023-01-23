@@ -490,3 +490,99 @@ body {
   margin-top: -13px;
   padding-left: 17px;
 }
+ 
+.filter-popup {
+  width: 310px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.filter-popup .filter-search {
+  width: 310px;
+  height: 40px;
+
+}
+.filter-popup .filter-search input {
+  width: 290px;
+  height: 32px;
+  margin: 5px;
+  padding: 5px;
+  background: #E3F0FF 0% 0% no-repeat padding-box;
+  color: #0e4d92;
+  font: normal normal bold 14px/15px Mulish;
+  border: 1px solid #1B90FF;
+  border-radius: 5px;
+}
+
+  .filter-popup .filter-search input:focus-within{
+border: none;
+outline: none;
+} 
+
+.filter-popup  .filter-item {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.filter-popup .pop-over {
+  font: normal normal bold 18px/15px Mulish;
+  color: #0e4d92;
+  background: #E3F0FF 0% 0% no-repeat padding-box;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+}
+
+.filter-popup .filter-selectall  {
+  width: 290px;
+  margin: 5px;
+  padding: 5px;
+  color: #0e4d92;
+  font: normal normal 500 14px/15px Mulish;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-popup .filter-item label {
+  display: flex;
+  align-items: center;
+  gap:5px;
+  color: #0e4d92;
+  font-family: "Mulish";
+
+}
+.filter-popup .filter-item label input[type=radio]  {
+  accent-color: black;
+
+}
+.filter-popup .filter-selectall input[type=radio] {
+  height: 15px;
+  width: 15px;
+  accent-color: black;
+}
+
+.filter-popup .filter-btn-div {
+  border-top: 0.5px solid #0e4d92;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+.filter-popup .filter-btn-div button {
+  height: 32px;
+  width:68px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font: normal normal 500 14px/15px Mulish;
+  background-color: #265F9D;
+
+}

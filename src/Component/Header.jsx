@@ -14,16 +14,13 @@ const Header = () => {
     setOpen(true);
   };
   const handleOk = (e) => {
-    console.log(e);
     setOpen(false);
   };
   const handleCancel = (e) => {
-    console.log(e);
     setOpen(false);
   };
   let location = useLocation();
 
-console.log("location",location);
   return (
     <>
 
