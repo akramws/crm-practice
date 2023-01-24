@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Style/EditUser.css'
 
-const EditUser = ({userReff}) => {
+const EditUser = ({userReff, editUserData}) => {
+  const [editedUser, setEdittedUser] = useState({
+    userName:editUserData.userName,
+    contactNumber:editUserData.contactNumber,
+    email:editUserData.email,
+    role:editUserData.role
+  })
+
   return (
     <>
      <div className="edit-user-main" ref={userReff}>
@@ -13,22 +20,20 @@ const EditUser = ({userReff}) => {
           <form action="" className="editUser-form-body">
             <label htmlFor="uName">User Name</label>
             <br />
-            <input type="text" id="uName" />
+            <input type="text" id="uName" value={editedUser.userName} onChange={(e) => setEdittedUser({...editedUser, userName: e.target.value})}/>
             <br />
-
             <label htmlFor="pNumber">Phone Number</label>
             <br />
-            <input type="text" id="pNumber" />
+            <input type="text" id="pNumber" value={editedUser.contactNumber} onChange={(e)=> setEdittedUser({...editedUser, contactNumber:e.target.value})}/>
             <br />
-
             <label htmlFor="email">Email ID</label>
             <br />
-            <input type="email" id="email" />
+            <input type="email" id="email" value={editedUser.email} onChange={(a)=> setEdittedUser({...editedUser, email:a.target.value})}/>
             <br />
 
             <label htmlFor="role">Role</label>
             <br />
-            <select id="role">
+            <select id="role" value={editedUser.role} onChange={(a)=> setEdittedUser({...editedUser,role:a.target.value})}>
               <option selected hidden>
                 Select
               </option>
@@ -40,7 +45,7 @@ const EditUser = ({userReff}) => {
 
            
             <button>
-              <p>Done</p>
+              Done
             </button>
           </form>
         </div>
