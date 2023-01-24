@@ -1,4 +1,4 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Style/UserManagmentExport.css";
 import "./Style/UserManagement.css";
 import { FiSearch } from "react-icons/fi";
@@ -13,39 +13,50 @@ import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineRight, } from "reac
 import AddUser from "./AddUser";
 import SearchbarPopup from "./SearchbarPopup";
 import Export from "./Export";
+import UserManagmentArray from "./UserManagmentArray";
+import UserTbody from "./UserTbodyArray";
+import EditUser from "./EditUser";
 
 
 
 const UserManagement = () => {
-    const userReff = useRef()
+    const userReff = useRef();
+    const edituserReff = useRef();
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
+    const [editUserData, seteditUserData] = useState("")
     // const [searchBarInput, setSearchBarInput] = useState(false);
     const showModal1 = () => {
         setOpen1(true);
     };
     // tEST
     const [openUser, setOpenUser] = useState(false);
+    const [openEdit, setopenEdit] = useState(false);
+    console.log("openEdit>>", openEdit)
 
     useEffect(() => {
         const handleClick = (e) => {
             if (userReff.current && !userReff.current.contains(e.target)) {
-     
-                if(e.target.className === "userAdd"){
-                }else{
+
+                if (e.target.className === "userAdd") {
+                } else {
                     setOpenUser(false)
                 }
-                
+
             }
-          };
+        };
         document.addEventListener("click", handleClick);
 
         return () => {
-          document.removeEventListener("click", handleClick);
+            document.removeEventListener("click", handleClick);
         };
-    }, [userReff])
+    }, [userReff]);
 
+    const editUserFunc = (item) =>{
+        seteditUserData(item);
+    }
+    console.log("data>>,",editUserData)
 
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
@@ -122,7 +133,7 @@ const UserManagement = () => {
                                     </button>
                                 </div>
                                 <div className="userheaderbut">
-                                    <button className="userReset">
+                                    <button className="userReset" >
                                         <BiReset style={{ fontSize: "17px", color: "white" }} />{" "}
                                         Reset
                                     </button>
@@ -136,291 +147,66 @@ const UserManagement = () => {
                         <div>
                             <table className="userTable">
                                 <thead className="userThead">
-                                    <tr className="usertheadtr">
-                                        <th className="userAllCheckbox1">
-                                            <input
-                                                className="userAllCheckbox"
-                                                onClick={checkBoxFun}
-                                                type="checkbox"
-                                            />
-                                        </th>
-                                        <th>
-                                            ID <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            User Name <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Email ID <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Contact Number <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Role <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Status <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>Actions</th>
-                                        <th></th>
-                                        <th className="userDelete1 userDelete" onClick={showModal1} style={{ opacity: deletebut }}>
-                                            <span>
-                                                <MdDelete
-                                                    className="userDelete"
-                                                    style={{ fontSize: "18px" }}
-                                                />
-                                            </span>
-                                            <span className="userDelete" style={{ fontSize: "15px" }}>
-                                                Delete
-                                            </span>
-                                        </th>
+                                    <tr className="usertheadtr" >
+                                        {UserManagmentArray.map((e) => {
+                                            if (e.accessor === "input") {
+                                                return (
+                                                    <th className="userAllCheckbox1">
+                                                        <input type="checkbox" />
+                                                    </th>)
+                                            } else {
+                                                return (
+                                                    <th>
+                                                        {e.Header}
+                                                    </th>
+                                                )
+                                            }
+                                        })}
                                     </tr>
                                 </thead>
                                 <tbody className="userTbody">
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input className="userInputcheckbox" type="checkbox" />
-                                        </td>
-                                        <td>610211</td>
-                                        <td>Rohit Sindhi</td>
-                                        <td>Rohit@wiseskulls.com</td>
-                                        <td>+91 9658714121</td>
-                                        <td>Team Lead</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
+                                    {UserTbody.map((e) =>
+                                        <tr>
+                                            {
+                                                UserManagmentArray?.map((ele) => {
+                                                    if (ele.accessor === "input") {
+                                                        return (
+                                                            <td>
+                                                                <input type="checkbox" />
+                                                            </td>
+                                                        )
+                                                    }
+                                                    if (ele.accessor === "status") {
+                                                        return (
+                                                            <td>
+                                                                <Switch
+                                                                    className="switch1"
+                                                                    style={{ color: "black" }}
+                                                                    defaultChecked={e[ele.accessor]}
+                                                                    checkedChildren="Active"
+                                                                    unCheckedChildren="Inactive"
+                                                                />
+                                                            </td>
+                                                        )
+                                                    }
+                                                    if (ele.accessor === "action") {
+                                                        return (
+                                                            <td onClick={() => {editUserFunc(e); setopenEdit(true)}}>
+                                                                <BsFillPersonCheckFill   /> Edit
+                                                            </td>
+                                                        )
+                                                    }
+                                                    else {
+                                                        return (
 
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610200</td>
-                                        <td>Faisal kachrajiwala</td>
-                                        <td>Faisal@wiseskulls.com</td>
-                                        <td>+91 9658714241</td>
-                                        <td>Director Of Operations</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                style={{ color: "black" }}
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            {" "}
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
+                                                            <td>{e[ele.accessor]}</td>
 
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610201</td>
-                                        <td>Mukaddish Ali</td>
-                                        <td>mukaddish@wiseskulls.com</td>
-                                        <td>+91 9658721121</td>
-                                        <td>Head of Delivery</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                style={{ color: "black" }}
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            {" "}
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610211</td>
-                                        <td>Ranjit Sing Tanwar</td>
-                                        <td>Ranjit@wiseskulls.com</td>
-                                        <td>+91 9658714121</td>
-                                        <td>Team Lead</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610200</td>
-                                        <td>Faisal kachrajiwala</td>
-                                        <td>Faisal@wiseskulls.com</td>
-                                        <td>+91 9658714241</td>
-                                        <td>Director Of Operations</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                style={{ color: "black" }}
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            {" "}
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610201</td>
-                                        <td>Mukaddish Ali</td>
-                                        <td>mukaddish@wiseskulls.com</td>
-                                        <td>+91 9658721121</td>
-                                        <td>Head of Delivery</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                style={{ color: "black" }}
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            {" "}
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610211</td>
-                                        <td>Ranjit Sing Tanwar</td>
-                                        <td>Ranjit@wiseskulls.com</td>
-                                        <td>+91 9658714121</td>
-                                        <td>Team Lead</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610200</td>
-                                        <td>Faisal kachrajiwala</td>
-                                        <td>Faisal@wiseskulls.com</td>
-                                        <td>+91 9658714241</td>
-                                        <td>Director Of Operations</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                style={{ color: "black" }}
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            {" "}
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610201</td>
-                                        <td>Mukaddish Ali</td>
-                                        <td>mukaddish@wiseskulls.com</td>
-                                        <td>+91 9658721121</td>
-                                        <td>Head of Delivery</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                style={{ color: "black" }}
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            {" "}
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="userAllCheckbox1">
-                                            <input type="checkbox" />
-                                        </td>
-                                        <td>610201</td>
-                                        <td>Mukaddish Ali</td>
-                                        <td>mukaddish@wiseskulls.com</td>
-                                        <td>+91 9658721121</td>
-                                        <td>Head of Delivery</td>
-                                        <td>
-                                            <Switch
-                                                className="switch1"
-                                                style={{ color: "black" }}
-                                                defaultChecked={false}
-                                                checkedChildren="Active"
-                                                unCheckedChildren="Inactive"
-                                            />
-                                        </td>
-                                        <td>
-                                            {" "}
-                                            <BsFillPersonCheckFill /> Edit
-                                        </td>
-                                        <td>Change Password</td>
-                                    </tr>
+                                                        )
+                                                    }
+                                                })
+                                            }
+                                        </tr>
+                                    )}
                                 </tbody>
                             </table>
                             <footer className="userFooter">
@@ -488,7 +274,8 @@ const UserManagement = () => {
                     </div>
                 </div>
             </div>
-            {openUser && <AddUser  userReff={userReff}/>}
+            {openUser && <AddUser userReff={userReff} />}
+            {openEdit && <EditUser EdituserReff={edituserReff} editUserData={editUserData}/>}
         </>
     );
 };
