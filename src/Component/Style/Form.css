@@ -66,7 +66,7 @@
     text-align: center;
     justify-content: center;
     width: 365px;
-    height: 73px;
+    height: 65px;
     background-color: aqua;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -78,7 +78,7 @@
     font-size: 20px;
     text-shadow: 0px 4px 3px #00000029;
     position: relative;
-    bottom: .7rem;
+    bottom: 1rem;
     left: 1rem;
 
 
@@ -246,4 +246,20 @@
 }
 #tooltips-1-quetion-div{
     width: 300px;
+}
+.select-in-form .select-option-form-inp01 .ant-select-selector {
+    border: none!important;
+   background: #F2F2F2 0% 0% no-repeat padding-box;
+   box-shadow: 0px 1px 1px #00000029;
+   border-radius: 3px;
+   color: #BFBFBF;
+   opacity: 1;
+   font-size: 16px;
+   
+  
+}
+:where(.css-dev-only-do-not-override-1i9hnpv):where(.select-option-form-inp01).ant-select .ant-select-arrow {
+    color: white; 
+    
+    
 }

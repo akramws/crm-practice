@@ -15,6 +15,7 @@ import ManageTeam from "./Component/ManageTeam";
 import UnderbarPopup from "./Component/UnderbarPopup";
 import SearchbarPopup from "./Component/SearchbarPopup";
 import EditUser from "./Component/EditUser";
+import AddMates from "./Component/AddMates";
 export default function Index() {
   return (
     <BrowserRouter>
@@ -27,8 +28,8 @@ export default function Index() {
           <Header />
           <UserManagement />
           <Sidebar />
-          <SearchbarPopup />
         </>} />
+        <Route path="/" index element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<>
           <Header />
@@ -36,6 +37,7 @@ export default function Index() {
         </>
         } />
         <Route path="/form" element={<DetailForm />} />
+        <Route path="/add-mates" element={<AddMates/>} />
         <Route path="/right-side-box" element={<RightSideBox />} />
         <Route path="/manage-team" element={<> <Header/> <ManageTeam/></>} />
         <Route path="/underbar-popup" element={<UnderbarPopup />} />

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.advanceSearch {
+    cursor: pointer;
+}
+
 .SearchbarPopupModel.ant-modal-content .ant-modal-content {
     margin-top: 0px;
 }
@@ -15,8 +19,7 @@
     margin-top: 18px;
     margin-left: -150px;
     border-radius: 60px;
-    border: 0;
-    
+    border: 0;    
 }
 
 .popup-Searchbar input {

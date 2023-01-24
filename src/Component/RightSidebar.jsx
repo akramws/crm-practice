@@ -13,7 +13,7 @@ const RightSidebar = () => {
  
   return (
     <>
-    <div className='right-sidebar'>
+    <div className='right-sidebar'title='User Management Created By Neha and Sohil'>
         <img src={Jobdesk} alt="" onClick={() => setOpenSide(!openSide)} />
     </div>
     {openSide && <RightSideBox/>}
