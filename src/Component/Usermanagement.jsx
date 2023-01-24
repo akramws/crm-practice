@@ -36,6 +36,7 @@ const UserManagement = () => {
                 }else{
                     setOpenUser(false)
                 }
+                
             }
           };
         document.addEventListener("click", handleClick);
