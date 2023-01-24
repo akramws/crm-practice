@@ -4,11 +4,11 @@ import './Style/SearchbarPopup.css'
 
 const SearchbarPopup = () => {
     return (
-        <div className='popup-Searchbar' >
+        <div className='popup-Searchbar'>
             <span className='searchBar-btn'><BsSearch /></span>
             <span className='experience-btn'>| Yrs. of Exp. |</span>
-            <input type="Search" placeholder='Search' />
-            <button className='last-Serchbtn' >Search</button>
+            <input type="Search" placeholder='Search'/>
+            <button className='last-Serchbtn'>Search</button>
         </div>
     )
 }
