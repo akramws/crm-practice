@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   const Navigate = useNavigate();
   return (
-    <div className="left-side-wiseskulls-logo">
+    <div className="left-side-wiseskulls-logo" title='Confirm to Delete Created By Naushad'>
       <img src={vertImg} alt="" onClick={() => { Navigate("/dashboard") }}/>
     </div>
   )

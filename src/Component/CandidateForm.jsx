@@ -35,7 +35,7 @@ const CandidateForm = () => {
           </div>
         </div>
       </Modal>
-      <div className="all-body-parent-div">
+      <div className="all-body-parent-div" title='Confirm to Delete Created By Rohit'>
         <div >
           <div className='main-form-div'>
             <div className='headerdiv'>

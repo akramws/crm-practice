@@ -4,12 +4,17 @@ import WiseSkull from "../assets/images/Wiseskulls_Text.png"
 import WiseSkull2 from "../assets/images/wise.png"
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io"
 import { Button, Modal } from 'antd';
+import { Popover } from 'antd';
+import './Style/AddRequirementPop.css';
+import AddRequirementPop from './AddRequirementPop'
+
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const Navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
+
   const showModal = () => {
     setOpen(true);
   };
@@ -38,17 +43,16 @@ const Header = () => {
         </div>
       </Modal>
 
-      <header className='main-header'>
+      <header className='main-header' title='Header Created By Neha'>
         <div className='logo-right'>
-          <img className='logo-img' src={WiseSkull2} alt="" />
-          <img className='photo-img' src={WiseSkull} alt="" />
           <img className='logo-img' src={WiseSkull2} alt="" onClick={() => { Navigate("/dashboard") }} />
           <img className='photo-img ' src={WiseSkull} alt=""  onClick={() => { Navigate("/dashboard") }}/>
         </div>
         <div className='secund-part'>
           <div>
-
-            {location.pathname !== "/dashboard" && location.pathname !== "/manage-team"  &&<button className='second-btn' >Add Requirement</button> }
+            <Popover placement="bottomRight" content={<AddRequirementPop/>} trigger="click">
+              <button className='second-btn' >Add Requirement</button>
+            </Popover>
             <button className='fist-btn' onClick={showModal}  >Log Out</button>
 
           </div>

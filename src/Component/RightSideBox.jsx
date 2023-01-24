@@ -6,7 +6,7 @@ const RightSideBox = () => {
 
     return (
         <>
-            <div className='main-box-boarder' >
+            <div className='main-box-boarder' title='Confirm to Delete Created By Neha'>
                 <div className='paragrap-title' >
                     <p>Job Title : Informatica MDM Developer
                         <br /> Location : Remote - Should work in CST

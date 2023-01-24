@@ -9,13 +9,11 @@ import { FaFilter } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Modal, Switch, Select } from "antd";
 import { BsFillPersonCheckFill } from "react-icons/bs";
-import {
-    AiOutlineDoubleLeft,
-    AiOutlineDoubleRight,
-    AiOutlineRight,
-} from "react-icons/ai";
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineRight, } from "react-icons/ai";
 import AddUser from "./AddUser";
 import SearchbarPopup from "./SearchbarPopup";
+
+
 
 const UserManagement = () => {
     const [deletebut, setDeleteBut] = useState("0");
@@ -27,7 +25,7 @@ const UserManagement = () => {
     // tEST
     const [openUser, setOpenUser] = useState(false);
 
- 
+
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
             setDeleteBut("1");
@@ -38,20 +36,21 @@ const UserManagement = () => {
 
     console.log("openUser >>", openUser);
 
-    const [searchBarInput,setSearchBarInput] = useState(false)
+    const [searchBarInput, setSearchBarInput] = useState(false)
 
     return (
         <>
             <Modal className="SearchbarPopupModel" open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
-                <SearchbarPopup/>
+                <SearchbarPopup />
             </Modal>
-            
+
             <Modal open={open1}>
+
                 <div className="pop-up">
                     <h1>Confirm to Delete ?</h1>
                     <div className='popup-btn'>
-                        <button onClick={()=> setOpen1(false)}>Cancel</button>
-                        <button onClick={()=> setOpen1(false)}>Delete</button>
+                        <button onClick={() => setOpen1(false)}>Cancel</button>
+                        <button onClick={() => setOpen1(false)}>Delete</button>
                     </div>
                 </div>
             </Modal>
@@ -363,7 +362,7 @@ const UserManagement = () => {
                                     </button>
                                 </div>
                                 <div className="advanceSearch" >
-                                        <p onClick={() => setSearchBarInput(true)} >Advanced Search</p>
+                                    <p onClick={() => setSearchBarInput(true)} >Advanced Search</p>
                                 </div>
                                 <div className="userManagmentText">
                                     <p>User Management</p>
@@ -421,7 +420,7 @@ const UserManagement = () => {
                                         </th>
                                         <th>Actions</th>
                                         <th></th>
-                                        <th  className="userDelete1 userDelete" onClick={showModal1} style={{ opacity: deletebut }}>
+                                        <th className="userDelete1 userDelete" onClick={showModal1} style={{ opacity: deletebut }}>
                                             <span>
                                                 <MdDelete
                                                     className="userDelete"
