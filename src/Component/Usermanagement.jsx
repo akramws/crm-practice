@@ -59,9 +59,9 @@ const UserManagement = () => {
 
     return (
         <>
-            {/* <Modal className="SearchbarPopupModel" open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
+            <Modal className="SearchbarPopupModel" open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
                 <SearchbarPopup/>
-            </Modal> */}
+            </Modal>
             
             <Modal open={open1}>
                 <div className="pop-up" title='Confirm to Delete Created By Sharif'>
