@@ -30,6 +30,7 @@ const ManageTeam = () => {
             </>  
         
   )
+    
 }
 
 export default ManageTeam

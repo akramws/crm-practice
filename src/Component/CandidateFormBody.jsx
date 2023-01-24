@@ -9,6 +9,7 @@ import RightSidebar from './RightSidebar';
 import { Modal } from 'antd';
 import { Tooltip } from 'antd';
 import { useState } from 'react';
+import { Select, Tag } from 'antd';
 
 
 const CandidateFormBody = () => {
@@ -43,7 +44,7 @@ const CandidateFormBody = () => {
                     disabled: true,
                 }}
             >
-                <div>
+                <div title='Confirm to Delete Created By Sohil'>
                     <div className='header-back'>
                         <header className='skill-head'>Skill Based Experience</header>
                         <button onClick={handleClose}><IoClose/></button>
@@ -88,7 +89,7 @@ const CandidateFormBody = () => {
 
                 </div>
             </Modal>
-            <div>
+            <div title='Confirm to Delete Created By Sohil'>
                 <div className='form-input-fields'>
                     <div className='form-inputs1'>
                         <div className='Candidate-Name'><br />
@@ -328,8 +329,29 @@ const CandidateFormBody = () => {
                     <div className='tool-submit-field'>
                         <label htmlFor="" className='selecter-label'>ADDITIONAL NOTIFICATIONS <Tooltip id='qsn-icon-tool'  color={"#1B90FF 0% 0% no-repeat padding-box"} placement="top" title="Notify them via email before submission"><BsQuestionCircleFill className='qsn-icon' />
                         </Tooltip></label><br /><br />
-                        <button className='selecter-but'>Select</button>
-                        <button className='arrow-icon'><IoIosArrowDown /></button>
+                      <div className='select-option-form-input1'>  <Select
+                className="select-option-form-underbar"
+                defaultValue="Rohit"
+                optionFilterProp="children"
+                style={{ width: '70%' }}
+                filterOption={(input, option) =>
+                  (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                }
+                options={[
+                  {
+                    value: 'Faizan',
+                    label: 'Faizan',
+                  },
+                  {
+                    value: 'Sohel',
+                    label: 'Sohel',
+                  },
+                  {
+                    value: 'Rohit',
+                    label: 'Rohit',
+                  },
+           ]}
+              /></div>
                     </div>
 
                     <span className='dash-div'>

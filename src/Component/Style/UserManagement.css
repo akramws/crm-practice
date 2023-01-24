@@ -83,6 +83,18 @@
     position: relative;
     top: 0.3rem;
 }
+
+.advanceSearch p {
+    height: 15px;
+    width: 108px;
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Mulish';
+    color: #000000;
+    opacity: 1;
+}
+
 .userManagmentText{
     width: 270px;
     height: 45px;

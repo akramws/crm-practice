@@ -13,6 +13,7 @@ import Sidebar from "./Component/Sidebar";
 import RightSideBox from "./Component/RightSideBox";
 import ManageTeam from "./Component/ManageTeam";
 import UnderbarPopup from "./Component/UnderbarPopup";
+import SearchbarPopup from "./Component/SearchbarPopup";
 import EditUser from "./Component/EditUser";
 export default function Index() {
   return (
@@ -27,6 +28,7 @@ export default function Index() {
           <UserManagement />
           <Sidebar />
         </>} />
+        <Route path="/" index element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<>
           <Header />

@@ -460,3 +460,14 @@
 #qsn-icon-tool{
     width: 275px;
 }
+.select-option-form-input1 .select-option-form-underbar .ant-select-selector {
+    border: none!important;
+   background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
+   box-shadow: 0px 1px 1px #00000029;
+   border-radius: 3px;
+   color: #FFFFFF;
+   opacity: 1;
+   font-size: 16px;
+   
+  
+}

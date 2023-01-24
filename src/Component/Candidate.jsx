@@ -10,7 +10,8 @@ import Header from "./Header";
 import { useNavigate } from "react-router";
 import Sidebar from "./Sidebar";
 import { Modal } from "antd";
-import { Select } from "antd";
+import { Select, Popover } from "antd";
+import Contentpop from "./Style/Contentpop";
 
 const Candidate = () => {
   const navigate = useNavigate();
@@ -31,6 +32,10 @@ const Candidate = () => {
 const  searchEvent = (e)=>{
    console.log(e.target.value);
 }
+
+
+// const mainTh = ["ID"," Job Title", "Candidate's Name ","User","Contacts","Profile Source","Available In Job Market"," Current Location"," Visa Type"]
+// console.log();
   return (
     <>
       <Modal
@@ -39,7 +44,7 @@ const  searchEvent = (e)=>{
         onCancel={hideModal}
         className="candidate-export"
       >
-        <div className="export-div">
+        <div className="export-div" title='User Management Created By Vikas'>
           <div className="export-button-div">
             <div className="export-text">
               <p>Export</p>
@@ -258,7 +263,7 @@ const  searchEvent = (e)=>{
         </div>
       </Modal>
       <Header />
-      <div className="candidate-page">
+      <div className="candidate-page" title='User Management Created By Vikas'>
         <div className="candidate-container">
           <nav className="candidate-navbar">
             <div className="search-navbar">
@@ -310,8 +315,9 @@ const  searchEvent = (e)=>{
             <table>
               <thead>
                 <tr>
-                  <th>
-                    ID <FaFilter style={{ fontSize: "11px" }} />
+                  <th onClick={()=>{console.log(document.getElementsByTagName("th")[0].outerText);}}>
+                    ID<Popover placement="bottom" content={<Contentpop/>} trigger="click" >
+                    <FaFilter style={{ fontSize: "11px" }}/></Popover>
                   </th>
                   <th>
                     Job Title <FaFilter style={{ fontSize: "11px" }} />
@@ -329,7 +335,7 @@ const  searchEvent = (e)=>{
                     Profile Source <FaFilter style={{ fontSize: "11px" }} />
                   </th>
                   <th>
-                    Available In Job Market{" "}
+                    Available In Job Market
                     <FaFilter style={{ fontSize: "11px" }} />
                   </th>
                   <th>
