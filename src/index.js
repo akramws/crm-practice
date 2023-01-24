@@ -27,9 +27,9 @@ export default function Index() {
           <Header />
           <UserManagement />
           <Sidebar />
-          <SearchbarPopup />
         </>} />
         <Route path="/" index element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<>
           <Header />
           <Dashboard />
