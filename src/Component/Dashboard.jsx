@@ -87,100 +87,116 @@ const Dashboard = () => {
             </div>
 
             <div className="crm-body-content-rightside-div">
-
               <div className="right-side-div-child-holder">
-              <div className="rightside-div-first-child-upper">
-                <p>Manage User</p>
-                <div className="upper-child-image-holder">
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
-                  <div><img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    /></div>
+                <div className="rightside-div-first-child-upper">
+                  <p>Manage User</p>
+                  <div className="upper-child-image-holder">
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                    <span className="sab-kuch-thik">9 Members</span>
+                </div>
+
+                <div className="rightside-div-secound-child-lower">
+                  <p>Manage Teams</p>
+                  <div className="manage-teams-list-div">
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                      <span>Team Alpha</span>
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                      <span>Team Beta</span>
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                      <span>Team Gama</span>
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                      <span>Team Zeta</span>
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                      <span>Team Tera</span>
+                    </div>
+                    <div>
+                      <img
+                        src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
+                        alt=""
+                      />
+                      <span>Team Superman</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div className="rightside-div-secound-child-lower">
-                <p>Manage Teams</p>
-                <div className="manage-teams-list-div">
-                  <div>
-                    <img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    />
-                    <span>Team Alpha</span>
-                  </div>
-                  <div>
-                    <img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    />
-                    <span>Team Beta</span>
-                  </div>
-                  <div>
-                    <img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    />
-                    <span>Team Gama</span>
-                  </div>
-                  <div>
-                    <img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    />
-                    <span>Team Zeta</span>
-                  </div>
-                  <div>
-                    <img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    />
-                    <span>Team Tera</span>
-                  </div>
-                  <div>
-                    <img
-                      src="http://localhost:3000/img/blank-profile-picture-973460_1280.webp"
-                      alt=""
-                    />
-                    <span>Team Superman</span>
-                  </div>
-                </div>
-              </div>
-
-              </div>
-              
             </div>
           </div>
         </div>
