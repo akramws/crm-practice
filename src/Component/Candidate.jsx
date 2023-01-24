@@ -17,6 +17,7 @@ import Contentpop from "./Contentpop";
 const Candidate = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [search, setsearchEvent] = useState("");
   const showModal = () => {
     setOpen(true);
   };
@@ -30,8 +31,11 @@ const Candidate = () => {
   }
 
   const searchEvent = (e) => {
-    console.log(e.target.value);
+    setsearchEvent(e.target.value);
+    console.log((e.target.value));
   };
+
+
 
   const thFunc =(e)=>{
 console.log(e.value);
@@ -46,7 +50,7 @@ console.log(e.value);
         onCancel={hideModal}
         className="candidate-export"
       >
-        <div className="export-div" title='User Management Created By Vikas'>
+        <div className="export-div" title='candidate Created By Vikas'>
           <div className="export-button-div">
             <div className="export-text">
               <p>Export</p>
@@ -316,13 +320,13 @@ console.log(e.value);
             </div>
           </nav>
           <main className="candidate-main">
-            <table>
+            <table >
               <thead>
                 <tr>
                   {theadData.map((thdata) => {
                   
                     return (
-                      <th onClick={thFunc} id={thdata.accessor}>
+                      <th onClick={thFunc} id={thdata.accessor} >
                         {thdata.Header}
                         <Popover
                           placement="leftBottom"
@@ -346,22 +350,17 @@ console.log(e.value);
               </thead>
               <tbody>
                 {Tddata.map((tdata) => {
+
                   return (
                     <>
                       <tr>
-                        <td>{tdata.id}</td>
-                        <td>{tdata.jobTitle}</td>
-                        <td>{tdata.candidate}</td>
-                        <td>{tdata.user}</td>
-                        <td>{tdata.contact}</td>
-                        <td>{tdata.profileSource}</td>
-                        <td>{tdata.availbaleJobMarket}</td>
-                        <td>{tdata.yearsExperience}</td>
-                        <td>{tdata.currentLocation}</td>
-                        <td>{tdata.joblocation}</td>
-                        <td>{tdata.visatype}</td>
-                        <td>{tdata.salesperson}</td>
-                        <td>{tdata.hiringmanager}</td>
+                        {
+                          theadData.map((e) => {
+                            return(
+                              <td>{tdata[e.accessor]}</td>
+                            )
+                          })
+                        }
                       </tr>
                     </>
                   );

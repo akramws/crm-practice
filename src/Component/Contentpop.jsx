@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const Contentpop = ({ thvalue, Tddata, taccesor,trigger }) => {
+const Contentpop = ({ thvalue, Tddata, taccesor }) => {
   const [uniqueData, setUniqueData] = useState([]);
+  const [value, setValue] = useState();
 
 
 
@@ -21,7 +22,8 @@ const Contentpop = ({ thvalue, Tddata, taccesor,trigger }) => {
 
   useEffect(() => {
     onFunc();
-  }, [trigger]);
+    setValue(uniqueData)
+  }, []);
 
   console.log("uniqueData", uniqueData);
   return (
@@ -35,8 +37,8 @@ const Contentpop = ({ thvalue, Tddata, taccesor,trigger }) => {
         <label>Select All</label>
       </div>
       <div className="filter-item">
-        {uniqueData          &&uniqueData?.map((item) => {
-          let value = item
+        {
+        value?.map((item) => {
           return (
             <>
             <label htmlFor="radio">
@@ -45,7 +47,7 @@ const Contentpop = ({ thvalue, Tddata, taccesor,trigger }) => {
                 className="filter-radio"
                 placeholder="Search"
               />
-              {value}
+              {item}
             </label>
             </>
           );
