@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import "./Style/UserManagmentExport.css";
 import "./Style/UserManagement.css";
 import { FiSearch } from "react-icons/fi";
@@ -17,15 +17,33 @@ import Export from "./Export";
 
 
 const UserManagement = () => {
+    const userReff = useRef()
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
-    const [searchBarInput, setSearchBarInput] = useState(false);
+    // const [searchBarInput, setSearchBarInput] = useState(false);
     const showModal1 = () => {
         setOpen1(true);
     };
     // tEST
     const [openUser, setOpenUser] = useState(false);
+
+    useEffect(() => {
+        const handleClick = (e) => {
+            if (userReff.current && !userReff.current.contains(e.target)) {
+     
+                if(e.target.className === "userAdd"){
+                }else{
+                    setOpenUser(false)
+                }
+            }
+          };
+        document.addEventListener("click", handleClick);
+
+        return () => {
+          document.removeEventListener("click", handleClick);
+        };
+    }, [userReff])
 
 
     const checkBoxFun = (e) => {
@@ -469,7 +487,7 @@ const UserManagement = () => {
                     </div>
                 </div>
             </div>
-            {openUser && <AddUser />}
+            {openUser && <AddUser  userReff={userReff}/>}
         </>
     );
 };
