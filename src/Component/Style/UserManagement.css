@@ -184,6 +184,9 @@
     background: #F2F2F2 0% 0% no-repeat padding-box;
     border: 1px solid #F2F2F2;
 }
+.userAllCheckbox{
+    padding-left: 100px;
+}
 .userAllCheckbox1{
     padding-left: 7px;
 }
@@ -213,7 +216,7 @@
     align-items: center;
     color: #0E4D92;
     height: 50px;
-    border-bottom: 1px solid #CFCFCF;
+    /* border-bottom: 1px solid #CFCFCF; */
 }
 .userTbody{
     height: 80px;
@@ -337,4 +340,7 @@
 }
 .ant-select-selector{
     border: 1px solid #043C79 !important;
+}
+.UserEditForm{
+    cursor: pointer;
 }
