@@ -1,6 +1,6 @@
 import React from 'react'
 import './Style/CandidateFormBody.css'
-import { IoIosArrowDown} from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
 import { FaAsterisk } from 'react-icons/fa';
 import { BsQuestionCircleFill } from 'react-icons/bs';
@@ -47,7 +47,7 @@ const CandidateFormBody = () => {
                 <div title='Confirm to Delete Created By Sohil'>
                     <div className='header-back'>
                         <header className='skill-head'>Skill Based Experience</header>
-                        <button onClick={handleClose}><IoClose/></button>
+                        <button onClick={handleClose}><IoClose /></button>
                     </div>
 
                     <div className='main-popup-inputs'>
@@ -327,31 +327,31 @@ const CandidateFormBody = () => {
 
                 <div className='foot-input'>
                     <div className='tool-submit-field'>
-                        <label htmlFor="" className='selecter-label'>ADDITIONAL NOTIFICATIONS <Tooltip id='qsn-icon-tool'  color={"#1B90FF 0% 0% no-repeat padding-box"} placement="top" title="Notify them via email before submission"><BsQuestionCircleFill className='qsn-icon' />
+                        <label htmlFor="" className='selecter-label'>ADDITIONAL NOTIFICATIONS <Tooltip id='qsn-icon-tool' color={"#1B90FF 0% 0% no-repeat padding-box"} placement="top" title="Notify them via email before submission"><BsQuestionCircleFill className='qsn-icon' />
                         </Tooltip></label><br /><br />
-                      <div className='select-option-form-input1'>  <Select
-                className="select-option-form-underbar"
-                defaultValue="Rohit"
-                optionFilterProp="children"
-                style={{ width: '70%' }}
-                filterOption={(input, option) =>
-                  (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
-                }
-                options={[
-                  {
-                    value: 'Faizan',
-                    label: 'Faizan',
-                  },
-                  {
-                    value: 'Sohel',
-                    label: 'Sohel',
-                  },
-                  {
-                    value: 'Rohit',
-                    label: 'Rohit',
-                  },
-           ]}
-              /></div>
+                        <div className='select-option-form-input1'>  <Select
+                            className="select-option-form-underbar"
+                            defaultValue="Rohit"
+                            optionFilterProp="children"
+                            style={{ width: '70%' }}
+                            filterOption={(input, option) =>
+                                (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                            }
+                            options={[
+                                {
+                                    value: 'Faizan',
+                                    label: 'Faizan',
+                                },
+                                {
+                                    value: 'Sohel',
+                                    label: 'Sohel',
+                                },
+                                {
+                                    value: 'Rohit',
+                                    label: 'Rohit',
+                                },
+                            ]}
+                        /></div>
                     </div>
 
                     <span className='dash-div'>

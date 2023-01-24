@@ -292,7 +292,6 @@ button:focus-within {
   .upper-child-image-holder
   img {
   position: absolute;
-  top: 50px;
   width: 54px;
   height: 54px;
   border-radius: 93%;
@@ -336,7 +335,7 @@ button:focus-within {
 
 .upper-child-members-inline-div {
   position: relative;
-  top: -55px;
+  top: 55px;
   left: 40%;
   text-align: left;
   letter-spacing: 0px;
