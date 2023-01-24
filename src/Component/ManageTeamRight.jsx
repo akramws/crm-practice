@@ -6,9 +6,9 @@ const ManageTeamRight = () => {
   return (
     <div>
 
-      <div className='main-teams-div'>
+      <div>
 
-        <div>
+        <div className='main-teams-div'>
           <span className='teams-head'>Teams</span>
           <ul className='teams-full-list'>
             <li>Team Alpha</li>
