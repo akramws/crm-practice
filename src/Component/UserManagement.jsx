@@ -43,7 +43,6 @@ const UserManagement = () => {
                 } else {
                     setOpenUser(false)
                 }
-
             }
         };
         document.addEventListener("click", handleClick);
@@ -53,10 +52,10 @@ const UserManagement = () => {
         };
     }, [userReff]);
 
-    const editUserFunc = (item) =>{
+    const editUserFunc = (item) => {
         seteditUserData(item);
     }
-    console.log("data>>,",editUserData)
+    console.log("data>>,", editUserData)
 
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
@@ -169,14 +168,14 @@ const UserManagement = () => {
                                         <tr>
                                             {
                                                 UserManagmentArray?.map((ele) => {
-                                                    if (ele.accessor === "input") {
+                                                    if (ele.accessor === "input"){
                                                         return (
                                                             <td>
                                                                 <input type="checkbox" />
                                                             </td>
                                                         )
                                                     }
-                                                    if (ele.accessor === "status") {
+                                                    if (ele.accessor === "status"){
                                                         return (
                                                             <td>
                                                                 <Switch
@@ -191,8 +190,8 @@ const UserManagement = () => {
                                                     }
                                                     if (ele.accessor === "action") {
                                                         return (
-                                                            <td onClick={() => {editUserFunc(e); setopenEdit(true)}}>
-                                                                <BsFillPersonCheckFill   /> Edit
+                                                            <td onClick={() => { editUserFunc(e); setopenEdit(true) }}>
+                                                                <BsFillPersonCheckFill /> Edit
                                                             </td>
                                                         )
                                                     }
@@ -275,7 +274,7 @@ const UserManagement = () => {
                 </div>
             </div>
             {openUser && <AddUser userReff={userReff} />}
-            {openEdit && <EditUser EdituserReff={edituserReff} editUserData={editUserData}/>}
+            {openEdit && <EditUser EdituserReff={edituserReff} editUserData={editUserData} setopenEdit={setopenEdit} />}
         </>
     );
 };
