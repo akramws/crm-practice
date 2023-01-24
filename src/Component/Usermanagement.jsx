@@ -22,7 +22,7 @@ const UserManagement = () => {
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
-    const [searchBarInput,setSearchBarInput] = useState(false);
+    const [searchBarInput, setSearchBarInput] = useState(false);
     const showModal1 = () => {
         setOpen1(true);
     };
@@ -57,20 +57,20 @@ const UserManagement = () => {
 
     console.log("openUser >>", openUser);
 
-    
+
 
     return (
         <>
             <Modal className="SearchbarPopupModel" open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
-                <SearchbarPopup/>
+                <SearchbarPopup />
             </Modal>
 
             <Modal open={open1}>
                 <div className="pop-up" title='Confirm to Delete Created By Sharif'>
                     <h1>Confirm to Delete ?</h1>
                     <div className='popup-btn'>
-                        <button onClick={()=> setOpen1(false)}>Cancel</button>
-                        <button onClick={()=> setOpen1(false)}>Delete</button>
+                        <button onClick={() => setOpen1(false)}>Cancel</button>
+                        <button onClick={() => setOpen1(false)}>Delete</button>
                     </div>
                 </div>
             </Modal>
@@ -84,7 +84,7 @@ const UserManagement = () => {
                 width={1000}
                 className="ModanExport"
             >
-                <Export  setOpen={setOpen}/>
+                <Export setOpen={setOpen} />
             </Modal>
             <div className="usermanagementmaindiv" title='User Management Created By Faizan'>
                 <div className="usermanagementmain" title='User Management Created By Faizan'>
@@ -485,7 +485,7 @@ const UserManagement = () => {
                     </div>
                 </div>
             </div>
-            {openUser && <AddUser userReff={userReff}/>}
+            {openUser && <AddUser userReff={userReff} />}
         </>
     );
 };
