@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import "./Style/UserManagmentExport.css";
 import "./Style/UserManagement.css";
 import { FiSearch } from "react-icons/fi";
@@ -9,25 +9,44 @@ import { FaFilter } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Modal, Switch, Select } from "antd";
 import { BsFillPersonCheckFill } from "react-icons/bs";
-import {
-    AiOutlineDoubleLeft,
-    AiOutlineDoubleRight,
-    AiOutlineRight,
-} from "react-icons/ai";
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineRight, } from "react-icons/ai";
 import AddUser from "./AddUser";
 import SearchbarPopup from "./SearchbarPopup";
+import Export from "./Export";
+
+
 
 const UserManagement = () => {
+    const userReff = useRef()
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
+    // const [searchBarInput, setSearchBarInput] = useState(false);
     const showModal1 = () => {
         setOpen1(true);
     };
     // tEST
     const [openUser, setOpenUser] = useState(false);
 
- 
+    useEffect(() => {
+        const handleClick = (e) => {
+            if (userReff.current && !userReff.current.contains(e.target)) {
+     
+                if(e.target.className === "userAdd"){
+                }else{
+                    setOpenUser(false)
+                }
+                
+            }
+          };
+        document.addEventListener("click", handleClick);
+
+        return () => {
+          document.removeEventListener("click", handleClick);
+        };
+    }, [userReff])
+
+
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
             setDeleteBut("1");
@@ -38,21 +57,19 @@ const UserManagement = () => {
 
     console.log("openUser >>", openUser);
 
-    const [searchBarInput,setSearchBarInput] = useState(false)
-
     return (
         <>
-            <Modal className="SearchbarPopupModel" open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
-                <SearchbarPopup/>
-            </Modal>
-            
+            {/* <Modal className="SearchbarPopupModel" open={searchBarInput} onCancel={() => setSearchBarInput(false)}>
+                <SearchbarPopup />
+            </Modal> */}
+
             <Modal open={open1}>
-    
+
                 <div className="pop-up">
                     <h1>Confirm to Delete ?</h1>
                     <div className='popup-btn'>
-                        <button onClick={()=> setOpen1(false)}>Cancel</button>
-                        <button onClick={()=> setOpen1(false)}>Delete</button>
+                        <button onClick={() => setOpen1(false)}>Cancel</button>
+                        <button onClick={() => setOpen1(false)}>Delete</button>
                     </div>
                 </div>
             </Modal>
@@ -66,282 +83,7 @@ const UserManagement = () => {
                 width={1000}
                 className="ModanExport"
             >
-                <div className="ExportPop">
-                    <div className="UserManagmentHead">
-                        <header>
-                            <p>Export</p>
-                            <button onClick={() => setOpen(false)}>X</button>
-                        </header>
-                    </div>
-                    <div className="userExportSecound">
-                        <h2>Export As</h2>
-                        <span className="userExportSecoundSpan1">
-                            <input name="Export" type="radio" />
-                            <label htmlFor="">Excel</label>
-                        </span>
-                        <span className="userExportSecoundSpan2">
-                            <input name="Export" type="radio" />
-                            <label htmlFor="">Csv</label>
-                        </span>
-                    </div>
-                    <div className="ExportThree">
-                        <input type="checkbox" />
-                        <label htmlFor="">Select All</label>
-                    </div>
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportAllCheckbox">
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="">UserName</label>
-                        </div>
-                    </div>
-
-                    <div className="ExportFooter">
-                        <button className="ExportFooterBut1">Export</button>
-                        <button className="ExportFooterBut2" onClick={() => setOpen(false)}>
-                            Cancel
-                        </button>
-                    </div>
-                </div>
+                <Export setOpen={setOpen} />
             </Modal>
             <div>
                 <div className="usermanagementmaindiv">
@@ -363,9 +105,9 @@ const UserManagement = () => {
                                         />
                                     </button>
                                 </div>
-                                <div className="advanceSearch" >
-                                        <p onClick={() => setSearchBarInput(true)} >Advanced Search</p>
-                                </div>
+                                {/* <div className="advanceSearch" >
+                                    <p onClick={() => setSearchBarInput(true)} >Advanced Search</p>
+                                </div> */}
                                 <div className="userManagmentText">
                                     <p>User Management</p>
                                 </div>
@@ -422,7 +164,7 @@ const UserManagement = () => {
                                         </th>
                                         <th>Actions</th>
                                         <th></th>
-                                        <th  className="userDelete1 userDelete" onClick={showModal1} style={{ opacity: deletebut }}>
+                                        <th className="userDelete1 userDelete" onClick={showModal1} style={{ opacity: deletebut }}>
                                             <span>
                                                 <MdDelete
                                                     className="userDelete"
@@ -746,7 +488,7 @@ const UserManagement = () => {
                     </div>
                 </div>
             </div>
-            {openUser && <AddUser />}
+            {openUser && <AddUser  userReff={userReff}/>}
         </>
     );
 };

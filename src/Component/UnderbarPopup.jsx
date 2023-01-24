@@ -7,7 +7,7 @@ const UnderbarPopup = () => {
   return (
     <div className='underbar-div' title='Confirm to Delete Created By Rohit'>
         <div className='underbar-div1'>
-            <label className='popup-lable-inp'>Team Name</label><br /><br />
+            <label className='popup-lable-inp'>Team Name</label><br />
             <input className='team-hulk-inp' type="text" value={"Team Hulk"} />
         </div>
         <div className='underbar-div2'>
