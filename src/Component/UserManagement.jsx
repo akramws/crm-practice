@@ -1,4 +1,4 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Style/UserManagmentExport.css";
 import "./Style/UserManagement.css";
 import { FiSearch } from "react-icons/fi";
@@ -31,18 +31,18 @@ const UserManagement = () => {
     useEffect(() => {
         const handleClick = (e) => {
             if (userReff.current && !userReff.current.contains(e.target)) {
-     
-                if(e.target.className === "userAdd"){
-                }else{
+
+                if (e.target.className === "userAdd") {
+                } else {
                     setOpenUser(false)
                 }
-                
+
             }
-          };
+        };
         document.addEventListener("click", handleClick);
 
         return () => {
-          document.removeEventListener("click", handleClick);
+            document.removeEventListener("click", handleClick);
         };
     }, [userReff])
 
@@ -141,28 +141,23 @@ const UserManagement = () => {
                                             <input
                                                 className="userAllCheckbox"
                                                 onClick={checkBoxFun}
-                                                type="checkbox"
-                                            />
+                                                type="checkbox" />
                                         </th>
-                                        <th>
-                                            ID <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            User Name <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Email ID <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Contact Number <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Role <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
-                                        <th>
-                                            Status <FaFilter style={{ fontSize: "13px" }} />
-                                        </th>
+
+                                        <th> ID <FaFilter style={{ fontSize: "13px" }} /> </th>
+
+                                        <th> User Name <FaFilter style={{ fontSize: "13px" }} /> </th>
+
+                                        <th> Email ID <FaFilter style={{ fontSize: "13px" }} /> </th>
+
+                                        <th> Contact Number <FaFilter style={{ fontSize: "13px" }} /> </th>
+
+                                        <th> Role <FaFilter style={{ fontSize: "13px" }} /> </th>
+
+                                        <th> Status <FaFilter style={{ fontSize: "13px" }} /> </th>
+
                                         <th>Actions</th>
+
                                         <th></th>
                                         <th className="userDelete1 userDelete" onClick={showModal1} style={{ opacity: deletebut }}>
                                             <span>
@@ -488,7 +483,7 @@ const UserManagement = () => {
                     </div>
                 </div>
             </div>
-            {openUser && <AddUser  userReff={userReff}/>}
+            {openUser && <AddUser userReff={userReff} />}
         </>
     );
 };
