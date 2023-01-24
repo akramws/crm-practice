@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import "./Style/Dashboard.css";
 
 const Dashboard = () => {
+const [dailyUpdate, setDailyUpdate] = useState("")
+const [weeklyUpdate, setWeeklyUpdate] = useState("")
+const [monthlyUpdate, setMonthlyUpdate] = useState("")
+
+const dailyTrackerFuc = (event) => {
+  setDailyUpdate(event)
+}
+
+const weeklyTrackerFuc = (event) => {
+  setWeeklyUpdate(event)
+
+}
+
+const monthlyTrackerFun = (event) => {
+  setMonthlyUpdate(event)
+
+}
+
   return (
     <>
       <div className="crm-dashboard">
@@ -21,9 +39,9 @@ const Dashboard = () => {
                     <div className="show-button">
                       <p>Recruiter's Activity</p>
                       <div className="buttons">
-                        <button>Daily</button>
-                        <button>Weekly</button>
-                        <button>Monthly</button>
+                        <button onClick={() => dailyTrackerFuc("daily")} className={dailyUpdate === "daily" ? "active" : ''} >Daily</button>
+                        <button onClick={() => dailyTrackerFuc("weekly")} className={dailyUpdate === "weekly" ? "active" : ''}>Weekly</button>
+                        <button onClick={() => dailyTrackerFuc("monthly")} className={dailyUpdate === "monthly" ? "active" : ''}>Monthly</button>
                       </div>
                     </div>
                   </div>
@@ -33,9 +51,9 @@ const Dashboard = () => {
                   <div className="show-button">
                     <p>Requirements</p>
                     <div className="buttons">
-                      <button>Daily</button>
-                      <button>Weekly</button>
-                      <button>Monthly</button>
+                    <button onClick={() => weeklyTrackerFuc("daily")} className={weeklyUpdate === "daily" ? "active" : ''} >Daily</button>
+                        <button onClick={() => weeklyTrackerFuc("weekly")} className={weeklyUpdate === "weekly" ? "active" : ''}>Weekly</button>
+                        <button onClick={() => weeklyTrackerFuc("monthly")} className={weeklyUpdate === "monthly" ? "active" : ''}>Monthly</button>
                     </div>
                   </div>
                   <div className="left-lowerside-requirements">
@@ -50,9 +68,9 @@ const Dashboard = () => {
                 <div className="show-button">
                   <p>Total Submissions</p>
                   <div className="buttons">
-                    <button>Daily</button>
-                    <button>Weekly</button>
-                    <button>Monthly</button>
+                  <button onClick={() => monthlyTrackerFun("daily")} className={monthlyUpdate === "daily" ? "active" : ''} >Daily</button>
+                        <button onClick={() => monthlyTrackerFun("weekly")} className={monthlyUpdate === "weekly" ? "active" : ''}>Weekly</button>
+                        <button onClick={() => monthlyTrackerFun("monthly")} className={monthlyUpdate === "monthly" ? "active" : ''}>Monthly</button>
                   </div>
                 </div>
                 <div className="top-5-recruiters-in-the-list-div">
@@ -146,7 +164,7 @@ const Dashboard = () => {
                       />
                     </div>
                   </div>
-                    <span className="sab-kuch-thik">9 Members</span>
+                    <span className="upper-child-members-inline-div">9 Members</span>
                 </div>
 
                 <div className="rightside-div-secound-child-lower">
