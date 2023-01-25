@@ -1,10 +1,9 @@
 import React from 'react';
 import './Style/ManageTeam.css';
-import { HiUserGroup,HiPlusCircle } from 'react-icons/hi'
-import { MdEdit } from 'react-icons/md'
+import { HiUserGroup, HiPlusCircle } from 'react-icons/hi'
+import { MdEdit, MdOutlineCancel } from 'react-icons/md'
 import { FaTrash } from 'react-icons/fa'
-import { Popover } from 'antd';
-import AddMates from './AddMates';
+import { BsFillPersonFill } from 'react-icons/bs'
 
 const ManageTeamRight = () => {
   return (
@@ -112,14 +111,31 @@ const ManageTeamRight = () => {
         </div>
 
         <div className='mates-all'>
-            <p>Mates</p>
+          <p>Mates</p>
           <div className='add-mates'>
-            <button className='add-btn-puls'><HiPlusCircle className='plus-icon'/>Add Mates</button>
-            <button className='delete-mates-but'><FaTrash className='delete-ic'/>Delete Mates</button>
+            <button className='add-btn-puls'><HiPlusCircle className='plus-icon' />Add Mates</button>
+            <button className='delete-mates-but'><FaTrash className='delete-ic' />Delete Mates</button>
           </div>
 
         </div>
+        {/* <span className='bar-button'>
+          <div className='scroll-bar-but'>
+          <button>l</button>
+          </div>
+        </span> */}
+        <div className='all-name-div'>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani - Team Leader</span></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+        </div>
       </div>
+
     </div>
   )
 }
