@@ -70,6 +70,7 @@
     align-items: center;
     position: relative;
     left: 25rem;
+    cursor: pointer;
 }
 
 .head-btn-X {
