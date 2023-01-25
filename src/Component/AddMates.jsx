@@ -12,19 +12,19 @@ const AddMates = () => {
                 <span className='cancel-add-mates'><RxCross2 /></span>
             </div>
             <div className='add-mates-page'>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
-                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill />rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
+                <p className='icons-name-radio-add'><span className='spase-icone-name'><BsFillPersonFill className='icons-in-add-mates'/>Rohit</span> <input className='add-mates-type-inpradio' name='one' type="checkbox" /></p>
 
             </div>
             

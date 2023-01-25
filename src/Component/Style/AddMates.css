@@ -45,7 +45,7 @@ opacity: 1;
 }
 .cancel-add-mates{
     position: relative;
-    left: 15rem;
+    left: 14rem;
     font-size: 22px;
     color: #0E4D92 0% 0% no-repeat padding-box;
 opacity: 1;
@@ -78,6 +78,10 @@ padding-left: 15px;
     width: 30px;
     height: 20px;
     position: relative;
-    right: 5rem;
+    right: 4rem;
     border-radius: 50%;
+}
+.icons-in-add-mates{
+    position: relative;
+    top: .19rem;
 }
