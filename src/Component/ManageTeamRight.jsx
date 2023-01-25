@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Style/ManageTeam.css';
-import { HiUserGroup } from 'react-icons/hi'
-import { MdEdit } from 'react-icons/md'
+import { HiUserGroup, HiPlusCircle } from 'react-icons/hi'
+import { MdEdit, MdOutlineCancel } from 'react-icons/md'
+import { FaTrash } from 'react-icons/fa'
+import { BsFillPersonFill } from 'react-icons/bs'
+import AddMates from './AddMates';
 
 const ManageTeamRight = () => {
+  const [openUser, setOpenUser] = useState(false);
+
+  const userReff = useRef();
+
+
+  useEffect(() => {
+    const handleClick = (e) => {
+        if (userReff.current && !userReff.current.contains(e.target)) {
+
+            if (e.target.className === "add-btn-puls") {
+            } else {
+                setOpenUser(false)
+            }
+        }
+    };
+    document.addEventListener("click", handleClick);
+
+    return () => {
+        document.removeEventListener("click", handleClick);
+    };
+}, [userReff]);
+
+
   return (
+    <>
     <div className='full-body-sec'>
       <div className='right-side-div1'>
 
@@ -93,12 +120,52 @@ const ManageTeamRight = () => {
 
       <div className='left-side-div2'>
         <div className='team-edit-div'>
-          <div className='group-but-one'><HiUserGroup />Team Alpha<MdEdit /></div>
+
+          <div className='group-but-one'>
+            <HiUserGroup className='group-but-icon' />
+            Team Alpha
+          </div>
+
+          <div className='edit-but-icon'>
+            <MdEdit className='edit-ic' />
+          </div>
+
+          <div className='teams-delete-but'>
+            <button className='trash-ico'><FaTrash className='trash-but' /> Delete Team</button>
+          </div>
+        </div>
+
+        <div className='mates-all'>
+          <p>Mates</p>
+          <div className='add-mates'>
+            <button className='add-btn-puls' onClick={() => setOpenUser(!openUser)}><HiPlusCircle className='plus-icon'  />Add Mates </button>
+            <button className='delete-mates-but'><FaTrash className='delete-ic' />Delete Mates</button>
+          </div>
+
+        </div>
+        <div className='all-name-div'>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani - Team Leader</span></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
+          <p className='add-mates-inside'><span className='span-name'><BsFillPersonFill />Moin Banani</span><MdOutlineCancel className='cancel-icon'/></p>
         </div>
       </div>
 
     </div>
+     {openUser && <AddMates setOpenUser={setOpenUser} userReff={userReff} />}
+     </>
+
   )
+
 }
 
 export default ManageTeamRight

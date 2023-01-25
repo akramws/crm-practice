@@ -493,7 +493,7 @@ body {
  
 .filter-popup {
   width: 310px;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   padding: 5px;
@@ -504,7 +504,7 @@ body {
 
 }
 .filter-popup .filter-search input {
-  width: 290px;
+  width: 250px;
   height: 32px;
   margin: 5px;
   padding: 5px;
@@ -523,8 +523,8 @@ outline: none;
 .filter-popup  .filter-item {
   display: flex;
   flex-direction: column;
-  width: 290px;
-  height: 500px;
+  width: 250px;
+  height: 300px;
   margin: 5px;
   padding: 5px;
 
@@ -560,24 +560,26 @@ outline: none;
   font-family: "Mulish";
 
 }
-.filter-popup .filter-item label input[type=radio]  {
+.filter-popup .filter-item label input[type=checkbox]  {
   accent-color: black;
 
 }
-.filter-popup .filter-selectall input[type=radio] {
+.filter-popup .filter-selectall input[type=checkbox] {
   height: 15px;
   width: 15px;
   accent-color: black;
 }
 
-.filter-popup .filter-btn-div {
+.pop-content .filter-btn-div {
   border-top: 0.5px solid #0e4d92;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
 }
-.filter-popup .filter-btn-div button {
+
+
+.pop-content .filter-btn-div button {
   height: 32px;
   width:68px;
   border: none;
