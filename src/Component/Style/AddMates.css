@@ -8,10 +8,11 @@
     border-radius: 10px;
     opacity: 1;
     width: 63%;
-    height: 78%;
+    height: 89%;
     z-index: 1;
 
 }
+
 
 
 .main-add-mates-div {
@@ -28,7 +29,7 @@
 
 .add-mates-page {
     width: 100%;
-    height: 85%;
+    height: 88%;
     overflow-y: scroll;
 }
 
