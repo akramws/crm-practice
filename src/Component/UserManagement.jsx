@@ -16,16 +16,17 @@ import Export from "./Export";
 import UserManagmentArray from "./UserManagmentArray";
 import UserTbody from "./UserTbodyArray";
 import EditUser from "./EditUser";
+import { Option } from "antd/es/mentions";
 
 
 
 const UserManagement = () => {
     const userReff = useRef();
-    const edituserReff = useRef();
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
     const [editUserData, seteditUserData] = useState("")
+    const [tableBodyData, setTableBodyData] = useState(UserTbody)
     // const [searchBarInput, setSearchBarInput] = useState(false);
     const showModal1 = () => {
         setOpen1(true);
@@ -33,7 +34,42 @@ const UserManagement = () => {
     // tEST
     const [openUser, setOpenUser] = useState(false);
     const [openEdit, setopenEdit] = useState(false);
-    console.log("openEdit>>", openEdit)
+    const [arrayVal, setArrayVal] = useState('')
+    const [inputval, setInputVal] = useState("")
+    const {Option} = Select ;
+    const handleChange = (value) => {
+        console.log(value);
+        const nameArray = [];
+        setArrayVal(value)
+        UserTbody.map((e)=>{
+            nameArray.push(e[value]);
+        })
+    };
+    const changeValue = (ele) =>{
+        
+        setInputVal(ele.target.value)
+        const valueeee = ele.target.value
+        
+        UserTbody.map((e) => {
+            console.log(e[arrayVal]);
+            if(e[arrayVal].toLowerCase().includes(valueeee.toLocaleLowerCase())){
+                setTableBodyData([e])
+                console.log("arrayVal>>",e);
+            }
+            else{
+                
+            }
+        })
+        // console.log("inputval>>",inputval);
+        
+      
+    }
+
+
+
+
+
+
 
     useEffect(() => {
         const handleClick = (e) => {
@@ -103,17 +139,24 @@ const UserManagement = () => {
                                 <div>
                                     <FiSearch className="userManagmentsearch" />
                                     <input
+                                        onChange={changeValue}
                                         className="userManagmentinpbut"
                                         type="text"
                                         placeholder="Search Candidate"
                                     />
-                                    <button className="searchAnyBut">
+                                    <Select defaultValue="search any" onChange={handleChange}>
+                                        <Option value='id' className="User-option">ID</Option>
+                                        <Option value="userName">Name</Option>
+                                        <Option value="email">Email</Option>
+                                        <Option value="contactNumber">Number</Option>
+                                    </Select>
+                                    {/* <button className="searchAnyBut">
                                         Search Any{" "}
                                         <AiOutlineDown
                                             className="userManagementdown"
                                             style={{ fontSize: "13px" }}
                                         />
-                                    </button>
+                                    </button> */}
                                 </div>
                                 {/* <div className="advanceSearch" >
                                     <p onClick={() => setSearchBarInput(true)} >Advanced Search</p>
@@ -139,7 +182,7 @@ const UserManagement = () => {
                                     <button className="userExport" onClick={() => setOpen(true)}>
                                         <TfiExport style={{ color: "white" }} /> Export
                                     </button>
-                                    <button className="userAdd" onClick={() => setOpenUser(!openUser)}>Add User</button>
+                                    <button className="userAdd" onClick={() => setOpenUser(true)}>Add User</button>
                                 </div>
                             </div>
                         </header>
@@ -164,7 +207,7 @@ const UserManagement = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="userTbody">
-                                    {UserTbody.map((e) =>
+                                    {tableBodyData?.map((e) =>
                                         <tr>
                                             {
                                                 UserManagmentArray?.map((ele) => {
@@ -274,7 +317,7 @@ const UserManagement = () => {
                 </div>
             </div>
             {openUser && <AddUser userReff={userReff} />}
-            {openEdit && <EditUser EdituserReff={edituserReff} editUserData={editUserData} setopenEdit={setopenEdit} />}
+            {openEdit && <EditUser userReff={userReff} editUserData={editUserData} setopenEdit={setopenEdit} />}
         </>
     );
 };

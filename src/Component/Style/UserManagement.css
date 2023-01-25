@@ -344,3 +344,6 @@
 .UserEditForm{
     cursor: pointer;
 }
+.User-option{
+    width: 500px;
+}

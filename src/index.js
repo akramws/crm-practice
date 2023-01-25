@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-
 import Header from "./Component/Header";
 import Candidate from "./Component/Candidate";
 import UserManagement from "./Component/Usermanagement";
