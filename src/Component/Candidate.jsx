@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Style/Candidate.css";
 import { BiSearch } from "react-icons/bi";
-import {  BiReset } from "react-icons/bi";
+import { BiReset } from "react-icons/bi";
 import { TbDownload } from "react-icons/tb";
 import { FaFilter } from "react-icons/fa";
 import { GrFormNext } from "react-icons/gr";
@@ -11,11 +11,13 @@ import { useNavigate } from "react-router";
 import Sidebar from "./Sidebar";
 import { Modal } from "antd";
 import { Select, Popover } from "antd";
-import Contentpop from "./Style/Contentpop";
+import { theadData, Tddata } from "./Thead";
+import Contentpop from "./Contentpop";
 
 const Candidate = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [search, setsearchEvent] = useState("");
   const showModal = () => {
     setOpen(true);
   };
@@ -28,14 +30,18 @@ const Candidate = () => {
     console.log(`selected ${value}`);
   }
 
+  const searchEvent = (e) => {
+    setsearchEvent(e.target.value);
+    console.log((e.target.value));
+  };
 
-const  searchEvent = (e)=>{
-   console.log(e.target.value);
-}
 
 
-// const mainTh = ["ID"," Job Title", "Candidate's Name ","User","Contacts","Profile Source","Available In Job Market"," Current Location"," Visa Type"]
-// console.log();
+  const thFunc =(e)=>{
+console.log(e.value);
+
+  }
+
   return (
     <>
       <Modal
@@ -44,7 +50,7 @@ const  searchEvent = (e)=>{
         onCancel={hideModal}
         className="candidate-export"
       >
-        <div className="export-div" title='User Management Created By Vikas'>
+        <div className="export-div" title='candidate Created By Vikas'>
           <div className="export-button-div">
             <div className="export-text">
               <p>Export</p>
@@ -271,7 +277,11 @@ const  searchEvent = (e)=>{
                 <span className="search-icon">
                   <BiSearch style={{ fontSize: "24px" }} />
                 </span>
-                <input type="text" placeholder="Search any.." onChange={searchEvent} />
+                <input
+                  type="text"
+                  placeholder="Search any.."
+                  onChange={searchEvent}
+                />
                 <span>
                   <div className="search-options">
                     <Select
@@ -282,9 +292,7 @@ const  searchEvent = (e)=>{
                       <Option value="Search Any">Search Any</Option>
                       <Option value="Job Title">Job Title</Option>
                       <Option value="User">User</Option>
-                      <Option value="Contacts" >
-                      Contacts
-                      </Option>
+                      <Option value="Contacts">Contacts</Option>
                       <Option value="Current Location">Current Location</Option>
                     </Select>
                   </div>
@@ -312,190 +320,51 @@ const  searchEvent = (e)=>{
             </div>
           </nav>
           <main className="candidate-main">
-            <table>
+            <table >
               <thead>
                 <tr>
-                  <th onClick={()=>{console.log(document.getElementsByTagName("th")[0].outerText);}}>
-                    ID<Popover placement="bottom" content={<Contentpop/>} trigger="click" >
-                    <FaFilter style={{ fontSize: "11px" }}/></Popover>
-                  </th>
-                  <th>
-                    Job Title <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Candidate's Name <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    User <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Contacts <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Profile Source <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Available In Job Market
-                    <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Current Location <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Visa Type <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Job Location <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Sales Person <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
-                  <th>
-                    Hiring Manager <FaFilter style={{ fontSize: "11px" }} />
-                  </th>
+                  {theadData.map((thdata) => {
+                  
+                    return (
+                      <th onClick={thFunc} id={thdata.accessor} >
+                        {thdata.Header}
+                        <Popover
+                          placement="leftBottom"
+                          content={
+                            <Contentpop
+                              thvalue={thdata.Header}
+                              taccesor={thdata.accessor}
+                              Tddata={Tddata}
+                              thFunc={thFunc}
+                              trigger="click"
+                            />
+                          }
+                          trigger="click"
+                        >
+                          <FaFilter style={{ fontSize: "11px" }} />
+                        </Popover>
+                      </th>
+                    );
+                  })}
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>125869</td>
-                  <td>Java Developer</td>
-                  <td>Vinay Sharma</td>
-                  <td>Amaan</td>
-                  <td>9101267898</td>
-                  <td>Linkedin</td>
-                  <td>Yes</td>
-                  <td>New York</td>
-                  <td>H1 N1</td>
-                  <td>New york city</td>
-                  <td>DigVijay</td>
-                  <td>Parth</td>
-                </tr>
-                <tr>
-                  <td>187830</td>
-                  <td>Android Developer</td>
-                  <td>Path Patel</td>
-                  <td>Amaan</td>
-                  <td>9664853392</td>
-                  <td>Monster</td>
-                  <td>Yes</td>
-                  <td>Seattle</td>
-                  <td>Green Card</td>
-                  <td>Missouri</td>
-                  <td>Jaimin</td>
-                  <td>Milli</td>
-                </tr>
-                <tr>
-                  <td>100869</td>
-                  <td>IOS Developer</td>
-                  <td>Vikas Kapoor</td>
-                  <td>Shoeb</td>
-                  <td>8101267898</td>
-                  <td>Linkedin</td>
-                  <td>Yes</td>
-                  <td>New Jersey</td>
-                  <td>H1 N1</td>
-                  <td>New Orleans</td>
-                  <td>Mili</td>
-                  <td>Anjali</td>
-                </tr>
-                <tr>
-                  <td>187830</td>
-                  <td>Android Developer</td>
-                  <td>Path Patel</td>
-                  <td>Amaan</td>
-                  <td>9664853392</td>
-                  <td>Monster</td>
-                  <td>Yes</td>
-                  <td>Seattle</td>
-                  <td>Green Card</td>
-                  <td>Missouri</td>
-                  <td>Jaimin</td>
-                  <td>Milli</td>
-                </tr>
-                <tr>
-                  <td>100869</td>
-                  <td>IOS Developer</td>
-                  <td>Vikas Kapoor</td>
-                  <td>Shoeb</td>
-                  <td>8101267898</td>
-                  <td>Linkedin</td>
-                  <td>Yes</td>
-                  <td>New Jersey</td>
-                  <td>H1 N1</td>
-                  <td>New Orleans</td>
-                  <td>Mili</td>
-                  <td>Anjali</td>
-                </tr>
-                <tr>
-                  <td>125869</td>
-                  <td>Java Developer</td>
-                  <td>Vinay Sharma</td>
-                  <td>Amaan</td>
-                  <td>9101267898</td>
-                  <td>Linkedin</td>
-                  <td>Yes</td>
-                  <td>New York</td>
-                  <td>H1 N1</td>
-                  <td>New york city</td>
-                  <td>DigVijay</td>
-                  <td>Parth</td>
-                </tr>
-                <tr>
-                  <td>100869</td>
-                  <td>IOS Developer</td>
-                  <td>Vikas Kapoor</td>
-                  <td>Shoeb</td>
-                  <td>8101267898</td>
-                  <td>Linkedin</td>
-                  <td>Yes</td>
-                  <td>New Jersey</td>
-                  <td>H1 N1</td>
-                  <td>New Orleans</td>
-                  <td>Mili</td>
-                  <td>Anjali</td>
-                </tr>
-                <tr>
-                  <td>187830</td>
-                  <td>Android Developer</td>
-                  <td>Path Patel</td>
-                  <td>Amaan</td>
-                  <td>9664853392</td>
-                  <td>Monster</td>
-                  <td>Yes</td>
-                  <td>Seattle</td>
-                  <td>Green Card</td>
-                  <td>Missouri</td>
-                  <td>Jaimin</td>
-                  <td>Milli</td>
-                </tr>
-                <tr>
-                  <td>125869</td>
-                  <td>Java Developer</td>
-                  <td>Vinay Sharma</td>
-                  <td>Amaan</td>
-                  <td>9101267898</td>
-                  <td>Linkedin</td>
-                  <td>Yes</td>
-                  <td>New York</td>
-                  <td>H1 N1</td>
-                  <td>New york city</td>
-                  <td>DigVijay</td>
-                  <td>Parth</td>
-                </tr>
-                <tr>
-                  <td>100869</td>
-                  <td>IOS Developer</td>
-                  <td>Vikas Kapoor</td>
-                  <td>Shoeb</td>
-                  <td>8101267898</td>
-                  <td>Linkedin</td>
-                  <td>Yes</td>
-                  <td>New Jersey</td>
-                  <td>H1 N1</td>
-                  <td>New Orleans</td>
-                  <td>Mili</td>
-                  <td>Anjali</td>
-                </tr>
+                {Tddata.map((tdata) => {
+
+                  return (
+                    <>
+                      <tr>
+                        {
+                          theadData.map((e) => {
+                            return(
+                              <td>{tdata[e.accessor]}</td>
+                            )
+                          })
+                        }
+                      </tr>
+                    </>
+                  );
+                })}
               </tbody>
             </table>
           </main>
