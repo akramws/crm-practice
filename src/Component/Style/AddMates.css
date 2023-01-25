@@ -35,6 +35,9 @@
     overflow-y: scroll;
 
 }
+.add-mates-page::-webkit-scrollbar {
+    background-color: white;
+}
 
 
 .add-mates-div {
