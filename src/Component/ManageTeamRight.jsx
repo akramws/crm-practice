@@ -3,6 +3,8 @@ import './Style/ManageTeam.css';
 import { HiUserGroup,HiPlusCircle } from 'react-icons/hi'
 import { MdEdit } from 'react-icons/md'
 import { FaTrash } from 'react-icons/fa'
+import { Popover } from 'antd';
+import AddMates from './AddMates';
 
 const ManageTeamRight = () => {
   return (
