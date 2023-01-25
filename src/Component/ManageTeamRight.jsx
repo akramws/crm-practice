@@ -1,7 +1,8 @@
 import React from 'react';
 import './Style/ManageTeam.css';
-import { HiUserGroup } from 'react-icons/hi'
+import { HiUserGroup,HiPlusCircle } from 'react-icons/hi'
 import { MdEdit } from 'react-icons/md'
+import { FaTrash } from 'react-icons/fa'
 
 const ManageTeamRight = () => {
   return (
@@ -93,10 +94,30 @@ const ManageTeamRight = () => {
 
       <div className='left-side-div2'>
         <div className='team-edit-div'>
-          <div className='group-but-one'><HiUserGroup />Team Alpha<MdEdit /></div>
+
+          <div className='group-but-one'>
+            <HiUserGroup className='group-but-icon' />
+            Team Alpha
+          </div>
+
+          <div className='edit-but-icon'>
+            <MdEdit className='edit-ic' />
+          </div>
+
+          <div className='teams-delete-but'>
+            <button className='trash-ico'><FaTrash className='trash-but' /> Delete Team</button>
+          </div>
+        </div>
+
+        <div className='mates-all'>
+            <p>Mates</p>
+          <div className='add-mates'>
+            <button className='add-btn-puls'><HiPlusCircle className='plus-icon'/>Add Mates</button>
+            <button className='delete-mates-but'><FaTrash className='delete-ic'/>Delete Mates</button>
+          </div>
+
         </div>
       </div>
-
     </div>
   )
 }
