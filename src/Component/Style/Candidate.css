@@ -524,6 +524,7 @@ outline: none;
   display: flex;
   flex-direction: column;
   width: 290px;
+  height: 500px;
   margin: 5px;
   padding: 5px;
 
