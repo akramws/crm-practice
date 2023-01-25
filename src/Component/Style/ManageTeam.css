@@ -200,7 +200,7 @@
 }
 
 .right-side-div1 {
-    width: 40%;
+    width: 30%;
     height: 100%;
     background: #F9F9F9 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -229,8 +229,9 @@
     letter-spacing: 0px;
     color: #0E4D92;
     opacity: 1;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    position: relative;
+    left: 12px;
+    top: 2rem;
 }
 
 
@@ -279,7 +280,7 @@
 
 .members-total {
     position: relative;
-    top: 55px;
+    top: 35px;
     left: 40%;
     text-align: left;
     letter-spacing: 0px;
@@ -293,10 +294,11 @@
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 10px;
     flex-basis: 29%;
-    height: 208px;
+    height: 155px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2.5rem;
 }
 
 .right-side-group {
@@ -330,7 +332,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    flex-basis: 5.5%;
+    flex-basis: 7.5%;
 }
 
 .right-side-image img {
@@ -354,7 +356,7 @@
 }
 
 .team-edit-div .group-but-one {
-    width: 350px;
+    width: 425px;
     height: 58px;
     background: transparent linear-gradient(180deg, #1B90FF 0%, #0E4D92 100%) 0% 0% no-repeat padding-box;
     border-radius: 3px 0 0 3px;
@@ -500,4 +502,57 @@
     top: 0.2rem;
     right: 5px;
     font-size: larger;
+}
+
+.add-mates-inside {
+    display: flex;
+    position: relative;
+    left: 1rem;
+    width: 93%;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.span-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #043C79;
+    position: relative;
+    left: 1.5rem;
+}
+
+.all-name-div {
+    margin-top: 3px;
+}
+
+.all-name-div p {
+    border: 0.5px solid #CECECE;
+    opacity: 1;
+    margin-top: 5px;
+    height: 50px;
+
+}
+
+.cancel-icon {
+    margin-top: .8rem;
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    color: #FF8A8A;
+    opacity: 1
+}
+
+.bar-button {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.scroll-bar-but {
+    width: 19px;
+    height: 327px;
+    background: #CECECE 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
 }
