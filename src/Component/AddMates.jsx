@@ -4,9 +4,9 @@ import { RxCross2 } from 'react-icons/rx';
 import './Style/AddMates.css';
 
 
-const AddMates = () => {
+const AddMates = ({userReff}) => {
     return (
-        <div className='main-add-mates'>
+        <div className='main-add-mates' ref={userReff} >
             <div className='main-add-mates-div'>
                 <div className='add-mates-div'>Add Mates</div>
                 <span className='cancel-add-mates'><RxCross2 /></span>
