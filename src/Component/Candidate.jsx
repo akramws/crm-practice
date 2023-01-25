@@ -94,7 +94,8 @@ const Candidate = () => {
             </div>
             <div className="all-checkbox">
               <label>
-                <input type="checkbox"></input>Username
+                <input type="checkbox"></input>
+                Username
               </label>
               <label>
                 <input type="checkbox"></input>Username
