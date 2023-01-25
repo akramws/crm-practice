@@ -71,8 +71,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 25rem;
-    cursor: pointer;
+    left: 27rem;
 }
 
 .head-btn-X {
@@ -83,7 +82,7 @@
     font-size: 25px;
     align-items: center;
     position: relative;
-    left: 25rem;
+    left: 26.5rem;
 }
 
 .manage-contant-main-div {
@@ -542,6 +541,14 @@
     height: 50px;
 
 }
+.all-name-div p:hover {
+    background: #E3F0FF 0% 0% no-repeat padding-box;
+    border: 0.5px solid #CECECE;
+    opacity: 1;
+    margin-top: 5px;
+    height: 50px;
+
+}
 
 .cancel-icon {
     margin-top: .8rem;
@@ -549,7 +556,8 @@
     width: 20px;
     height: 20px;
     color: #FF8A8A;
-    opacity: 1
+    opacity: 1;
+    cursor: pointer;
 }
 
 .bar-button {
