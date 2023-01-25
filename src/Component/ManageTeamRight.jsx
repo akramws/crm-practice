@@ -161,7 +161,7 @@ const ManageTeamRight = () => {
       </div>
 
     </div>
-     {openUser && <AddMates userReff={userReff} />}
+     {openUser && <AddMates setOpenUser={setOpenUser} userReff={userReff} />}
      </>
 
   )
