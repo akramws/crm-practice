@@ -13,11 +13,15 @@ import { Modal } from "antd";
 import { Select, Popover } from "antd";
 import { theadData, Tddata } from "./Thead";
 import Contentpop from "./Contentpop";
+import Tablehead from "./Tablehead";
 
 const Candidate = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [search, setsearchEvent] = useState("");
+  const [searchinput, setsearchinput] = useState("");
+  const [selected, setselected] = useState("");
+
   const showModal = () => {
     setOpen(true);
   };
@@ -26,21 +30,35 @@ const Candidate = () => {
   };
 
   const { Option } = Select;
+
   function handleChange(value) {
-    console.log(`selected ${value}`);
+    let datatd = Tddata.map((item) => {
+      return item[value];
+    });
+
+    setselected(datatd);
   }
 
   const searchEvent = (e) => {
-    setsearchEvent(e.target.value);
-    console.log((e.target.value));
+    let searchValue = e.target.value;
+    setsearchinput(e.target.value);
+    let searchArray = [];
+    selected.map((item, index) => {
+      if (searchValue === item) {
+        searchArray.push(index);
+      }
+    });
+    let tdArray = [];
+    searchArray.map((val) => {
+      Tddata.map((tdvalue, index) => {
+        if (index === val) {
+          return tdArray.push(tdvalue);
+        }
+      });
+      setsearchEvent(tdArray);
+      console.log("searchArray", tdArray);
+    });
   };
-
-
-
-  const thFunc =(e)=>{
-console.log(e.value);
-
-  }
 
   return (
     <>
@@ -50,7 +68,7 @@ console.log(e.value);
         onCancel={hideModal}
         className="candidate-export"
       >
-        <div className="export-div" title='candidate Created By Vikas'>
+        <div className="export-div" title="candidate Created By Vikas">
           <div className="export-button-div">
             <div className="export-text">
               <p>Export</p>
@@ -269,7 +287,7 @@ console.log(e.value);
         </div>
       </Modal>
       <Header />
-      <div className="candidate-page" title='User Management Created By Vikas'>
+      <div className="candidate-page" title="User Management Created By Vikas">
         <div className="candidate-container">
           <nav className="candidate-navbar">
             <div className="search-navbar">
@@ -281,6 +299,7 @@ console.log(e.value);
                   type="text"
                   placeholder="Search any.."
                   onChange={searchEvent}
+                  value={searchinput}
                 />
                 <span>
                   <div className="search-options">
@@ -289,11 +308,12 @@ console.log(e.value);
                       onChange={handleChange}
                       className="search-select"
                     >
-                      <Option value="Search Any">Search Any</Option>
-                      <Option value="Job Title">Job Title</Option>
-                      <Option value="User">User</Option>
-                      <Option value="Contacts">Contacts</Option>
-                      <Option value="Current Location">Current Location</Option>
+                      <Option value="SearchAny">Search Any</Option>
+                      <Option value="jobTitle">Job Title</Option>
+                      <Option value="user">User</Option>
+                      <Option value="contact">Contacts</Option>
+                      <Option value="profileSource">Profile Source</Option>
+                      <Option value="currentLocation">Current Location</Option>
                     </Select>
                   </div>
                 </span>
@@ -303,7 +323,13 @@ console.log(e.value);
               <div className="candidate-logo">Candidates' Listing</div>
             </div>
             <div className="nav-btn">
-              <button className="btn-reset">
+              <button
+                className="btn-reset"
+                onClick={() => {
+                  setsearchEvent("");
+                  setsearchinput("");
+                }}
+              >
                 <BiReset style={{ fontSize: "16px" }} />
                 Reset
               </button>
@@ -320,51 +346,41 @@ console.log(e.value);
             </div>
           </nav>
           <main className="candidate-main">
-            <table >
+            <table>
               <thead>
                 <tr>
                   {theadData.map((thdata) => {
-                  
                     return (
-                      <th onClick={thFunc} id={thdata.accessor} >
-                        {thdata.Header}
-                        <Popover
-                          placement="leftBottom"
-                          content={
-                            <Contentpop
-                              thvalue={thdata.Header}
-                              taccesor={thdata.accessor}
-                              Tddata={Tddata}
-                              thFunc={thFunc}
-                              trigger="click"
-                            />
-                          }
-                          trigger="click"
-                        >
-                          <FaFilter style={{ fontSize: "11px" }} />
-                        </Popover>
-                      </th>
+                      <Tablehead thdata={thdata}/>
+
                     );
                   })}
                 </tr>
               </thead>
               <tbody>
-                {Tddata.map((tdata) => {
-
-                  return (
-                    <>
-                      <tr>
-                        {
-                          theadData.map((e) => {
-                            return(
-                              <td>{tdata[e.accessor]}</td>
-                            )
-                          })
-                        }
-                      </tr>
-                    </>
-                  );
-                })}
+                {!search
+                  ? Tddata.map((tdata) => {
+                      return (
+                        <>
+                          <tr>
+                            {theadData.map((e) => {
+                              return <td>{tdata[e.accessor]}</td>;
+                            })}
+                          </tr>
+                        </>
+                      );
+                    })
+                  : search.map((tdata) => {
+                      return (
+                        <>
+                          <tr>
+                            {theadData.map((e) => {
+                              return <td>{tdata[e.accessor]}</td>;
+                            })}
+                          </tr>
+                        </>
+                      );
+                    })}
               </tbody>
             </table>
           </main>
