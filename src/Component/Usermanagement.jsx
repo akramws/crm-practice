@@ -11,21 +11,22 @@ import { Modal, Switch, Select } from "antd";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineRight, } from "react-icons/ai";
 import AddUser from "./AddUser";
-import SearchbarPopup from "./SearchbarPopup";
+// import SearchbarPopup from "./SearchbarPopup";
 import Export from "./Export";
 import UserManagmentArray from "./UserManagmentArray";
 import UserTbody from "./UserTbodyArray";
 import EditUser from "./EditUser";
+import { Option } from "antd/es/mentions";
 
 
 
 const UserManagement = () => {
     const userReff = useRef();
-    const edituserReff = useRef();
     const [deletebut, setDeleteBut] = useState("0");
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
     const [editUserData, seteditUserData] = useState("")
+    const [tableBodyData, setTableBodyData] = useState(UserTbody)
     // const [searchBarInput, setSearchBarInput] = useState(false);
     const showModal1 = () => {
         setOpen1(true);
@@ -33,17 +34,45 @@ const UserManagement = () => {
     // tEST
     const [openUser, setOpenUser] = useState(false);
     const [openEdit, setopenEdit] = useState(false);
-    console.log("openEdit>>", openEdit)
+    const [arrayVal, setArrayVal] = useState('')
+    const [inputval, setInputVal] = useState("")
+    const {Option} = Select ;
+    const handleChange = (value) => {
+        console.log(value);
+        const nameArray = [];
+        setArrayVal(value)
+        UserTbody.map((e)=>{
+            nameArray.push(e[value]);
+        })
+    };
+    const changeValue = (ele) =>{
+        
+        setInputVal(ele.target.value);
+        
+       const tableBody =  UserTbody.filter((e) => {
+            return e[arrayVal].toLowerCase().includes(inputval.toLocaleLowerCase());
+        })
+        setTableBodyData([...tableBody])
+        console.log("inputval>>",tableBody);
+        
+      
+    }
+
+
+
+
+
+
 
     useEffect(() => {
         const handleClick = (e) => {
             if (userReff.current && !userReff.current.contains(e.target)) {
 
                 if (e.target.className === "userAdd") {
+                    
                 } else {
                     setOpenUser(false)
                 }
-
             }
         };
         document.addEventListener("click", handleClick);
@@ -53,10 +82,10 @@ const UserManagement = () => {
         };
     }, [userReff]);
 
-    const editUserFunc = (item) =>{
+    const editUserFunc = (item) => {
         seteditUserData(item);
     }
-    console.log("data>>,",editUserData)
+    console.log("data>>,", editUserData)
 
     const checkBoxFun = (e) => {
         if (e.target.checked == true) {
@@ -104,17 +133,24 @@ const UserManagement = () => {
                                 <div>
                                     <FiSearch className="userManagmentsearch" />
                                     <input
+                                        onChange={changeValue}
                                         className="userManagmentinpbut"
                                         type="text"
                                         placeholder="Search Candidate"
                                     />
-                                    <button className="searchAnyBut">
+                                    <Select defaultValue="search any" onChange={handleChange}>
+                                        <Option value='id' className="User-option">ID</Option>
+                                        <Option value="userName">Name</Option>
+                                        <Option value="email">Email</Option>
+                                        <Option value="contactNumber">Number</Option>
+                                    </Select>
+                                    {/* <button className="searchAnyBut">
                                         Search Any{" "}
                                         <AiOutlineDown
                                             className="userManagementdown"
                                             style={{ fontSize: "13px" }}
                                         />
-                                    </button>
+                                    </button> */}
                                 </div>
                                 {/* <div className="advanceSearch" >
                                     <p onClick={() => setSearchBarInput(true)} >Advanced Search</p>
@@ -140,7 +176,7 @@ const UserManagement = () => {
                                     <button className="userExport" onClick={() => setOpen(true)}>
                                         <TfiExport style={{ color: "white" }} /> Export
                                     </button>
-                                    <button className="userAdd" onClick={() => setOpenUser(!openUser)}>Add User</button>
+                                    <button className="userAdd" onClick={() => setOpenUser(true)}>Add User</button>
                                 </div>
                             </div>
                         </header>
@@ -165,18 +201,18 @@ const UserManagement = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="userTbody">
-                                    {UserTbody.map((e) =>
+                                    {tableBodyData?.map((e) =>
                                         <tr>
                                             {
                                                 UserManagmentArray?.map((ele) => {
-                                                    if (ele.accessor === "input") {
+                                                    if (ele.accessor === "input"){
                                                         return (
                                                             <td>
                                                                 <input type="checkbox" />
                                                             </td>
                                                         )
                                                     }
-                                                    if (ele.accessor === "status") {
+                                                    if (ele.accessor === "status"){
                                                         return (
                                                             <td>
                                                                 <Switch
@@ -191,8 +227,8 @@ const UserManagement = () => {
                                                     }
                                                     if (ele.accessor === "action") {
                                                         return (
-                                                            <td onClick={() => {editUserFunc(e); setopenEdit(true)}}>
-                                                                <BsFillPersonCheckFill   /> Edit
+                                                            <td onClick={() => { editUserFunc(e); setopenEdit(true) }}>
+                                                                <BsFillPersonCheckFill /> Edit
                                                             </td>
                                                         )
                                                     }
@@ -275,7 +311,7 @@ const UserManagement = () => {
                 </div>
             </div>
             {openUser && <AddUser userReff={userReff} />}
-            {openEdit && <EditUser EdituserReff={edituserReff} editUserData={editUserData}/>}
+            {openEdit && <EditUser userReff={userReff} editUserData={editUserData} setopenEdit={setopenEdit} />}
         </>
     );
 };

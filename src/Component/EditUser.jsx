@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import './Style/EditUser.css'
 
-const EditUser = ({userReff, editUserData}) => {
+const EditUser = ({userReff, editUserData,setopenEdit}) => {
   const [editedUser, setEdittedUser] = useState({
     userName:editUserData.userName,
     contactNumber:editUserData.contactNumber,
     email:editUserData.email,
     role:editUserData.role
   })
+
+  const [closeUser, setCloseUser] = useState(false);
+
+  const setCloseUserFun = () =>{
+    setCloseUser(setopenEdit)
+  }
 
   return (
     <>
@@ -44,7 +50,7 @@ const EditUser = ({userReff, editUserData}) => {
             <br />
 
            
-            <button>
+            <button onClick={setCloseUserFun}>
               Done
             </button>
           </form>
