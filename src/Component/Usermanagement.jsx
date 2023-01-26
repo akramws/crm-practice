@@ -11,7 +11,7 @@ import { Modal, Switch, Select } from "antd";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight, AiOutlineRight, } from "react-icons/ai";
 import AddUser from "./AddUser";
-import SearchbarPopup from "./SearchbarPopup";
+// import SearchbarPopup from "./SearchbarPopup";
 import Export from "./Export";
 import UserManagmentArray from "./UserManagmentArray";
 import UserTbody from "./UserTbodyArray";
@@ -47,20 +47,13 @@ const UserManagement = () => {
     };
     const changeValue = (ele) =>{
         
-        setInputVal(ele.target.value)
-        const valueeee = ele.target.value
+        setInputVal(ele.target.value);
         
-        UserTbody.map((e) => {
-            console.log(e[arrayVal]);
-            if(e[arrayVal].toLowerCase().includes(valueeee.toLocaleLowerCase())){
-                setTableBodyData([e])
-                console.log("arrayVal>>",e);
-            }
-            else{
-                
-            }
+       const tableBody =  UserTbody.filter((e) => {
+            return e[arrayVal].toLowerCase().includes(inputval.toLocaleLowerCase());
         })
-        // console.log("inputval>>",inputval);
+        setTableBodyData([...tableBody])
+        console.log("inputval>>",tableBody);
         
       
     }
@@ -76,6 +69,7 @@ const UserManagement = () => {
             if (userReff.current && !userReff.current.contains(e.target)) {
 
                 if (e.target.className === "userAdd") {
+                    
                 } else {
                     setOpenUser(false)
                 }
