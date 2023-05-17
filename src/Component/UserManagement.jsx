@@ -34,42 +34,38 @@ const UserManagement = () => {
     // tEST
     const [openUser, setOpenUser] = useState(false);
     const [openEdit, setopenEdit] = useState(false);
-    const [arrayVal, setArrayVal] = useState('')
+
+    const [arrayVal, setArrayVal] = useState("")
     const [inputval, setInputVal] = useState("")
-    const {Option} = Select ;
+    const { Option } = Select;
+
     const handleChange = (value) => {
         console.log(value);
         const nameArray = [];
         setArrayVal(value)
-        UserTbody.map((e)=>{
+        UserTbody.map((e) => {
             nameArray.push(e[value]);
         })
     };
-    const changeValue = (ele) =>{
-        
+    
+    const changeValue = (ele) => {
+
         setInputVal(ele.target.value);
-        
-       const tableBody =  UserTbody.filter((e) => {
+
+        const tableBody = UserTbody.filter((e) => {
             return e[arrayVal].toLowerCase().includes(inputval.toLocaleLowerCase());
         })
         setTableBodyData([...tableBody])
-        console.log("inputval>>",tableBody);
-        
-      
+        console.log("inputval>>", tableBody);
+
     }
-
-
-
-
-
-
 
     useEffect(() => {
         const handleClick = (e) => {
             if (userReff.current && !userReff.current.contains(e.target)) {
 
                 if (e.target.className === "userAdd") {
-                    
+
                 } else {
                     setOpenUser(false)
                 }
@@ -205,14 +201,14 @@ const UserManagement = () => {
                                         <tr>
                                             {
                                                 UserManagmentArray?.map((ele) => {
-                                                    if (ele.accessor === "input"){
+                                                    if (ele.accessor === "input") {
                                                         return (
                                                             <td>
                                                                 <input type="checkbox" />
                                                             </td>
                                                         )
                                                     }
-                                                    if (ele.accessor === "status"){
+                                                    if (ele.accessor === "status") {
                                                         return (
                                                             <td>
                                                                 <Switch
